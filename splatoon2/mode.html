@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+       <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
+ <tbody>
+ 	<tr>
+<th colspan="3"><b><font color="#70DB93">常规涂地模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/mode/battle-sec01_logo.png" class="image">
+	<img  src="../common/assets/img/mode/battle-sec01_logo.png" width="80" height="68"  ></a>
+</th>
+<td   style="text-align:left">模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对战的模式<br
+	  游戏方法:最大限度进行涂地（涂墙面不算）<br>
+	  胜利条件:3分钟内墨水覆盖地图面积最大的队伍<br>
+	  奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:经验值、金钱<img  src="../common/assets/img/mode/S2_Icon_Cash.png"  >、等级提升、武器熟练度(胜一局加1点)、等级提升后可在<img  src="../common/assets/img/mode/170px-Juddt.png" width="40" height="43" >处获得1枚海螺<img  src="../common/assets/img/mode/100px-Super_Sea_Snail.png" width="25" height="25"   >
+<table width=100%>
+
+<tr><th colspan=5>手感/熟练度 	<img  src="../common/assets/img/misc/flag_green.png"  width="40" height="20"  ></th>	</tr>
+<tr>
+<th width=20% >手感</th>
+<th width=20% >满足分值</th>
+<th width=25% >失败一局扣除点数</th>
+<th width=20%  >里程碑奖励</th>
+<th   >旗子颜色</th>
+</tr>
+<tr>
+<td>初始</td>
+<td>0</td>
+<td>-0.5</td>
+<td>-</td>
+<td>灰色</td>
+</tr>
+<tr>
+<td>生手</td>
+<td>5</td>
+<td>-1</td>
+<td>3000p</td>
+<td>绿色</td>
+</tr>
+<tr>
+<td>比较好</td>
+<td>10</td>
+<td>-1.5</td>
+<td>4500p</td>
+<td>橘红色</td>
+</tr>
+<tr>
+<td>超好!</td>
+<td>15</td>
+<td>-2</td>
+<td>6000p</td>
+<td>白色</td>
+</tr>
+<tr>
+<td>超好!</td>
+<td>20</td>
+<td>-2.5</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>超好!</td>
+<td>50</td>
+<td>-3</td>
+<td>-s</td>
+<td>金色</td>
+</tr>
+</table>
+	  
+</td>
+<td><a href="../common/assets/img/mode/320px-Turf_War_Flounder_Heights.jpg" class="image">
+	<img  src="../common/assets/img/mode/320px-Turf_War_Flounder_Heights.jpg"  width="195" height="110"  ></a>
+</td>
+
+</tr>
+
+ 	<tr>
+<th colspan="3"><b><font color="#70DB93">祭典模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/mode/Splatfest_Logo.png" class="image">
+	<img  src="../common/assets/img/mode/Splatfest_Logo.png" width="80" height="68"  ></a>
+</th>
+
+<td   style="text-align:left">模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对战的涂地模式<br
+	  游戏方法:每月不定期举行，先投票选择阵营，然后进入涂地模式按阵营进行对手匹配<br>
+	  胜利条件:单局胜负同涂地模式，最终按照得票率、个人赛胜率、团体赛胜率3个指标来计算最终胜负<br>
+	  奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:经验值、金钱、涂地模式等级提升、海螺<img  src="../common/assets/img/mode/100px-Super_Sea_Snail.png" width="25" height="25"   ><br>
+	   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp祭典专用服装(带有<img  src="../common/assets/img/skills/ExSkillDouble.png" width="32" height="32"  >技能),2000块即可在海胆哥处洗点(普通服装洗点一次要20000块)<br>
+	   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp根据贡献度和最终胜负结果可获得洗点用的海胆，战斗到MAX级别后，祭奠获胜方和失败方可分别获得24/21枚海螺；
+<table  width=100%>
+<tr>
+<th width=25% rowspan="2">称号</th>
+<th  width=25% rowspan="2">经验点要求</th>
+<th  colspan="2">奖励海螺</th>
+</tr>
+<tr>
+<th  >胜利方</th>
+<th >失败方</th>
+</tr>
+<tr>
+<td>粉丝</td>
+<td>–</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>着迷</td>
+<td>10</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>守护者</td>
+<td>35</td>
+<td>9</td>
+<td>7</td>
+</tr>
+<tr>
+<td>冠军</td>
+<td>85</td>
+<td>16</td>
+<td>13</td>
+</tr>
+<tr>
+<td>王者</td>
+<td>184</td>
+<td>24</td>
+<td>21</td>
+</tr>
+</table>
+</td>
+
+
+<td><a href="../common/assets/img/mode/267px-Splatfest_Plaza_6.jpg" class="image">
+	<img  src="../common/assets/img/mode/267px-Splatfest_Plaza_6.jpg"  width="195" height="110"  ></a>
+</td>
+
+</tr>
+	<tr>
+<th colspan="3"><b><font color="#70DB93">打工(鲑鱼跑)模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+
+<tr>
+<th rowspan=2 ><a href="../common/assets/img/mode/salmon-run-logo.png" class="image">
+	<img alt="salmon-run.png" src="../common/assets/img/mode/salmon-run-logo.png" width="195" height="80"  ></a> 
+</th>
+<td  style="text-align:left">
+	模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对抗鲑鱼敌人的模式<br>
+	游戏方法:击败特定的鲑鱼敌人收集其掉落的鱼卵，同时队友牺牲后可通过射击其救生圈来复活<br>
+	胜利条件:1.坚持3回合;2.每回合必须收集指定数量的鱼蛋
+		<img alt="S2_Icon_Golden_Egg" src="../common/assets/img/mode/S2_Icon_Golden_Egg.png" width="24" height="24"/>(击败boss级鲑鱼掉落)<img alt="S2_Icon_Power_Egg" src="../common/assets/img/mode/S2_Icon_Power_Egg.png" width="24" height="24"/>3.在倒计时前保持不团灭
+	<br>等级评价:けんしゅう实习生、かけだし初学者、はんにんまえ兼职、いちにんまえ全职、じゅくれん熟练、たつじん专家
+	
+
+	<br>
+	
+</td>
+<td rowspan=2><a href="../common/assets/img/mode/run.jpg" class="image">
+	<img  src="../common/assets/img/mode/run.jpg"   width="195" height="110"  ></a>
+</td>
+</tr>
+<tr>
+<td>
+<table width=100%>
+<tr>
+<th width=20%>奖励类型</th>
+<th width=20% >50%几率</th>
+<th width=20%>40%几率</th>
+<th width=20%>10%几率</th>
+<th>说明</th>
+
+</tr>
+<tr>
+<td><a><img alt="S2 Salmon Run blue capsule.png" src="../common/assets/img/mode/S2_Salmon_Run_blue_capsule.png" width="32" height="32"    /></a>蓝色胶囊</td>
+<td><a><img alt="Cash" src="../common/assets/img/mode/S2_Icon_Cash.png" width="24" height="24" srcset="../common/assets/img/mode/S2_Icon_Cash.png" /></a> <span style="display: inline-block; text-align: right;">4,000</span>.</td>
+<td>一张饮料券</td>
+<td>三张饮料券</td>
+<td width =80 rowspan=6 > 建议缺钱时至少打到1200p，可以获得较为丰厚的奖励。奖励可在打工大厅的左侧ATM机处可以领取，并在龙虾所处的快餐车处使用（技能券需要在购物界面按X键后方可查看和使用）[可持续20回合的各种增效饮料券:1.加经验<img  src="../common/assets/img/mode/ticket_exp.png" />2.强化技能出现概率<img  src="../common/assets/img/mode/ticket_skill.png" />(自己调配1+3技能时使用)3.加金币<img  src="../common/assets/img/mode/ticket_money.png" />等]
+</td>
+</tr>
+<tr>
+<td><a ><img alt="S2 Gear Clothing Anchor Life Vest.png" src="../common/assets/img/mode/S2_Gear_Clothing_Anchor_Life_Vest.png" width="32" height="32"    /></a>限定服装</td>
+<td>无孔</td>
+<td>一孔</td>
+<td>三孔</td>
+</tr>
+<tr>
+<td><a href="../common/assets/img/mode/S2_Salmon_Run_green_capsule.png" class="image"><img alt="S2 Salmon Run green capsule.png" src="../common/assets/img/mode/S2_Salmon_Run_green_capsule.png" width="32" height="32"    /></a>绿色胶囊</td>
+<td><a  ><img alt="Cash" src="../common/assets/img/mode/S2_Icon_Cash.png" width="24" height="24"   /></a> <span style="display: inline-block; text-align: right;">4,000</span>.</td>
+<td>两个技能碎片</td>
+<td>四个技能碎片</td>
+</tr>
+<tr>
+<td><a href="../common/assets/img/mode/S2_Salmon_Run_orange_capsule.png" class="image"><img align:letf alt="S2 Salmon Run orange capsule.png" src="../common/assets/img/mode/S2_Salmon_Run_orange_capsule.png" width="32" height="32"   /></a>橘色胶囊</td>
+<td><a  ><img alt="Cash" src="../common/assets/img/mode/S2_Icon_Cash.png" width="24" height="24"   /></a> <span style="display: inline-block; text-align: right;">4,000</span>.</td>
+<td>1个 1.5× 券.</td>
+<td>1个 2× 券.</td>
+</tr>
+<tr>
+<td><a href="../common/assets/img/mode/S2_Salmon_Run_pink_capsule.png" class="image"><img alt="S2 Salmon Run pink capsule.png" src="../common/assets/img/mode/S2_Salmon_Run_pink_capsule.png" width="32" height="32"      /></a>粉色胶囊<br>(限定服装)</td>
+<td>无孔</td>
+<td>一孔</td>
+<td>三孔</td>
+</tr>
+<tr>
+<td><a href="../common/assets/img/mode/S2_Salmon_Run_yellow_capsule.png" class="image"><img alt="S2 Salmon Run yellow capsule.png" src="../common/assets/img/mode/S2_Salmon_Run_yellow_capsule.png" width="32" height="32"  /></a>黄色胶囊</td>
+<td><a ><img alt="Cash" src="../common/assets/img/mode/S2_Icon_Cash.png" width="24" height="24"   /></a> <span style="display: inline-block; text-align: right;">4,000</span>.</td>
+<td><a ><img alt="Cash" src="../common/assets/img/mode/S2_Icon_Cash.png" width="24" height="24"   /></a> <span style="display: inline-block; text-align: right;">16,000</span>.</td>
+<td><a ><img alt="Cash" src="../common/assets/img/mode/S2_Icon_Cash.png" width="24" height="24"  /></a> <span style="display: inline-block; text-align: right;">32,000</span>.</td>
+</tr>
+
+</table>
+</td>
+
+</tr>
+
+<tr>
+<th colspan="3"><b><font color="#70DB93">真格排名模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/mode/ranked-battle-icon.png" class="image">
+	<img  src="../common/assets/img/mode/ranked-battle-icon.png" width="80" height="68"  ></a><br>抢地
+</th>
+<td style="text-align:left">模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对战的模式<br>
+	游戏方法:抢占地图上用虚线进行标记的矩形区域并保持续占领<br>
+	胜利条件:标识抢占的计时器归0则相应的队伍将获得胜利。<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:经验值、对战成绩排名（如C到S等级别） 
+	
+</td>
+<td><a href="../common/assets/img/mode/320px_Splatzoneofficial.jpg" class="image">
+	<img  src="../common/assets/img/mode/320px_Splatzoneofficial.jpg"    width="195" height="110" ></a>
+</td>
+
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/mode/ranked-battle-icon.png" class="image">
+	<img  src="../common/assets/img/mode/ranked-battle-icon.png" width="80" height="68"  ></a><br>推塔
+</th>
+<td style="text-align:left">模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对战的模式<br>
+	游戏方法:争夺地图中央的一个矩形塔台的控制权<br>
+	胜利条件:玩家站在塔台并到达了对方基地附近的目标点<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:经验值、对战成绩排名（如C到S等级别） 
+ 
+	
+</td>
+<td><a href="../common/assets/img/mode/320px-Tower_Control_Mode.jpg" class="image">
+	<img  src="../common/assets/img/mode/320px-Tower_Control_Mode.jpg"  width="195" height="110"  ></a>
+</td>
+
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/mode/ranked-battle-icon.png" class="image">
+	<img  src="../common/assets/img/mode/ranked-battle-icon.png" width="80" height="68"  ></a><br>抢鱼
+</th>
+<td style="text-align:left">
+	模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对战的模式<br>
+	游戏方法:争夺地图中的一个鱼形超武的控制权<br>
+	胜利条件:玩家将抢到的鱼形超武放到敌方基地附近的一个特定基座上<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:经验值、对战成绩排名（如C到S等级别） 
+ 
+	
+</td>
+<td><a href="../common/assets/img/mode/320px-RainmakerMain.jpg" class="image">
+	<img  src="../common/assets/img/mode/320px-RainmakerMain.jpg"    width="195" height="110" ></a>
+</td>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/mode/ranked-battle-icon.png" class="image">
+	<img  src="../common/assets/img/mode/ranked-battle-icon.png" width="80" height="68"  ></a><br>蛤蜊突击	
+</th>
+<td style="text-align:left">
+		模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:四人随机组队进行对战的模式<br>
+	游戏方法:收集齐分散在地图中的十个蛤蜊后即可得到一个超级蛤蜊（橄榄球形），将超级蛤蜊投射到对手基地附近的特定篮筐即可得20分，同时开启最多10秒的普通蛤蜊投掷机会，此时每个普通蛤蜊可得3分，并可延长时间3秒。
+	最终进攻方的会得到本次攻击得分的一半的惩罚分，下次进攻时要先消除上次的惩罚分才能继续得分。
+	收集到的蛤蜊可以按A或L扔出，也可以传到队友旁边由队友捡起；掉落的普通蛤蜊在一定时间内可以由己方队友捡起，而掉落的超级蛤蜊如果不及时捡起则会消失。
+
+	<br>
+	胜利条件:得分最高<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:经验值、对战成绩排名（如C到S等级别） 
+</td>
+<td><a href="../common/assets/img/mode/320px-ClamBlitzOfficial" class="image">
+	<img  src="../common/assets/img/mode/320px-ClamBlitzOfficial.jpg"   width="195" height="110"  ></a>
+</td>
+
+</tr>
+
+
+
+<tr>
+<th colspan="3"><b><font color="#70DB93">小队联盟战模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/mode/League_mode.png" class="image">
+	<img  src="../common/assets/img/mode/League_mode.png"  width="85" height="80"  ></a>	
+</th>
+<td style="text-align:left">
+		模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:组队战的游戏模式<br>
+	游戏方法:2-4人组队的模式进行排名战<br>
+	胜利条件:参见上面的介绍<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:排名徽章 
+	<a   class="image"><img  src="../common/assets/img/mode/Gold_Medal_Icon.png"   >	<img  src="../common/assets/img/mode/Silver_Medal_Icon.png"   ><img  src="../common/assets/img/mode/Bronze_Medal_Icon.png"   ></a>
+ 
+</td>
+<td><a href="../common/assets/img/mode/320px-Turf_War_Flounder_Heights.jpg" class="image">
+	<img  src="../common/assets/img/mode/320px-Turf_War_Flounder_Heights.jpg"   width="195" height="110"  ></a>
+</td>
+
+</tr>
+<tr>
+<th colspan="3"><b><font color="#70DB93">私人对战模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/mode/Private-battles.png" class="image">
+	<img alt="Private-battles.png" src="../common/assets/img/mode/Private-battles.png" width="111" height="90"  ></a>	
+</th>
+<td style="text-align:left">
+		模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:2至8人进行联机对抗模式<br>
+	游戏方法:房主可自定地图、人数均衡等规则<br>
+	胜利条件:同上<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:-
+</td>
+<td><a href="../common/assets/img/mode/320px-Turf_War_Flounder_Heights.jpg" class="image">
+	<img  src="../common/assets/img/mode/320px-Turf_War_Flounder_Heights.jpg"   width="195" height="110"  ></a>
+</td>
+
+</tr>
+
+
+<tr>
+
+</tr>
+
+
+<tr>
+<th colspan="4"><b><font color="#70DB93">单人模式</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">模式
+</th>
+<th rowspan="2" >说明
+</th>
+<th width="195px" rowspan="2">预览
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th ><a href="../common/assets/img/mode/canyon-char.png" class="image">
+	<img  src="../common/assets/img/mode/canyon-char.png"  width="60" height="80"  ></a>	
+</th>
+<td  style="text-align:left">
+		模式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:单人的游戏模式<br>
+	游戏方法:根据要求完成各项单人任务,收集关卡中的隐藏物品<br>
+	胜利条件:救回被章鱼军团抢走的黄色发电鲶鱼<br>
+	奖励&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:持有的武器全通关一遍后可以解锁英雄武器皮肤到多人模式（如P90) 
+</td>
+<td><a href="../common/assets/img/mode/hero_mode.jpg" class="image">
+	<img  src="../common/assets/img/mode/hero_mode.jpg"   width="195" height="110"  ></a>
+</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+
+     <footer class="footer">
+        <div class="container">
+          <span>  整理者:疾风</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+    </body>
+    </html>

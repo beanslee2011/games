@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+       <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
+ <tbody>
+ 	<tr>
+<th colspan="3"><b><font color="#70DB93">主界面翻译</b>
+</th>
+</tr>
+<tr>
+<th width="40%" rowspan="2">界面
+</th>
+<th  rowspan="2" >说明
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th>
+	<img  src="../common/assets/img/ui/square1.jpg"  ></a>
+</th>
+<td   style="text-align:left">提供广场中各个关键位置的标注，特别说明:<br>1.在进打工模式房间左边的ATM机可以领打工所得的奖励<br>2.打工领到的食品券可以去龙虾所在的食品卡车处兑换奖励<br>3.可以查看和购买(日版称之为"注文")广场上网友的装备(打工装备、amiibo装备除外)，,所得服装技能槽有一定随机性，运气好的话可以获得3孔一样技能的服装(最高需10w元购买)</td>
+</tr>
+<tr>
+<th>
+	<img  src="../common/assets/img/ui/map1.jpg"  ></a>
+</th>
+<td   style="text-align:left">包括广场大厅(涵盖各种商店)、单人模式、音游、打工模式等的快捷入口</td>
+</tr>
+
+<tr>
+<th>
+	<img  src="../common/assets/img/ui/status1.jpg"  ></a>
+</th>
+<td   style="text-align:left">可以查看个人信息和当前技能碎片的收集情况</td>
+</tr>
+<tr>
+<th>
+	<img  src="../common/assets/img/ui/stages1.jpg"  ></a>
+</th>
+<td   style="text-align:left">显示当前各个游戏模式对应的地图信息</td>
+</tr>
+<tr>
+<th>
+	<img  src="../common/assets/img/ui/options1.jpg"  ></a>
+</th>
+<td   style="text-align:left">在此处可以设置游戏相关的参数开关</td>
+</tr>
+<tr>
+<th>
+	<img  src="../common/assets/img/ui/murch1.jpg"  ></a>
+</th>
+<td   style="text-align:left">海胆洗点界面操作说明，特别说明：<br>1.增孔需要支付祭典或升级所得的海螺<br>2.第2个选项，除了对不满3孔的服装进行增孔外，还可以对已经有三个副技能的服装，通过支付一个海螺的方式来重新随机配比一次三个副技能<br>3.第3个选项，洗点一次要支付20000个金币（祭典期间，祭典专用服装为2000个金币）<br>4.第4个选项是给服装更换副技能，需要支付一定数量的技能碎片方可(如需要拼3个一样的副技能时，依次需要支付10、20、30个技能碎片方可)</td>
+</tr> 
+</tbody>
+</table>
+</div>
+<br><br><br>
+
+     <footer class="footer">
+        <div class="container">
+          <span>此部分图片英文原图来自谷歌搜索，疾风负责文字汉化修改</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+    </body>
+    </html>

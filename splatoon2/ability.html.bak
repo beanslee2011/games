@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+       <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
+ <tbody>
+ 	<tr>
+<th colspan="6"><b>主要实用技能搭配说明(1件服装最多有1主+3孔辅助技能)</b>
+</th>
+</tr>
+<tr>
+<th  rowspan="2">技能
+</th>
+<th width="10%" rowspan="2" >分类
+</th>
+<th width="10%" rowspan="2">1个主技能
+</th>
+<th width="10%" rowspan="2">1个主技能<br>3个辅助技能
+	</th>
+<th width="10%" rowspan="2">3个主技能<br>0个辅助技能
+</th>
+<th width="10%" >3个主技能<br>9个辅助技能
+</th>
+</tr>
+<tr>
+</tr>
+<tr>
+<th>
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/MainInk_Save.png" width="80" height="68"  ></a><br>主武器省墨
+</th>
+<td style="text-align:center">-
+</td>
+<td>13.6%
+</td>
+<td> 23.8%
+</td>
+<td>33.6%
+</td>
+<td>45.2%
+</td>
+</tr>
+<tr>
+<tr>
+<th rowspan="3" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/SubInk_Save.png" width="80" height="68"  ></a><br>副武器省墨
+</th>
+<td style="text-align:left">提升度-弱(水球，最高提升20%)
+</td>
+<td>6.1% 
+</td>
+<td> 10.6%
+</td>
+<td>14.9%
+</td>
+<td>20.1%
+</td>
+<tr>
+<td style="text-align:left">提升度-中(机器人炸弹、毒雾，最高提升30%)
+</td>
+<td>9.1%
+ </td>
+<td> 15.9%
+</td>
+<td>22.4%
+</td>
+<td>30.1%
+</td>
+</tr>
+<td style="text-align:left">提升度-高(其他副武器,最高提升35%)
+</td>
+<td>10.6%
+ </td>
+<td> 18.5%
+</td>
+<td>26.1%
+</td>
+<td>35.1%
+</td>
+</tr>
+<tr>
+<th rowspan="5" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/HumanMove_Up.png" width="80" height="68"  ></a><br>人形移动速度提升
+</th>
+<td style="text-align:left">射击时(多数武器)
+</td>
+<td>7.6%
+</td>
+<td> 13.2%
+</td>
+<td>18.7%
+</td>
+<td>25.1%
+<tr>
+<td style="text-align:left">射击时(splating)
+</td>
+<td>9.10%
+</td>
+<td> 15.90%
+</td>
+<td>22.40%
+</td>
+<td>30.10%
+</td></tr>
+<td style="text-align:left">轻型武器(移动)
+</td>
+<td>11.70% 
+</td>
+<td> 20.40%
+</td>
+<td>28.70%
+</td>
+<td>38.60%
+</td>
+<tr>
+<td style="text-align:left">中型武器(移动)
+</td>
+<td>15.20%
+ </td>
+<td> 26.50%
+</td>
+<td>37.40%
+</td>
+<td>50.20%
+</td>
+</tr>
+<td style="text-align:left">重型武器(移动)
+</td>
+<td>19.30%
+ </td>
+<td> 33.70%
+</td>
+<td>47.50%
+</td>
+<td>63.90%
+</td>
+</tr>
+<tr>
+<th rowspan="3" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/SquidMove_Up.png" width="80" height="68"  ></a><br>游速提升
+</th>
+<td style="text-align:left">轻型武器
+</td>
+<td>6.1%
+</td>
+<td> 10.6%
+</td>
+<td>14.9%
+</td>
+<td>20.1%
+</td>
+<tr>
+<td style="text-align:left">中型武器
+</td>
+<td>7.60%
+ </td>
+<td> 13.20%
+</td>
+<td>18.70%
+</td>
+<td>25.10%
+</td>
+</tr>
+<td style="text-align:left">重型武器
+</td>
+<td>11.40%
+ </td>
+<td> 19.90%
+</td>
+<td>28.00%
+</td>
+<td>37.60%
+</td>
+</tr>
+<tr>
+<th rowspan="2" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/InkRecovery_Up.png" width="80" height="68"  ></a><br>墨水回复速度提升
+</th>
+<td style="text-align:left">乌贼形态
+</td>
+<td>10.60%
+</td>
+<td> 18.50%
+</td>
+<td>26.10%
+</td>
+<td>35.10%
+</td>
+<tr>
+<td style="text-align:left">人形态
+</td>
+<td>18.20%
+ </td>
+<td> 31.80%
+</td>
+<td>44.80%
+</td>
+<td>60.20%
+</td>
+</tr>
+</tr>
+<tr>
+<th rowspan="3" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/BombDamage_Reduction.png" width="80" height="68"  ></a><br>减轻炸弹影响
+</th>
+<td style="text-align:left">水球爆弹
+</td>
+<td>12.10%
+</td>
+<td> 21.20%
+</td>
+<td>29.90%
+</td>
+<td>40.20%
+</td>
+<tr>
+<td style="text-align:left">其他炸弹
+</td>
+<td>15.20%
+ </td>
+<td> 26.50%
+</td>
+<td>37.40%
+</td>
+<td>50.20%
+</td>
+</tr>
+<td style="text-align:left">必杀技
+</td>
+<td>10.60%
+ </td>
+<td>18.50%
+</td>
+<td>26.10%
+</td>
+<td>35.10%
+</td>
+</tr>
+<tr>
+<th rowspan="1" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/OpInkEffect_Reduction.png" width="80" height="68"  ></a><br>减少敌方墨水影响
+</th>
+<td style="text-align:center">-
+</td>
+<td>60.60%
+</td>
+<td> 105.90%
+</td>
+<td>149.40%
+</td>
+<td>200.80%
+</td>
+</tr>	
+<tr>
+<th rowspan="5" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/SpecialTime_Up.png" width="80" height="68"  ></a><br>提升特殊技性能
+</th>
+<td style="text-align:left">滚球爆弹
+</td>
+<td>12.10%
+</td>
+<td> 21.20%
+</td>
+<td>29.90%
+</td>
+<td>40.20%
+</td>
+<tr>
+<td style="text-align:left">发射器类
+</td>
+<td>15.20%
+ </td>
+<td> 26.50%
+</td>
+<td>37.40%
+</td>
+<td>50.20%
+</td>
+</tr>
+<tr>
+<td style="text-align:left">墨水护甲
+</td>
+<td>11.40%
+ </td>
+<td>19.90%
+</td>
+<td>28.00%
+</td>
+<td>37.60%
+</td>
+</tr>
+<tr>
+<td style="text-align:left">喷射背包/求雨器/高压射线
+</td>
+<td>7.60%
+ </td>
+<td>13.20%
+</td>
+<td>18.70%
+</td>
+<td>25.10%
+</td>
+</tr>
+<td style="text-align:left">超级着地
+</td>
+<td>8.30%
+ </td>
+<td>14.40%
+</td>
+<td>20.40%
+</td>
+<td>27.40%
+</td>
+</tr>
+<tr>
+<th rowspan="1" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/RespawnSpecialGauge_Save.png" width="80" height="68"  ></a><br>节约sp槽减少量
+</th>
+<td style="text-align:center">-
+</td>
+<td>10.90%
+</td>
+<td> 21.50%
+</td>
+<td>33.60%
+</td>
+<td>50.30%
+</td>
+</tr>
+<tr>
+<th rowspan="1" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/SpecialIncrease_Up.png" width="80" height="68"  ></a><br>提升sp槽增加量
+</th>
+<td style="text-align:center">-
+</td>
+<td>8.30%
+</td>
+<td> 13.70%
+</td>
+<td>18.30%
+</td>
+<td>23.10%
+</td>
+</tr>
+
+<tr>
+<th rowspan="1" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/MarkingTime_Reduction.png" width="80" height="68"  ></a><br>缩短被敌锁定时间
+</th>
+<td style="text-align:center">-
+</td>
+<td>27.3%
+</td>
+<td> 47.7%
+</td>
+<td>67.2%
+</td>
+<td>90.3%
+</td>
+</tr>
+
+<tr>
+<th rowspan="2" clospan="5">
+	<img alt="188px-S2_skills_Inkling_Girl.png" src="../common/assets/img/skills/JumpTime_Save.png" width="80" height="68"  ></a><br>缩短超级跳跃时间
+</th>
+<td style="text-align:center">蓄力时间(未装备技能为1.35秒)
+</td>
+<td>0.73秒
+</td>
+<td> 0.57秒
+</td>
+<td>0.45秒
+</td>
+<td>0.35秒
+</td>
+<tr>
+<td style="text-align:center">跳跃时间(未装备技能为3.65秒)
+</td>
+<td>3秒
+</td>
+<td> 2.75秒
+</td>
+<td>2.45秒
+</td>
+<td>1.95秒
+</td>	
+
+</tr>
+	
+</tr>
+
+
+ 	<tr>
+<th colspan="6"><img src="../common/assets/img/skills/Exorcist.png" width="80" height="68"  ><b>复活惩罚</b>
+</th>
+</tr>
+<tr>
+
+<th width="20%" colspan="2" rowspan="2">分类
+</th>
+<th width="20%" colspan="2" rowspan="2">重生时间
+	</th>
+<th width="20%" colspan="2" rowspan="2">特殊槽扣减量
+</th>
+</tr>
+<tr>
+</tr>
+<tr>
+<td colspan="2" >普通死亡(双方不涉及本技能)</td>
+<td colspan="2">8.4秒</td>
+<td colspan="2">50%</td>
+</tr>
+
+<tr>
+<td colspan="2" >被持有本技能的人杀死</td>
+<td colspan="2">9.2秒</td>
+<td colspan="2">65%</td>
+</tr>
+
+<tr>
+<td colspan="2" >持有本技能的人被别人杀死</td>
+<td colspan="2">9.6秒</td>
+<td colspan="2">72.5%</td>
+</tr>
+
+ 	<tr>
+<th colspan="6"><img src="../common/assets/img/skills/SquidMoveSpatter_Reduction.png" width="80" height="68"  ><b>乌贼忍者</b>
+</th>
+</tr>
+<tr>
+
+<th width="20%" colspan="2" rowspan="2">功效
+</th>
+<th width="20%" colspan="2" rowspan="2">负面效果
+	</th>
+<th width="20%" colspan="2" rowspan="2">负面效果补偿方法
+</th>
+</tr>
+<tr>
+</tr>
+<tr>
+<td colspan="2" >在非垂直表面游动时隐身</td>
+<td colspan="2">游速减少10%</td>
+<td colspan="2">穿带有提升游速<img   src="../common/assets/img/skills/SquidMove_Up.png" width="32" height="32"  >技能效果的服装，1主2辅助技能即可</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+
+ <br><br> <br><br>
+
+   <footer class="footer">
+        <div class="container">
+          <span>  整理者:疾风 数据参考splatoonwiki.org</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+    </body>
+    </html>

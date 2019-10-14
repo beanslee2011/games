@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+       <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
+ <tbody>
+ 	<tr>
+<th colspan="6"><b>主武器推荐</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">武器名称
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="10%" rowspan="2">类型
+</th>
+<th width="20%" rowspan="2">技能
+	</th>
+<th width="10%" rowspan="2">手感
+</th>
+<th  text-align:center;   width="10%" rowspan="2">推荐指数
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" class="image">
+	<img alt="Wst_Shooter_Normal_00.png" src="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" width="80" height="68"  ></a><br>喷溅射手
+</th>
+<td style="text-align:left">游戏初期就可获得的一把比较均衡的武器，副武器和特殊技都比较实用。绝对不要因为是初始武器而放弃使用~
+</td>
+<td>水枪
+</td>
+<td><img src="../common/assets/img/subspe/Wsb_Bomb_Quick.png" width="80" height="68"  ><img src="../common/assets/img/subspe/Wsp_SuperLanding.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" class="image">
+	<img alt="Wst_Shooter_Normal_00.png" src="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" width="80" height="68"  ></a><br>喷溅射手(定制版)
+</th>
+<td style="text-align:left">同上，游戏初期就可获得的一把比较均衡的武器，副武器变成了威力更大的三角雷，特殊技我总是掌握不好火候，经常被对手从空中给击落。<br>
+	所以对于我来说，我更喜欢用原版的~
+</td>
+<td>水枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Splash.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_Jetpack.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+ 
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_Expert_01.png" class="image">
+	<img alt="Wst_Shooter_Expert_01.png.png" src="../common/assets/img/weapons/Wst_Shooter_Expert_01.png" width="80" height="68"  ></a><br>鲨鱼枪(定制版)
+</th>
+<td style="text-align:left">远程攻击力较佳的武器，缺点是射速较慢，近距离对射是比较吃亏。<br>喜欢的原因是因为看到了一个高手的视频，使用特殊技爆炸泡泡在一个平台偷袭敌人，一下把对手4人全灭了
+</td>
+<td>水枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Suction.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_SuperBubble.png" width="80" height="68"  >
+</td>
+<td>★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_Blaze_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Shooter_Blaze_00.png" width="80" height="68"  ></a><br>银喷
+</th>
+<td style="text-align:left">近距离高射速武器，攻击力低的缺点可以用射速弥补了。<br>喜欢的原因是特殊技的冰壶炸弹扔起来贼爽，搅局专用
+</td>
+<td>水枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Suction.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_LauncherCurling.png" width="80" height="68"  >
+</td>
+<td>★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_QuickMiddle_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Shooter_QuickMiddle_00.png" width="80" height="68"  ></a><br>85枪
+</th>
+<td style="text-align:left">射距、射速均俱佳的武器。<br>特殊技的护甲对于团队而言是非常最实用的，关键时刻能够救你一命
+</td>
+<td>水枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Suction.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_SuperArmor.png" width="80" height="68"  >
+</td>
+<td>★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_Gravity_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Shooter_Gravity_00.png" width="80" height="68"  ></a><br>.52加仑
+</th>
+<td style="text-align:left">对枪时胜率很大的武器。<br>特殊技如果运用得当那简直真的可以碾压对手
+</td>
+<td>水枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_PointSensor.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_AquaBall.png" width="80" height="68"  >
+</td>
+<td>★★★★★
+</td>
+<td>★★★★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Twins_Dual_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Twins_Dual_00.png" width="80" height="68"  ></a><br>红双
+</th>
+<td style="text-align:left">可以做出闪避动作的同时还具备远射能力，缺点就是攻击力弱点。枪法差的朋友可以考虑用距离优势来补偿（我30多级前基本只用这把）<br>另外，当特殊技火箭炮瞄准4人的时候，那心情绝对是非常爽的
+</td>
+<td>双枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_PointSensor.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_SuperMissile.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Roller_Normal_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Roller_Normal_00.png" width="80" height="68"  ></a><br>中刷
+</th>
+<td style="text-align:left">操控感比较均衡的滚刷，记住新手尽量不要和中刷近距离正面刚。<br>在高手手中，能甩出花样的武器之一。<br>新手低头涂地也可以体验到背后推人的乐趣
+</td>
+<td>滚刷
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Curling.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_SuperLanding.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png" width="80" height="68"  ></a><br>高速泡泡枪(远泡)
+</th>
+<td style="text-align:left">射速慢，距离远，攻击力一般。<br>远程牵制、范围攻击专用，运用得当的话群杀扎堆的敌人那才叫爽。如果对自己的水平没自信，千万不要盲目冲到阵地最前方，被敌人突近可不是好玩的。
+</td>
+<td>泡泡枪
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_PoisonFog.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_RainCloud.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Slosher_Diffusion_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Slosher_Diffusion_00.png" width="80" height="68"  ></a><br>绿桶
+</th>
+<td style="text-align:left">泼墨神器，前提是练好了~~
+</td>
+<td>水桶
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Quick.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_SuperArmor.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/weapons/Wst_Roller_BrushNormal_00.png" class="image">
+	<img alt="Wst_Shooter_Blaze_00.png" src="../common/assets/img/weapons/Wst_Roller_BrushNormal_00.png" width="80" height="68"  ></a><br>北斋毛刷
+</th>
+<td style="text-align:left">和水桶一样，玩好了绝对炫酷拉风~~
+</td>
+<td>毛刷
+</td>
+<td><img  src="../common/assets/img/subspe/Wsb_Bomb_Robo.png" width="80" height="68"  > <img src="../common/assets/img/subspe/Wsp_Jetpack.png" width="80" height="68"  >
+</td>
+<td>★★★★
+</td>
+<td>★★★★★
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+ <br><br> <br><br>
+
+   <footer class="footer">
+        <div class="container">
+          <span>  整理者:疾风</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+    </body>
+    </html>

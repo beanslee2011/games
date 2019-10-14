@@ -7,17 +7,17 @@ function filter_available(item) {
 }
 
 var language_map = {
-	"ja_JP": "/splatoon2/",
-  "en_US": "/splatoon2/mode.html",
-  "ui":"/splatoon2/ui.html",
-   "fr_CA":"/splatoon2/mainwep.html",
-  "fr_FR": "/splatoon2/subwep.html",
-  "es_ES": "/splatoon2/skill.html",
-  "stage":"/splatoon2/stage.html",
-  "record":"/splatoon2/personal.html",
-  "es_MX": "/index.html",
-  "amiibo":"/splatoon2/amiibo.html",
-  "ability":"/splatoon2/ability.html"
+	"ja_JP": "/games/splatoon2/",
+  "en_US": "/games/splatoon2/mode.html",
+  "ui":"/games/splatoon2/ui.html",
+   "fr_CA":"/games/splatoon2/mainwep.html",
+  "fr_FR": "/games/splatoon2/subwep.html",
+  "es_ES": "/games/splatoon2/skill.html",
+  "stage":"/games/splatoon2/stage.html",
+  "record":"/games/splatoon2/personal.html",
+  "es_MX": "/games/index.html",
+  "amiibo":"/games/splatoon2/amiibo.html",
+  "ability":"/games/splatoon2/ability.html"
   
   
 }

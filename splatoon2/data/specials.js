@@ -3,7 +3,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Tenta Missiles",
       localizedName: {
-        "ja_JP": "追踪导弹",
+        "ja_JP": "导弹",
         "en_US": "Tenta Missiles",
         "en_GB": "Tenta Missiles",
         "es_ES": "Lanzamisiles",
@@ -22,7 +22,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Baller",
       localizedName: {
-        "ja_JP": "滚球爆弹",
+        "ja_JP": "仓鼠球",
         "en_US": "Baller",
         "en_GB": "Baller",
         "es_ES": "Esfera tintera",
@@ -41,7 +41,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Splashdown",
       localizedName: {
-        "ja_JP": "超级着地",
+        "ja_JP": "捶地",
         "en_US": "Splashdown",
         "en_GB": "Splashdown",
         "es_ES": "Salto explosivo",
@@ -60,7 +60,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Bubble Blower",
       localizedName: {
-        "ja_JP": "爆炸泡泡",
+        "ja_JP": "泡泡",
         "en_US": "Bubble Blower",
         "en_GB": "Bubble Blower",
         "es_ES": "Lanzapompas",
@@ -74,7 +74,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Ink Armor",
       localizedName: {
-        "ja_JP": "墨水装甲",
+        "ja_JP": "墨甲",
         "en_US": "Ink Armor",
         "en_GB": "Ink Armor",
         "es_ES": "Membrana",
@@ -89,7 +89,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Inkjet",
       localizedName: {
-        "ja_JP": "喷射背包",
+        "ja_JP": "飞机",
         "en_US": "Inkjet",
         "en_GB": "Inkjet",
         "es_ES": "Propulsor",
@@ -109,7 +109,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Sting Ray",
       localizedName: {
-        "ja_JP": "高压射线",
+        "ja_JP": "水枪",
         "en_US": "Sting Ray",
         "en_GB": "Sting Ray",
         "es_ES": "Rayo tintódico",
@@ -124,7 +124,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Ink Storm",
       localizedName: {
-        "ja_JP": "求雨器",
+        "ja_JP": "下雨",
         "en_US": "Ink Storm",
         "en_GB": "Ink Storm",
         "es_ES": "Atormentador",
@@ -139,7 +139,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Suction-Bomb Launcher",
       localizedName: {
-        "ja_JP": "吸盘炸弹",
+        "ja_JP": "粘弹rush",
         "en_US": "Suction-Bomb Launcher",
         "en_GB": "Suction-Bomb Launcher",
         "es_ES": "Bombardeos",
@@ -169,7 +169,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Splat-Bomb Launcher",
       localizedName: {
-        "ja_JP": "三角炸弹",
+        "ja_JP": "三角雷rush",
         "en_US": "Splat-Bomb Launcher",
         "en_GB": "Splat-Bomb Launcher",
         "es_ES": "Bombardeos",
@@ -184,7 +184,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Burst-Bomb Launcher",
       localizedName: {
-        "ja_JP": "水球爆弹",
+        "ja_JP": "水球rush",
         "en_US": "Burst-bomb Launcher",
         "en_GB": "Burst-bomb Launcher",
         "es_ES": "Bombardeos",
@@ -199,7 +199,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Curling-Bomb Launcher",
       localizedName: {
-        "ja_JP": "冰壶炸弹",
+        "ja_JP": "冰壶rush",
         "en_US": "Curling-bomb Launcher",
         "en_GB": "Curling-bomb Launcher",
         "es_ES": "Bombardeos deslizante",

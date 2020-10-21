@@ -3,7 +3,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Splat Bomb",
       localizedName: {
-        "ja_JP": "三角炸弹",
+        "ja_JP": "三角雷",
         "en_US": "Splat Bomb",
         "en_GB": "Splat Bomb",
         "es_ES": "Bomba básica",
@@ -23,7 +23,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Burst Bomb",
       localizedName: {
-        "ja_JP": "水球炸弹",
+        "ja_JP": "水球",
         "en_US": "Burst Bomb",
         "en_GB": "Burst Bomb",
         "es_ES": "Bomba rápida",
@@ -44,7 +44,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Suction Bomb",
       localizedName: {
-        "ja_JP": "吸盘炸弹",
+        "ja_JP": "粘弹",
         "en_US": "Suction Bomb",
         "en_GB": "Suction Bomb",
         "es_ES": "Bomba ventosa",
@@ -84,7 +84,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Curling Bomb",
       localizedName: {
-        "ja_JP": "冰壶炸弹",
+        "ja_JP": "冰壶",
         "en_US": "Curling Bomb",
         "en_GB": "Curling Bomb",
         "es_ES": "Bomba deslizante",
@@ -124,7 +124,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Squid Beakon",
       localizedName: {
-        "ja_JP": "传送雷达",
+        "ja_JP": "跳点(放置后按X可以让自己或队友跳到指定位置)",
         "en_US": "Squid Beakon",
         "en_GB": "Squid Beakon",
         "es_ES": "Baliza transportadora",
@@ -140,7 +140,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Sprinkler",
       localizedName: {
-        "ja_JP": "墨水喷撒器",
+        "ja_JP": "花洒",
         "en_US": "Sprinkler",
         "en_GB": "Sprinkler",
         "es_ES": "Aspersor",
@@ -156,7 +156,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Toxic Mist",
       localizedName: {
-        "ja_JP": "剧毒雾",
+        "ja_JP": "毒雾",
         "en_US": "Toxic Mist",
         "en_GB": "Toxic Mist",
         "es_ES": "Nebulizador",
@@ -172,7 +172,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Point Sensor",
       localizedName: {
-        "ja_JP": "追踪器",
+        "ja_JP": "套环(让附近的隐游失效)",
         "en_US": "Point Sensor",
         "en_GB": "Point Sensor",
         "es_ES": "Rastreador",
@@ -188,7 +188,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Splash Wall",
       localizedName: {
-        "ja_JP": "墨水屏障",
+        "ja_JP": "雨帘",
         "en_US": "Splash Wall",
         "en_GB": "Splash Wall",
         "es_ES": "Telón de Tinta",

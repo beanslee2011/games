@@ -439,7 +439,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_Precision_01.png",
           name: "Neo Splash-o-matic",
           localizedName: {
-            "ja_JP": "シャープマーカーネオ",
+            "ja_JP": "针管(贴牌)",
             "en_US": "Neo Splash-o-matic",
             "en_GB": "Neo Splash-o-matic",
             "es_ES": "Marcador fino neo",
@@ -681,7 +681,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_TripleQuick_01.png",
           name: "L-3 Nozzlenose D",
           localizedName: {
-            "ja_JP": "L3卷线枪D型",
+            "ja_JP": "L3卷线枪(贴牌)",
             "en_US": "L-3 Nozzlenose D",
             "en_GB": "L-3 Nozzlenose D",
             "es_ES": "Tintambor ligero D",
@@ -742,7 +742,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_TripleMiddle_01.png",
           name: "H-3 Nozzlenose D",
           localizedName: {
-            "ja_JP": "H3卷线枪D型",
+            "ja_JP": "H3卷线枪(贴牌)",
             "en_US": "H-3 Nozzlenose D",
             "en_GB": "H-3 Nozzlenose D",
             "es_ES": "Tintambor pesado D",
@@ -840,6 +840,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Foil Squeezer",
             "de_DE": "Foil Squeezer"
           },
+          unreleased: true,
           shotUnit: "一发",
           sub: "Splash Wall",
           special: "Sting Ray",
@@ -992,7 +993,7 @@ angular.module('splatApp').weapons = function ($scope) {
         },
         {
           image: "../common/assets/img/weapons/Wst_Twins_Dual_01.png",
-          name: "Custom Dualie Squelchers",
+          name: "红双(贴牌)",
           localizedName: {
             "ja_JP": "Custom Dualie Squelchers",
             "en_US": "Custom Dualie Squelchers",
@@ -1055,7 +1056,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Twins_Short_01.png",
           name: "Dapple Dualies Nouveau",
           localizedName: {
-            "ja_JP": "新机动双枪",
+            "ja_JP": "蓝牙刷",
             "en_US": "Dapple Dualies Nouveau",
             "en_GB": "Dapple Dualies Nouveau",
             "es_ES": "Dapple Dualies Nouveau",
@@ -1086,7 +1087,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Twins_Stepper_00.png",
           name: "Dark Tetra Dualies",
           localizedName: {
-            "ja_JP": "Dark Tetra Dualies",
+            "ja_JP": "气垫",
             "en_US": "Dark Tetra Dualies",
             "en_GB": "Dark Tetra Dualies",
             "es_ES": "Dark Tetra Dualies",
@@ -1115,7 +1116,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Twins_Stepper_01.png",
           name: "Light Tetra Dualies",
           localizedName: {
-            "ja_JP": "Light Tetra Dualies",
+            "ja_JP": "气垫(贴牌)",
             "en_US": "Light Tetra Dualies",
             "en_GB": "Light Tetra Dualies",
             "es_ES": "Light Tetra Dualies",
@@ -1398,7 +1399,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Roller_Heavy_01.png",
           name: "Gold Dynamo Roller",
           localizedName: {
-            "ja_JP": "重刷",
+            "ja_JP": "重刷（贴牌）",
             "en_US": "Gold Dynamo Roller",
             "en_GB": "Gold Dynamo Roller",
             "es_ES": "Dinamorrodillo T",
@@ -1596,7 +1597,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Roller_BrushNormal_H.png",
           name: "Herobrush Replica",
           localizedName: {
-            "ja_JP": "笔刷（英雄）",
+            "ja_JP": "英雄刷",
             "en_US": "Herobrush Replica",
             "en_GB": "Herobrush Replica",
             "es_ES": "Brocha de élite (réplica)",
@@ -1763,7 +1764,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_BlasterLong_00.png",
           name: "Range Blaster",
           localizedName: {
-            "ja_JP": "长泡",
+            "ja_JP": "长热泡",
             "en_US": "Range Blaster",
             "en_GB": "Range Blaster",
             "es_ES": "Teledevastador",
@@ -1793,7 +1794,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_BlasterLong_01.png",
           name: "Custom Range Blaste",
           localizedName: {
-            "ja_JP": "长泡(贴牌版)",
+            "ja_JP": "长热泡(贴牌版)",
             "en_US": "Custom Range Blaster",
             "en_GB": "Custom Range Blaster",
             "es_ES": "Teledevastador SP",
@@ -2139,7 +2140,7 @@ angular.module('splatApp').weapons = function ($scope) {
         },
         {
           image: "../common/assets/img/weapons/Wst_Umbrella_Normal_01.png",
-          name: "Sorella Brella",
+          name: "银伞",
           localizedName: { // TODO
             "ja_JP": "Sorella Brella",
             "en_US": "Sorella Brella",
@@ -2301,7 +2302,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Slosher_Strong_01.png",
           name: "Slosher Deco",
           localizedName: {
-            "ja_JP": "洗衣机(贴牌版）",
+            "ja_JP": "红桶(贴牌版）",
             "en_US": "Slosher Deco",
             "en_GB": "Slosher Deco",
             "es_ES": "Derramatic DX",
@@ -2830,7 +2831,7 @@ angular.module('splatApp').weapons = function ($scope) {
         },
         {
           image: "../common/assets/img/weapons/Wst_Charger_Keeper_01.png",
-          name: "Custom Goo Tuber",
+          name: "软管（贴牌）",
           localizedName: { // TODO
             "ja_JP": "Custom Goo Tuber",
             "en_US": "Custom Goo Tuber",
@@ -2891,7 +2892,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Charger_Light_01.png",
           name: "Bamboozler 14 Mk II",
           localizedName: {
-            "ja_JP": "竹狙-乙",
+            "ja_JP": "竹狙(贴牌)",
             "en_US": "Bamboozler 14 Mk II",
             "en_GB": "Bamboozler 14 Mk II",
             "es_ES": "Bambufusil 14-II",

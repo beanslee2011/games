@@ -64,7 +64,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Autobomb",
       localizedName: {
-        "ja_JP": "机器人炸弹",
+        "ja_JP": "小鸡",
         "en_US": "Autobomb",
         "en_GB": "Autobomb",
         "es_ES": "Robobomba",
@@ -104,7 +104,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Ink Mine",
       localizedName: {
-        "ja_JP": "地雷",
+        "ja_JP": "陷阱",
         "en_US": "Ink Mine",
         "en_GB": "Ink Mine",
         "es_ES": "Bomba Trampa",
@@ -124,7 +124,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Squid Beakon",
       localizedName: {
-        "ja_JP": "跳点(放置后按X可以让自己或队友跳到指定位置)",
+        "ja_JP": "跳点",
         "en_US": "Squid Beakon",
         "en_GB": "Squid Beakon",
         "es_ES": "Baliza transportadora",
@@ -172,7 +172,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Point Sensor",
       localizedName: {
-        "ja_JP": "套环(让附近的隐游失效)",
+        "ja_JP": "套环",
         "en_US": "Point Sensor",
         "en_GB": "Point Sensor",
         "es_ES": "Rastreador",

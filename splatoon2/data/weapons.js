@@ -111,10 +111,10 @@ angular.module('splatApp').weapons = function ($scope) {
             "ja_JP": "P90",
             "en_US": "Hero Shot Replica",
             "en_GB": "Hero Shot Replica",
-            "es_ES": "Pistola de Élite (réplica)",
+            "es_ES": "Pistola de élite (réplica)",
             "es_MX": "Rociador de élite réplica",
-            "fr_FR": "Lanceur héroïque (réplique)",
-            "fr_CA": "Liquéfi. héroïque (rép.)",
+            "fr_FR": "Lanceur héro?que (réplique)",
+            "fr_CA": "Liquéfi. héro?que (rép.)",
             "de_DE": "Heldenwaffe Replik"
           },
           shotUnit: "一发",
@@ -378,7 +378,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_Short_01.png",
           name: "Neo Sploosh-o-matic",
           localizedName: {
-            "ja_JP": "喇叭枪Neo",
+            "ja_JP": "喇叭枪(贴牌)",
             "en_US": "Neo Sploosh-o-matic",
             "en_GB": "Neo Sploosh-o-matic",
             "es_ES": "Marcador neo",
@@ -387,7 +387,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Marqueur lourd néo",
             "de_DE": "Neo Sploosh-o-matic"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Squid Beakon",
           special: "Tenta Missiles",
@@ -448,7 +448,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Marqueur léger néo",
             "de_DE": "Neo Splash-o-matic"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Burst Bomb",
           special: "Suction-Bomb Launcher",
@@ -569,7 +569,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Calibre 3000 chic",
             "de_DE": ".96 Gal Deco"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Splash Wall",
           special: "Splashdown",
@@ -690,7 +690,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Arroseur léger requin",
             "de_DE": "L-3 Nozzlenose D"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Burst Bomb",
           special: "Inkjet",
@@ -751,7 +751,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Arroseur lourd requin",
             "de_DE": "H-3 Nozzlenose D"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Sprinkler",
           special: "Ink Armor",
@@ -782,7 +782,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Squeezer",
             "de_DE": "Squeezer"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Splash Wall",
           special: "Sting Ray",
@@ -811,7 +811,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Foil Squeezer",
             "de_DE": "Foil Squeezer"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Splat Bomb",
           special: "Bubble Blower",
@@ -909,8 +909,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Dualie Replicas",
             "es_ES": "Difusor dual de élite (réplica)",
             "es_MX": "Difusor dual de élite réplica",
-            "fr_FR": "D. encreur héroïque (réplique)",
-            "fr_CA": "Double encreur héroïque (rép.)",
+            "fr_FR": "D. encreur héro?que (réplique)",
+            "fr_CA": "Double encreur héro?que (rép.)",
             "de_DE": "Helden-Doubler Replik"
           },
           shotUnit: "一发",
@@ -1003,7 +1003,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Custom Dualie Squelchers",
             "de_DE": "Custom Dualie Squelchers"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Splat Bomb",
           special: "Ink Armor",
@@ -1064,7 +1064,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Dapple Dualies Nouveau",
             "de_DE": "Dapple Dualies Nouveau"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Toxic Mist",
           special: "Ink Storm",
@@ -1095,7 +1095,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Dark Tetra Dualies",
             "de_DE": "Dark Tetra Dualies"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Autobomb",
           special: "Splashdown",
@@ -1124,7 +1124,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Light Tetra Dualies",
             "de_DE": "Light Tetra Dualies"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Sprinkler",
           special: "Splat-Bomb Launcher",
@@ -1181,7 +1181,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Glooga Dualies Deco",
             "de_DE": "Glooga Dualies Deco"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Splash Wall",
           special: "Baller",
@@ -1252,8 +1252,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Roller Replica",
             "es_ES": "Rodillo de élite (réplica)",
             "es_MX": "Rodillo de élite réplica",
-            "fr_FR": "Rouleau héroïque (réplique)",
-            "fr_CA": "Rouleau héroïque (rép.)",
+            "fr_FR": "Rouleau héro?que (réplique)",
+            "fr_CA": "Rouleau héro?que (rép.)",
             "de_DE": "Helden-Roller Replik"
           },
           shotUnit: "一甩",
@@ -1346,7 +1346,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Rouleau carbone chic",
             "de_DE": "Carbon Roller Deco" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一甩",
           sub: "Sprinkler",
           special: "Inkjet",
@@ -1407,7 +1407,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Dynamo-rouleau pro",
             "de_DE": "Gold Dynamo Roller" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一甩",
           sub: "Toxic Mist",
           special: "Ink Armor",
@@ -1467,7 +1467,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_FR": "Foil Flingza Roller",
             "fr_CA": "Foil Flingza Roller"
           },
-          unreleased: true,
+          
           shotUnit: "一甩",
           sub: "Suction Bomb",
           special: "Tenta Missiles",
@@ -1495,8 +1495,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "en_GB": "Brushes",
         "es_ES": "Brochas",
         "es_MX": "Brochas",
-        "fr_FR": "Épinceau",
-        "fr_CA": "Épinceau",
+        "fr_FR": "épinceau",
+        "fr_CA": "épinceau",
         "de_DE": "Brushes"
       },
       id: 3,
@@ -1510,8 +1510,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Inkbrush",
             "es_ES": "Pincel",
             "es_MX": "Pincel",
-            "fr_FR": "Épinceau",
-            "fr_CA": "Épinceau",
+            "fr_FR": "épinceau",
+            "fr_CA": "épinceau",
             "de_DE": "Quasto"
           },
           shotUnit: "一甩",
@@ -1540,11 +1540,11 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Inkbrush Nouveau",
             "es_ES": "Pincel maestro",
             "es_MX": "Pincel maestro",
-            "fr_FR": "Épinceau nuancé",
-            "fr_CA": "Épinceau nuancé",
+            "fr_FR": "épinceau nuancé",
+            "fr_CA": "épinceau nuancé",
             "de_DE": "Inkbrush Nouveau" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一甩",
           sub: "Ink Mine",
           special: "Baller",
@@ -1571,8 +1571,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Octobrush",
             "es_ES": "Brocha",
             "es_MX": "Brocha",
-            "fr_FR": "Épinceau brosse",
-            "fr_CA": "Épinceau brosse",
+            "fr_FR": "épinceau brosse",
+            "fr_CA": "épinceau brosse",
             "de_DE": "Kalligraf"
           },
           shotUnit: "一甩",
@@ -1601,8 +1601,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Herobrush Replica",
             "es_ES": "Brocha de élite (réplica)",
             "es_MX": "Pincel caligrafía de élite réplica",
-            "fr_FR": "Épinceau héroïque (réplique)",
-            "fr_CA": "Épinceau héroïque (rép.)",
+            "fr_FR": "épinceau héro?que (réplique)",
+            "fr_CA": "épinceau héro?que (rép.)",
             "de_DE": "Helden-Pinsel Replik"
           },
           shotUnit: "一甩",
@@ -1631,11 +1631,11 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Octobrush Nouveau",
             "es_ES": "Brocha maestra",
             "es_MX": "Pincel caligrafía maestro",
-            "fr_FR": "Épinceau brosse nuancé",
-            "fr_CA": "Épinceau brosse nuancé",
+            "fr_FR": "épinceau brosse nuancé",
+            "fr_CA": "épinceau brosse nuancé",
             "de_DE": "Octobrush Nouveau" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一甩",
           sub: "Squid Beakon",
           special: "Tenta Missiles",
@@ -1663,8 +1663,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "en_GB": "Blasters",
         "es_ES": "Devastadors",
         "es_MX": "Lanzamotas",
-        "fr_FR": "Éclablaster",
-        "fr_CA": "Éclablasteur",
+        "fr_FR": "éclablaster",
+        "fr_CA": "éclablasteur",
         "de_DE": "Blasters"
       },
       id: 4,
@@ -1678,8 +1678,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Blaster",
             "es_ES": "Devastador",
             "es_MX": "Lanzamotas",
-            "fr_FR": "Éclablaster",
-            "fr_CA": "Éclablasteur",
+            "fr_FR": "éclablaster",
+            "fr_CA": "éclablasteur",
             "de_DE": "Blaster"
           },
           shotUnit: "一发",
@@ -1708,8 +1708,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Blaster Replica",
             "es_ES": "Devastador de élite (réplica)",
             "es_MX": "Lanzamotas de élite réplica",
-            "fr_FR": "Blaster héroïque (réplique)",
-            "fr_CA": "Éclablasteur héroïque (rép.)",
+            "fr_FR": "Blaster héro?que (réplique)",
+            "fr_CA": "éclablasteur héro?que (rép.)",
             "de_DE": "Helden-Blaster Replik"
           },
           shotUnit: "一发",
@@ -1738,8 +1738,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Custom Blaster",
             "es_ES": "Devastador SP",
             "es_MX": "Lanzamotas adaptado",
-            "fr_FR": "Éclablaster modifié",
-            "fr_CA": "Éclablasteur modifié",
+            "fr_FR": "éclablaster modifié",
+            "fr_CA": "éclablasteur modifié",
             "de_DE": "Blaster SE"
           },
           shotUnit: "一发",
@@ -1768,11 +1768,11 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Range Blaster",
             "es_ES": "Teledevastador",
             "es_MX": "Telelanzamotas",
-            "fr_FR": "Éclablaster XL",
-            "fr_CA": "Éclablasteur LP",
+            "fr_FR": "éclablaster XL",
+            "fr_CA": "éclablasteur LP",
             "de_DE": "Range Blaster" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Suction Bomb",
           special: "Ink Storm",
@@ -1798,11 +1798,11 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Custom Range Blaster",
             "es_ES": "Teledevastador SP",
             "es_MX": "Telelanzamotas adaptado",
-            "fr_FR": "Éclablaster XL griffé",
-            "fr_CA": "Éclablasteur LP modifié",
+            "fr_FR": "éclablaster XL griffé",
+            "fr_CA": "éclablasteur LP modifié",
             "de_DE": "Custom Range Blaster" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Burst Bomb",
           special: "Sting Ray",
@@ -1862,7 +1862,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Turboblasteur chic",
             "de_DE": "Rapid Blaster Deco"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Suction Bomb",
           special: "Inkjet",
@@ -1884,7 +1884,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png",
           name: "Rapid Blaster Pro",
           localizedName: {
-            "ja_JP": "短泡",
+            "ja_JP": "长泡",
             "en_US": "Rapid Blaster Pro",
             "en_GB": "Rapid Blaster Pro",
             "es_ES": "Superdevastador",
@@ -1914,7 +1914,7 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Shooter_BlasterLightLong_01.png",
           name: "Rapid Blaster Pro Deco",
           localizedName: {
-            "ja_JP": "短泡(贴牌版)",
+            "ja_JP": "长泡(贴牌版)",
             "en_US": "Rapid Blaster Pro Deco",
             "en_GB": "Rapid Blaster Pro Deco",
             "es_ES": "Superdevastador DX",
@@ -1923,7 +1923,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Turboblasteur pro chic",
             "de_DE": "Rapid Blaster Pro Deco"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Curling Bomb",
           special: "Ink Armor",
@@ -1984,7 +1984,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Proxiblasteur néo",
             "de_DE": "Luna Blaster Neo"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Ink Mine",
           special: "Suction-Bomb Launcher",
@@ -2044,7 +2044,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_FR": "Rafablaster Néo",
             "fr_CA": "Rafalblasteur Néo"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Sprinkler",
           special: "Tenta Missiles",
@@ -2116,8 +2116,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Brella Replica",
             "es_ES": "Paratintas de élite (réplica)",
             "es_MX": "Paratintas de élite réplica",
-            "fr_FR": "Para-encre héroïque (réplique)",
-            "fr_CA": "Para-encre héroïque (rép.)",
+            "fr_FR": "Para-encre héro?que (réplique)",
+            "fr_CA": "Para-encre héro?que (rép.)",
             "de_DE": "Helden-Pluviator Replik"
           },
           shotUnit: "一发",
@@ -2149,7 +2149,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_FR": "Sorella Brella",
             "fr_CA": "Sorella Brella"
           },
-          unreleased: true,
+          
           shotUnit: "一发",
           sub: "Toxic Mist",
           special: "Splat-Bomb Launcher",
@@ -2276,8 +2276,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Slosher Replica",
             "es_ES": "Derramatic de élite (réplica)",
             "es_MX": "Derramatic de élite réplica",
-            "fr_FR": "Seauceur héroïque (réplique)",
-            "fr_CA": "Seauceur héroïque (rép.)",
+            "fr_FR": "Seauceur héro?que (réplique)",
+            "fr_CA": "Seauceur héro?que (rép.)",
             "de_DE": "Helden-Schwapper Replik"
           },
           shotUnit: "一击",
@@ -2310,7 +2310,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Seauceur chic",
             "de_DE": "Slosher Deco"
           },
-          unreleased: true,
+          
           shotUnit: "一击",
           sub: "Sprinkler",
           special: "Baller",
@@ -2371,7 +2371,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Seauceur nuancé",
             "de_DE": "Tri-Slosher Nouveau"
           },
-          unreleased: true,
+          
           shotUnit: "一击",
           sub: "Splat Bomb",
           special: "Autobomb Launcher",
@@ -2432,7 +2432,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Encrifugeur néo",
             "de_DE": "Sloshing Machine Neo" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "一击",
           sub: "Point Sensor",
           special: "Splat-Bomb Launcher",
@@ -2504,8 +2504,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Charger Replica",
             "es_ES": "Cargatintas de élite (réplica)",
             "es_MX": "Cargatintas de élite réplica",
-            "fr_FR": "Conc. héroïque (réplique)",
-            "fr_CA": "Conc. héroïque (rép.)",
+            "fr_FR": "Conc. héro?que (réplique)",
+            "fr_CA": "Conc. héro?que (rép.)",
             "de_DE": "Helden-Konzentrator Replik"
           },
           shotUnit: "蓄力完成",
@@ -2658,7 +2658,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Lignizateur bêta",
             "de_DE": "Sepiator β" // TODO
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Autobomb",
           special: "Baller",
@@ -2719,7 +2719,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "X-traceur + modifié",
             "de_DE": "Custom E-liter 4K" //TODO
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Squid Beakon",
           special: "Bubble Blower",
@@ -2780,7 +2780,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "X-traceur + modifié",
             "de_DE": "Custom E-liter 4K Scope" //TODO
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Squid Beakon",
           special: "Bubble Blower",
@@ -2841,7 +2841,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Custom Goo Tuber",
             "de_DE": "Custom Goo Tuber"
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Curling Bomb",
           special: "Inkjet",
@@ -2900,7 +2900,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Bimbamboum Mk II",
             "de_DE": "Bamboozler 14 Mk II"
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Toxic Mist",
           special: "Burst-Bomb Launcher",
@@ -2971,8 +2971,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Hero Splatling Replica",
             "es_ES": "Tintralladora de élite (réplica)",
             "es_MX": "Garabateador de élite réplica",
-            "fr_FR": "Badigeon. héroïque (réplique)",
-            "fr_CA": "Badigeonneur héroïque (rép.)",
+            "fr_FR": "Badigeon. héro?que (réplique)",
+            "fr_CA": "Badigeonneur héro?que (rép.)",
             "de_DE": "Helden-Splatling Replik"
           },
           shotUnit: "蓄力完成",
@@ -3065,7 +3065,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Badigeonneur XP Leviathus",
             "de_DE": "Zink Mini Splatling" //TODO
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Curling Bomb",
           special: "Ink Storm",
@@ -3124,7 +3124,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Exteinteur modifié",
             "de_DE": "Custom Hydra Splatling" //TODO
           },
-          unreleased: true,
+          
           shotUnit: "蓄力完成",
           sub: "Ink Mine",
           special: "Splashdown",

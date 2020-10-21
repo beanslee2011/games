@@ -183,7 +183,7 @@ angular.module('splatApp').skills = function ($scope) {
     {
       name:"Special Power Up",
       localizedName: {
-        "ja_JP": "提升特殊技能性能",
+        "ja_JP": "提升大招性能",
         "en_US": "Special Power Up",
         "en_GB": "Special Power Up",
         "es_ES": "Superarma especial",
@@ -293,7 +293,7 @@ angular.module('splatApp').skills = function ($scope) {
     {
       name:"Ninja Squid",
       localizedName: {
-        "ja_JP": "乌贼忍者（潜行看不易被发现）",
+        "ja_JP": "隐游（潜行隐身）",
         "en_US": "Ninja Squid",
         "en_GB": "Ninja Squid",
         "es_ES": "Ninjalamar",
@@ -357,7 +357,7 @@ angular.module('splatApp').skills = function ($scope) {
     {
       name:"Stealth Jump",
       localizedName: {
-        "ja_JP": "超级跳隐形",
+        "ja_JP": "超级跳隐形(否则跳跃时地图上会有敌人也能看到的标记)",
         "en_US": "Stealth Jump",
         "en_GB": "Stealth Jump",
         "es_ES": "Supersalto invisible",

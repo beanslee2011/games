@@ -5472,7 +5472,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Enperry Splat Dualies",
           "localizedName": {
             "ja_JP": "スプラマニューバーコラボ",
-            "en_US": "银双",
+            "en_US": "金双",
             "en_GB": "Enperry Splat Dualies",
             "es_ES": "Difusor dual B",
             "es_MX": "Difusor dual Emperi",

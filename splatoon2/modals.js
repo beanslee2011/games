@@ -9,7 +9,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div class="col-md-12">
     <div class="card neonstripes" id="dialog">
     <div class="row cardheader">
-    Weapon Picker
+    武器选择
     </div>
     <div class="row">
     <div class="col-md-4">

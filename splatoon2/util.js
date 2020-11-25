@@ -8,12 +8,12 @@ function filter_available(item) {
 
 var language_map = {
   "en_US": "splatoon2/index.html",
-  "fr_FR": "splatoon2/subwep.html",
+  "fr_FR": "games/splatoon2/subwep.html",
   "ja_JP": "splatoon2/mode.html",
   "fr_CA": "splatoon2/skill.html",
   "es_ES": "splatoon2/ui.html",
   "es_MX": "splatoon2/mainwep.html",
-  "homex": "index.html",
+  "homex": "games/index.html",
   "it_IT": "splatoon2/ability.html",
   "zh_HK": "splatoon2/amiibo.html",
   "record": "splatoon2/personal.html",

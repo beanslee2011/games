@@ -609,7 +609,7 @@ angular
           var value = $scope.loadout.weapon.dashSpeed;
           var percentage = 0.0;
           var label = "{value} DU/f".format({value: value.toFixed(2)});
-          var desc = "Roll Speed for Rollers is constant.";
+          var desc = "对于滚刷武器而言速度是常数.";
 
           if(saveStat) {
             $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
@@ -639,7 +639,7 @@ angular
             var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
             var percentage = ((result/min_param - 1) * 100).toFixed(1);            
             var label = "{value} DU/f".format({value: $scope.toFixedTrimmed(result,4)});
-            var desc = "Brush Speed is affected by Main Power Up.";
+            var desc = "笔刷武器的速度受主强技能影响.";
 
             if(saveStat) {
               $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
@@ -684,7 +684,7 @@ angular
         var value = run_speed;
         var percentage = delta;
         var label = "{value} DU/f".format({value: $scope.toFixedTrimmed(value,4)});
-        var desc = "Distance Units/frame";
+        var desc = "距离单位/帧(DU/f)";
 
         if(isNaN(value)) {
           value = 0;
@@ -762,7 +762,7 @@ angular
         var value = run_speed;
         var percentage = delta;
         var label = "{value} DU/f".format({value: $scope.toFixedTrimmed(run_speed,4)});
-        var desc = "Distance Units/frame";        
+        var desc = "距离单位/帧(DU/f)";        
 
         if(saveStat) {
           $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
@@ -799,7 +799,7 @@ angular
         var value = run_speed;
         var percentage = delta;
         var label = "{value} DU/f".format({value: $scope.toFixedTrimmed(run_speed,4)});
-        var desc = "Distance Units/frame";
+        var desc = "距离单位/帧(DU/f)";
 
         if(saveStat) {
           $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
@@ -835,7 +835,7 @@ angular
         var value = run_speed;
         var percentage = delta;
         var label = "{value} DU/f".format({value: $scope.toFixedTrimmed(run_speed,4)});
-        var desc = "Distance Units/frame";
+        var desc = "距离单位/帧(DU/f)";
 
         if(saveStat) {
           $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
@@ -863,7 +863,7 @@ angular
         var name = "大招槽充能速度";
         var value = special_charge_speed;
         var percentage = ((special_charge_speed*100) - 100).toFixed(1);
-        var desc = "{value}p for special".format({value: Math.ceil($scope.loadout.weapon.specialCost / special_charge_speed)});
+        var desc = "大招需要{value}p ".format({value: Math.ceil($scope.loadout.weapon.specialCost / special_charge_speed)});
         var label = "{value}%".format({value: (value*100).toFixed(1)});
   
         if($scope.logging) {
@@ -1100,18 +1100,18 @@ angular
         if($scope.loadout.weapon.class == "Roller" || $scope.loadout.weapon.class == "Brush") {
           var costPerShot = $scope.loadout.weapon.inkPerShotRolling * reduction * 60;
           var name = "[+] 墨水消耗 (主武器): 滚压";
-          var desc = "{totalShots} to empty ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
           var label = "{value}/second".format({value: $scope.toFixedTrimmed(costPerShot,3)});
         }
         else {
           var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
           var name = "墨水消耗 (主武器)";
-          var desc = "{totalShots} to empty ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-          var label = "{value}% tank/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: $scope.loadout.weapon.shotUnit});
+          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: $scope.loadout.weapon.shotUnit});
         }
   
         if($scope.loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
-          var desc = "{totalShots} to empty ({reduction}% reduction)".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
+          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
         }
         
         var value = costPerShot;
@@ -1165,8 +1165,8 @@ angular
         var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
 
         var name = "[+] 墨水消耗 (主武器)";
-        var desc = "{totalShots} to empty ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-        var label = "{value}% tank/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "flick"});
+        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "拍"});
         var value = costPerShot;
         var percentage = (100 - (reduction*100)).toFixed(1);
 
@@ -1207,8 +1207,8 @@ angular
         var costPerShot = $scope.loadout.weapon.horizontalInkPerShot * reduction;
 
         var name = "[+] 墨水消耗 (主武器): 横拍";
-        var desc = "{totalShots} to empty ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-        var label = "{value}% tank/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "horizontal flick"});
+        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "横拍"});
         var value = costPerShot;
         var percentage = (100 - (reduction*100)).toFixed(1);
 
@@ -1249,8 +1249,8 @@ angular
         var costPerShot = $scope.loadout.weapon.verticalInkPerShot * reduction;
 
         var name = "[+] 墨水消耗 (主武器): 竖拍";
-        var desc = "{totalShots} to empty ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-        var label = "{value}% tank/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "vertical flick"});
+        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "竖拍"});
         var value = costPerShot;
         var percentage = (100 - (reduction*100)).toFixed(1);
 
@@ -1309,8 +1309,8 @@ angular
         }
   
         var name = "墨水消耗 (副武器)";
-        var desc = "{reduction}% reduction".format({reduction: (100 - (reduction*100)).toFixed(1)})
-        var label = "{value}% tank".format({value: $scope.toFixedTrimmed(costPerSub,3)})      
+        var desc = "{reduction}% 减少".format({reduction: (100 - (reduction*100)).toFixed(1)})
+        var label = "{value}% 罐".format({value: $scope.toFixedTrimmed(costPerSub,3)})      
         var value = costPerSub;
         var percentage = (100 - (reduction*100)).toFixed(1);
   
@@ -1352,7 +1352,7 @@ angular
         var name = "墨水恢复速度 (乌贼形态)";
         var value = delta;
         var percentage = (100 - (100 / delta) * 100).toFixed(1);
-        var desc = "{value}s from empty to full".format({value: refill_time.toFixed(2)})
+        var desc = "{value}s 从空到满".format({value: refill_time.toFixed(2)})
         var label = "{value}s".format({value: refill_time.toFixed(2)})
         
         return $scope.statValuesToDict(name, value, percentage, label, desc);       
@@ -1388,7 +1388,7 @@ angular
         var name = "墨水恢复速度 (人形)";
         var value = delta;
         var percentage = (100 - (100 / delta) * 100).toFixed(1);
-        var desc = "{value}s from empty to full".format({value: refill_time.toFixed(2)})      
+        var desc = "{value}s 从空到满".format({value: refill_time.toFixed(2)})      
         var label = "{value}s".format({value: refill_time.toFixed(2)})
 
         return $scope.statValuesToDict(name, value, percentage, label, desc);     

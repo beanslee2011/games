@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Splat2";
-  src: url(/common/assets/fonts/Splatfont2.woff) format("woff"),
-  url(/common/assets/fonts/Splatfont2.ttf)
+  src: url(/common/assets/fonts/msyh.ttc) format("woff"),
+  url(/common/assets/fonts/msyh.ttc)
 }
 
 #logo {

@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Splat1";
-  src: url(../assets/fonts/Splatfont.woff) format("woff"),
-  url(../assets/fonts/Splatfont.ttf)
+  src: url(../assets/fonts/msyh.ttc) format("woff"),
+  url(../assets/fonts/msyh.ttc)
 }
 
 @font-face {
   font-family: "Splat2";
-  src: url(../assets/fonts/Splatfont2.woff) format("woff"),
-  url(../assets/fonts/Splatfont2.ttf)
+  src: url(../assets/fonts/msyh.ttc) format("woff"),
+  url(../assets/fonts/msyh.ttc)
 }
 
 html {

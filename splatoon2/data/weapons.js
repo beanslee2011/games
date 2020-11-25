@@ -522,8 +522,8 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Splattershot",
           "localizedName": {
             "ja_JP": "スプラシューターベッチュー",
-            "en_US": "Kensa Splattershot",
-            "en_GB": "小绿(他牌)",
+            "en_US": "小绿(他牌)",
+            "en_GB": "Kensa Splattershot",
             "es_ES": "Lanzatintas elegante",
             "es_MX": "Rociador Tonken",
             "fr_FR": "Liquidateur K",
@@ -1417,7 +1417,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Foil Squeezer",
           "localizedName": {
             "ja_JP": "香槟枪(贴牌)",
-            "en_US": "Foil Squeezer",
+            "en_US": "香槟枪(贴牌)",
             "en_GB": "Foil Squeezer",
             "es_ES": "Tintopresor B",
             "es_MX": "Tintopresor Foil",
@@ -4123,7 +4123,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Slosher",
           "localizedName": {
             "ja_JP": "バケットスロッシャー",
-            "en_US": "Slosher",
+            "en_US": "红桶",
             "en_GB": "Slosher",
             "es_ES": "Derramatic",
             "es_MX": "Derramatic",
@@ -4169,7 +4169,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Slosher Deco",
           "localizedName": {
             "ja_JP": "バケットスロッシャーデコ",
-            "en_US": "Slosher Deco",
+            "en_US": "红桶(贴牌)",
             "en_GB": "Slosher Deco",
             "es_ES": "Derramatic DX",
             "es_MX": "Derramatic chic",
@@ -4215,7 +4215,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Soda Slosher",
           "localizedName": {
             "ja_JP": "バケットスロッシャーソーダ",
-            "en_US": "Soda Slosher",
+            "en_US": "苏打桶",
             "en_GB": "Soda Slosher",
             "es_ES": "Derramatic centella",
             "es_MX": "Derramatic burbujeante",
@@ -4261,7 +4261,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Hero Slosher Replica",
           "localizedName": {
             "ja_JP": "ヒーロースロッシャー レプリカ",
-            "en_US": "Hero Slosher Replica",
+            "en_US": "英雄桶",
             "en_GB": "Hero Slosher Replica",
             "es_ES": "Derramatic de élite (réplica)",
             "es_MX": "Derramatic de élite réplica",

@@ -13,7 +13,7 @@ var language_map = {
   "fr_CA": "splatoon2/skill.html",
   "es_ES": "splatoon2/ui.html",
   "es_MX": "splatoon2/mainwep.html",
-  "homex": "",
+  "homex": "/index.html",
   "it_IT": "splatoon2/ability.html",
   "zh_HK": "splatoon2/amiibo.html",
   "record": "splatoon2/personal.html",

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+  <link rel="stylesheet" href="../common/style/rzslider.css"></link>
+  <script src="../common/lib/rzslider.js"></script>  
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+     
+
+    <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
+ <tbody>
+ 	<tr>
+<th colspan="3">
+<p align="left">1.初始得到的服装通常有1-3个孔，不足3个孔的可以在海胆处用祭典或每次升级所得的海螺扩孔</p>
+ <p align="left">2.可以在广场上按A查看其他人的服装并操作预定，然后第二天在海胆处领取</p>
+ <p align="left">3.可以在海胆处使用技能碎片强行填充或替换指定孔中的技能</p>	
+</th>
+</tr>
+
+	 <tr>
+<th colspan="3"><b>服装品牌对技能获取的影响</b>
+</th>
+</tr>
+<tr>
+<th  rowspan="2">品牌
+</th>
+
+<th width="30%" rowspan="2">易获取技能
+</th>
+<th width="30%" rowspan="2">难获取技能
+	</th>
+ 
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/brands/B00.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B00.png" width="80" height="68"  ></a><br>SquidForce
+</th>
+<td><a href="../common/assets/img/skills/OpInkEffect_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/OpInkEffect_Reduction.png" width="80" height="68"  ></a><br>敌方墨水影响减轻
+</td>
+<td><a href="../common/assets/img/skills/MainInk_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/MainInk_Save.png" width="80" height="68"  ></a><br>主武器墨水效率提升
+</td>
+ 
+</tr>
+<tr>
+<th><a href="../common/assets/img/brands/B02.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B02.png" width="80" height="68"  ></a><br>Krak-On
+</th>
+<td><a href="../common/assets/img/skills/SquidMove_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SquidMove_Up.png" width="80" height="68"  ></a><br>潜行速度提升
+</td>
+<td><a href="../common/assets/img/skills/BombDamage_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/BombDamage_Reduction.png" width="80" height="68"  ></a><br>炸弹伤害减轻
+</td>
+ 
+</tr>
+<tr>
+<th><a href="../common/assets/img/brands/B01.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B01.png" width="80" height="68"  ></a><br>Zink
+</th>
+<td><a href="../common/assets/img/skills/JumpTime_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/JumpTime_Save.png" width="80" height="68"  ></a><br>超级跳跃时间缩短
+</td>
+<td><a href="../common/assets/img/skills/RespawnTime_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/RespawnTime_Save.png" width="80" height="68"  ></a><br>复活时间缩短
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B03.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B03.png" width="80" height="68"  ></a><br>Rokenberg
+</th>
+<td><a href="../common/assets/img/skills/HumanMove_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/HumanMove_Up.png" width="80" height="68"  ></a><br>人形速度提升
+</td>
+<td><a href="../common/assets/img/skills/SquidMove_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SquidMove_Up.png" width="80" height="68"  ></a><br>潜行速度提升
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B04.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B04.png" width="80" height="68"  ></a><br>Zekko
+</th>
+<td><a href="../common/assets/img/skills/RespawnSpecialGauge_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/RespawnSpecialGauge_Save.png" width="80" height="68"  ></a><br>sp计量减少量下降
+</td>
+<td><a href="../common/assets/img/skills/SpecialIncrease_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SpecialIncrease_Up.png" width="80" height="68"  ></a><br>sp计量增加量上升
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B05.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B05.png" width="80" height="68"  ></a><br>Forge
+</th>
+<td><a href="../common/assets/img/skills/SpecialTime_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SpecialTime_Up.png" width="80" height="68"  ></a><br>sp性能提升
+</td>
+<td><a href="../common/assets/img/skills/SubInk_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SubInk_Save.png" width="80" height="68"  ></a><br>副武器墨水效率提升
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B06.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B06.png" width="80" height="68"  ></a><br>Firefin
+</th>
+<td><a href="../common/assets/img/skills/SubInk_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SubInk_Save.png" width="80" height="68"  ></a><br>副武器墨水效率提升
+</td>
+<td><a href="../common/assets/img/skills/SubInk_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/InkRecovery_Up.png" width="80" height="68"  ></a><br>墨水回复速度提升
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B07.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B07.png" width="80" height="68"  ></a><br>Skalop
+</th>
+<td><a href="../common/assets/img/skills/RespawnTime_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/RespawnTime_Save.png" width="80" height="68"  ></a><br>复活时间缩短
+</td>
+<td><a href="../common/assets/img/skills/RespawnSpecialGauge_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/RespawnSpecialGauge_Save.png" width="80" height="68"  ></a><br>sp计量减少量下降
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B08.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B08.png" width="80" height="68"  ></a><br>Splash Mob
+</th>
+<td><a href="../common/assets/img/skills/MainInk_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/MainInk_Save.png" width="80" height="68"  ></a><br>主武器墨水效率提升
+</td>
+<td><a href="../common/assets/img/skills/HumanMove_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/HumanMove_Up.png" width="80" height="68"  ></a><br>人形速度提升
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B09.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B09.png" width="80" height="68"  ></a><br>InkLine
+</th>
+<td><a href="../common/assets/img/skills/BombDamage_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/BombDamage_Reduction.png" width="80" height="68"  ></a><br>炸弹伤害减轻
+</td>
+<td><a href="../common/assets/img/skills/MarkingTime_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/MarkingTime_Reduction.png" width="80" height="68"  ></a><br>被敌锁定时间缩短
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B10.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B10.png" width="80" height="68"  ></a><br>TentaTek
+</th>
+<td><a href="../common/assets/img/skills/InkRecovery_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/InkRecovery_Up.png" width="80" height="68"  ></a><br>墨水回复速度提升
+</td>
+<td><a href="../common/assets/img/skills/JumpTime_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/JumpTime_Save.png" width="80" height="68"  ></a><br>超级跳跃时间缩短
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B11.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B11.png" width="80" height="68"  ></a><br>TakoRoka
+</th>
+<td><a href="../common/assets/img/skills/SpecialIncrease_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SpecialIncrease_Up.png" width="80" height="68"  ></a><br>sp计量增加量上升
+</td>
+<td><a href="../common/assets/img/skills/SpecialTime_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/SpecialTime_Up.png" width="80" height="68"  ></a><br>sp性能提升
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B15.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B15.png" width="80" height="68"  ></a><br>AnnaKi
+</th>
+<td><a href="../common/assets/img/skills/MarkingTime_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/MarkingTime_Reduction.png" width="80" height="68"  ></a><br>被敌锁定时间缩短
+</td>
+<td><a href="../common/assets/img/skills/RespawnSpecialGauge_Save.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/RespawnSpecialGauge_Save.png" width="80" height="68"  ></a><br>sp计量减少量下降
+</td>
+ 
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/brands/B16.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B16.png" width="80" height="68"  ></a><br>Enperry
+</th>
+<td><a href="../common/assets/img/skills/BombDistance_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/BombDistance_Up.png" width="80" height="68"  ></a><br>副武器性能上升
+</td>
+<td><a href="../common/assets/img/skills/OpInkEffect_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/OpInkEffect_Reduction.png" width="80" height="68"  ></a><br>敌方墨水影响减轻
+</td>
+ 
+</tr>
+<tr>
+<th><a href="../common/assets/img/brands/B17.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/brands/B17.png" width="80" height="68"  ></a><br>Tony Kensa
+</th>
+<td><a href="../common/assets/img/skills/MarkingTime_Reduction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/MarkingTime_Reduction.png" width="80" height="68"  ></a><br>被敌锁定时间缩短
+</td>
+<td><a href="../common/assets/img/skills/BombDistance_Up.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/skills/BombDistance_Up.png" width="80" height="68"  ></a><br>副武器性能上升
+</td>
+ 
+</tr>
+</tbody>
+</table>
+ 
+
+    <footer class="footer">
+        <div class="container">
+          <span>  <br><br><br>整理者:疾风</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+    </body>
+    </html>

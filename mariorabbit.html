@@ -1,0 +1,6914 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>疾风的游戏仓库 | 马里奥疯兔 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/smart_tab_vertical.css" rel="stylesheet" type="text/css"></link>
+ 
+
+       
+
+ 
+
+<script type="text/javascript">
+// tab
+
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+</script>
+
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+ 
+</style>
+
+     
+<style>
+*{padding:0px; margin:0px;}
+body{ background:#f0f0f0;}
+/*登录*/
+.tab_box{width:100%;background:#fff; margin:0 auto;}
+
+.mbbox{  width:100%; height:50px; line-height:50px;}
+.mbbox li{ width:25%; height:50px;float:left;display:block;text-align:center;cursor:pointer; margin-right:0px;background:#f8f8f8;color:#000;font:normal 120%/2.5 "微软雅黑","宋体", Arial, sans-serif;}
+.mbbox .hover{background:#1d1a35;width:25%; height:50px;color:#fff;}
+.conbox{ clear:both; width:100%;overflow:hidden;padding:20px 20px;}
+.xtable td,th{border-top:1px solid #999;border-left:1px solid #999;border-bottom:1px solid #999;border-right:1px solid #999;   text-align:center;vertical-align: middle;  }
+.xtable {width:auto;word-break: break-all; word-wrap: break-word;border-collapse:collapse;overflow:auto;}
+.image img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+
+
+<style>
+ 
+		.containerz{
+			width: 800px;
+			margin: 0 auto;
+ 		}
+
+
+
+		ul.tabsz{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+ 		}
+		ul.tabsz li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		ul.tabsz li.current{
+			background: #ededed;
+			color: #222;
+		}
+
+		.tab-contentz{
+			display: none;
+			background: #FCFCFC	;
+			padding: 15px;
+			
+		}
+
+		.tab-contentz.current{
+			display: inherit;
+		}	
+	
+	</style>
+<!-- start gallery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+			
+	});	
+	</script>
+<!-- Add fancyBox main JS and CSS files -->
+<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	
+ <script type='text/javascript'>
+  $(document).ready( function() {
+  
+  	
+    $('#shareme').sharrre({
+      share: {
+        twitter: true,
+        facebook: true,
+        linkedin: true,
+        googlePlus: true
+      },
+      urlCurl: '',
+      enableTracking: true,
+      buttons: {
+        twitter: {count: 'vertical', via: 'alfajango'},
+        facebook: {layout: 'box_count'},
+        linkedin: {counter: 'top'},
+        googlePlus: {size: 'tall'}
+      },
+      hover: function(api, options){
+        $(api.element).find('.buttons').show();
+      },
+      hide: function(api, options){
+        $(api.element).find('.buttons').hide();
+      },
+      render: function() {
+        var $count = $('#shareme .count'),
+            count = parseFloat($count.text());
+
+        if (count < 10) {
+          $count.hide();
+          $('#shareme .share').width('300');
+        }
+      }
+    });
+  });
+</script>
+ 
+ 
+ 
+</head>
+<body>
+	
+ 
+  
+<!-- start header -->
+<div class="header_bg">
+
+<div class="wrap">
+	
+	<div class="header">
+ 		<div class="h_left">
+			<h2>欢迎来到疾风的游戏仓库.</h2>
+			<h3>一个70后玩家的回忆</h3>
+		</div>
+	
+	 
+ 		
+		<div class="h_right">
+			<ul class="menu">
+					<li  class="active"><a href="/">首页</a></li>
+				<li><a href="/">主机</a></li>
+				<li><a href="/">街机</a></li>
+				<li><a href="/">PC</a></li>
+				<li><a href="about.html">关于</a></li>
+				<li><a href="contact.html">联系方式</a></li>
+			</ul>
+		
+			<script src="js/classie.js"></script>
+		
+			<!-- start smart_nav * -->
+	        <nav class="nav">
+	            <ul class="nav-list">
+	                 <li class="nav-item"><a href="/">首页</a></li>
+	                <li class="nav-item"><a href="/">主机/a></li>
+	                <li class="nav-item"><a href="/">街机</a></li>
+	                <li class="nav-item"><a href="/">PC</a></li>
+	                 <li class="nav-item"><a href="about.html">关于</a></li>
+	                <li class="nav-item"><a href="contact.html">联系方式</a></li>
+	                <div class="clear"></div>
+	            </ul>
+	        </nav>
+	        <script type="text/javascript" src="js/responsive.menu.js"></script>
+			<!-- end smart_nav * -->
+		</div>
+		<div class="clear"></div>
+	</div>
+
+</div>
+</div>
+<!-- start main -->
+ <div class="main_bg">
+ 	<br>
+<div class="wrap_mr">
+	<br><br>
+	<div class="main">
+			<div  class="content">
+			<!--tab begin-->
+      <div class="tab_box">
+    	<div class="mbbox">
+            <ul>
+                <li id="mb1" onclick="setTab('mb',1,4)" class="hover" >主要角色</li>
+                <li id="mb2" onclick="setTab('mb',2,4)" >主武器</li>
+                <li id="mb3" onclick="setTab('mb',3,4)" >副武器</li>
+                <li id="mb4" onclick="setTab('mb',4,4)" >其他</li>
+            </ul>
+      </div><!--mbbox end-->	
+        <div class="conbox">
+            <div id="con_mb_1" width:150px;
+height:150px;
+overflow: scroll >
+               <table align="center" border="0" cellpadding="0" cellspacing="0">
+					       <tr>
+                   <td valign="top">
+                   <!-- Tabs -->
+								  		<div  id="tabsd" width:150px;
+height:150px;
+overflow: scroll >
+								  			<ul>
+								  				<li><a href="#tabs-1">任天堂<br />
+								            </a></li>
+								  				<li><a href="#tabs-2">育碧疯兔<br />
+								            </a></li>
+								  				 
+								  			</ul>
+  											<div id="tabs-1" width:150px;
+height:150px;
+overflow: scroll >
+            								<table class="xtable"   style="text-align:center; margin:auto"  >
+<tbody><tr>
+<th width="25%" style="background:#ff5959" colspan="3"><a title="Mario">马里奥</a>
+</th>
+<th width="25%" style="background:#90ff59" colspan="3"><a  title="Luigi">路易</a>
+</th>
+<th width="25%" style="background:#ffbb59" colspan="3"><a title="Yoshi">耀西</a>
+</th>
+<th width="25%" style="background:#ff8095" colspan="3"><a   title="Princess Peach">桃子公主</a>
+</th></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Mario_Stats.png" class="image_h"><img alt="MRKB Mario Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Mario_Stats.png" width="200" height="250" </a><!--srcset="/images/thumb/8/8e/MRKB_Mario_Stats.png/300px-MRKB_Mario_Stats.png 1.5x, /images/8/8e/MRKB_Mario_Stats.png 2x"></a> -->
+</td>
+<td style="background:#BBFF99" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Luigi_Stats.png" class="image_h"><img alt="MRKB Luigi Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Luigi_Stats.png" width="200" height="250" </a><!--srcset="/images/thumb/3/3c/MRKB_Luigi_Stats.png/300px-MRKB_Luigi_Stats.png 1.5x, /images/3/3c/MRKB_Luigi_Stats.png 2x"></a> -->
+</td>
+<td style="background:#ffd496" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Yoshi_Stats.png" class="image_h"><img alt="MRKB Yoshi Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Yoshi_Stats.png" width="200" height="250" </a><!--srcset="/images/thumb/9/90/MRKB_Yoshi_Stats.png/300px-MRKB_Yoshi_Stats.png 1.5x, /images/9/90/MRKB_Yoshi_Stats.png 2x"></a> -->
+</td>
+<td style="background:pink" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Peach_Stats.png" class="image_h"><img alt="MRKB Peach Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Peach_Stats.png" width="200" height="250" </a><!--srcset="/images/thumb/2/22/MRKB_Peach_Stats.png/300px-MRKB_Peach_Stats.png 1.5x, /images/2/22/MRKB_Peach_Stats.png 2x"></a> -->
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><i> 团队的核心人物，中近距离上具备高机动性的战士。</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><i>适合放在后方的远程攻击大师，优秀的机动性可以用在需要快速通过/撤离的关卡。</i>
+</td>
+<td style="background:#ffd496" colspan="3"><i>可以冲在前线的远程输出专家 </i>
+</td>
+<td style="background:pink" colspan="3"><i>能力比较均衡的角色</i>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">领队/战士</span>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">狙击手</span> 
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">Eggsploder</span>  
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">武士</span> 
+</td></tr>
+<tr>
+<td style="background:#ff9797"><small>进攻 ★★★★★</small>
+</td>
+<td style="background:#ff9797"><small>防守 ★★☆☆☆</small>
+</td>
+<td style="background:#ff9797"><small>机动性 ★★★☆☆</small>
+</td>
+<td style="background:#BBFF99"><small>进攻 ★★★★☆</small>
+</td>
+<td style="background:#BBFF99"><small>防守 ★☆☆☆☆</small>
+</td>
+<td style="background:#BBFF99"><small>机动性 ★★★★★</small>
+</td>
+<td style="background:#ffd496"><small>进攻 ★★★★★</small>
+</td>
+<td style="background:#ffd496"><small>防守 ★★☆☆☆</small>
+</td>
+<td style="background:#ffd496"><small>机动性 ★★★☆☆</small>
+</td>
+<td style="background:pink"><small>进攻 ★★★☆☆</small>
+</td>
+<td style="background:pink"><small>防守 ★★★☆☆</small>
+</td>
+<td style="background:pink"><small>机动性 ★★★★☆</small>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">体力</span> <br>220
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">体力</span> <br>130
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">体力</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">体力</span> <br>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>6格
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>6格
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>3格
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>3格
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">冲刺</span> <br>  20点
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">冲刺</span> <br> 20点
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">冲刺</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">冲刺</span> <br>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br><i>Cleansing Stomp</i><br>6格
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br><i>Double Cleansing Jump</i><br> 6格 (两次)
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br><i>Ground Pound</i>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br><i>Healing Jump</i>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>光线炮</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>近战</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>狙击枪</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>哨兵</i>
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>Rumblebang</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>Rocket</i>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>Boomshot</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>手榴弹</i>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Hero Sight</i><br>When triggered: 20-28 weapon DMG<br>3回合<br><i><span style="font-weight:bold;">副</span> </i><br><i>M-Power</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Steely Stare</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>Itchy Feet</i>
+</td>
+<td style="background:#ffd496" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Egg Beater</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>Super Chance</i>
+</td>
+<td style="background:pink" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Royal Gaze</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>Protection</i>
+</td>
+</tr>
+</tbody>
+</table> 
+            							 
+ 
+ 
+           									 
+           								
+        								</div>
+								  			<div id="tabs-2">
+								  				<table class="xtable" style="text-align:center; margin:auto"  >
+<tbody>             
+<tr>
+<th width="25%" style="background:#ff5959" colspan="3"><a   title="Rabbid Mario">疯兔马里奥</a>
+</th>
+<th width="25%" style="background:#90ff59" colspan="3"><a  title="Rabbid Luigi">疯兔路易</a>
+</th>
+<th width="25%" style="background:#ffbb59" colspan="3"><a   title="Rabbid Yoshi">疯兔耀西</a>
+</th>
+<th width="25%" style="background:#ff8095" colspan="3"><a  title="Rabbid Peach">疯兔桃子公主</a>
+</th></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Rabbid_Mario_Stats.png" class="image_h"><img alt="MRKB Rabbid Mario Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Rabbid_Mario_Stats.png" width="200" height="250" </a>
+</td>
+<td style="background:#BBFF99" colspan="3"><a href="common/assets/img/mariorabbits/hero/190px-MRKB_Rabbid_Luigi_Stats.png" class="image_h"><img alt="MRKB Rabbid Luigi Stats.png" src="common/assets/img/mariorabbits/hero/190px-MRKB_Rabbid_Luigi_Stats.png" width="190" height="238" </a><!--srcset="/images/thumb/0/05/MRKB_Rabbid_Luigi_Stats.png/285px-MRKB_Rabbid_Luigi_Stats.png 1.5x, /images/thumb/0/05/MRKB_Rabbid_Luigi_Stats.png/380px-MRKB_Rabbid_Luigi_Stats.png 2x"></a> -->
+</td>
+<td style="background:#ffd496" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Rabbid_Yoshi_Stats.png" class="image_h"><img alt="MRKB Rabbid Yoshi Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Rabbid_Yoshi_Stats.png" width="200" height="250" </a><!--srcset="/images/thumb/5/54/MRKB_Rabbid_Yoshi_Stats.png/300px-MRKB_Rabbid_Yoshi_Stats.png 1.5x, /images/5/54/MRKB_Rabbid_Yoshi_Stats.png 2x"></a> -->
+</td>
+<td style="background:pink" colspan="3"><a href="common/assets/img/mariorabbits/hero/200px-MRKB_Rabbid_Peach_Stats.png" class="image_h"><img alt="MRKB Rabbid Peach Stats.png" src="common/assets/img/mariorabbits/hero/200px-MRKB_Rabbid_Peach_Stats.png" width="200" height="250" </a><!--srcset="/images/thumb/5/52/MRKB_Rabbid_Peach_Stats.png/300px-MRKB_Rabbid_Peach_Stats.png 1.5x, /images/5/52/MRKB_Rabbid_Peach_Stats.png 2x"></a> -->
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><i>马里奥的强力替补</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><i>防守专家 </i>
+</td>
+<td style="background:#ffd496" colspan="3"><i>擅长利用远程重武器打击敌人 </i>
+</td>
+<td style="background:pink" colspan="3"><i>精通治疗</i>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">Brawler</span> 
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">法师</span> 
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">领队/战士</span> 
+</td>
+<td style="background:pink" colspan="3"><b>奶妈</b>
+</td></tr>
+<tr>
+<td style="background:#ff9797"> <small>进攻 ★★★★☆</small>
+</td>
+<td style="background:#ff9797"> <small>防守 ★★☆☆☆</small>
+</td>
+<td style="background:#ff9797"> <small>机动性 ★★★★☆</small>
+</td>
+<td style="background:#BBFF99"><small>进攻 ★★★☆☆</small>
+</td>
+<td style="background:#BBFF99"><small>防守 ★★★★☆</small>
+</td>
+<td style="background:#BBFF99"><small>机动性 ★★★☆☆</small>
+</td>
+<td style="background:#ffd496"><small>进攻 ★★★☆☆</small>
+</td>
+<td style="background:#ffd496"><small>防守 ★★★★☆</small>
+</td>
+<td style="background:#ffd496"><small>机动性 ★★★☆☆</small>
+</td>
+<td style="background:pink"><small>进攻 ★★☆☆☆</small>
+</td>
+<td style="background:pink"><small>防守 ★★★★★</small>
+</td>
+<td style="background:pink"><small>机动性 ★★★☆☆</small>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">体力</span> <br>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">体力</span> <br>200
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">体力</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">体力</span> <br>220
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>6格
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">移动范围</span> <br>6格
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>3格
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">离开管道范围</span> <br>3格
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">冲刺</span> <br><i>Boom Dash</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">冲刺</span> <br><i>吸血滑铲</i><br>30点
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">冲刺</span> <br><i>三重滑铲</i>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">冲刺</span> <br><i>时尚滑铲</i><br>20点(两次)
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br> <br>6格
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">团队跳跃</span> <br> <br>6格
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>Boomshot</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>近战</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>Bworb</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>火箭</i>
+</td>
+<td style="background:#ffd496" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>Rumblebang</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>手榴弹</i>
+</td>
+<td style="background:pink" colspan="3"><span style="font-weight:bold;">武器</span> <br><i><span style="font-weight:bold;">主</span> </i><br><i>Blaster</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>哨兵</i>
+</td></tr>
+<tr>
+<td style="background:#ff9797" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Bodyguard</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>Magnet Dance</i>
+</td>
+<td style="background:#BBFF99" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Super Barrier</i><br>Immunity to Super Effects<br>2回合<br><i><span style="font-weight:bold;">副</span> </i><br><i>Weaken</i>
+</td>
+<td style="background:#ffd496" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Outer Shell</i><br><i><span style="font-weight:bold;">副</span> </i><br><i>Scaredy Rabbid</i>
+</td>
+<td style="background:pink" colspan="3"><b>技能</b><br><i><span style="font-weight:bold;">主</span> </i><br><i>Shield</i><br>Weapon DMG reduction: 40%<br>2回合<br><i><span style="font-weight:bold;">副</span> </i><br><i>治疗</i>
+</td>
+</tr>
+</tbody>
+</table>
+								           
+  										</div>
+  										</div>  	
+  									</td>
+									</tr>
+							</table>     
+            </div><!--mb1 end-->	
+            <div id="con_mb_2" style="display:none;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0">
+					       <tr>
+                   <td valign="top">
+                   <!-- Tabs -->
+								  		<div id="tabs2">
+								  			<ul>
+								  				<li><a href="#tabs-1">光线炮<br />
+								            </a></li>
+								  				<li><a href="#tabs-2">狙击炮<br />
+								            </a></li>
+								  				<li><a href="#tabs-3">元素炮<br />
+								             </a></li>
+								  				<li><a href="#tabs-4">机关炮<br />
+								            </a></li>
+								            <li><a href="#tabs-5">散弹炮<br />
+								            </a></li>
+								  			</ul>
+  											<div id="tabs-1">
+            						<div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-1">马里奥</li>
+														<li class="tab-link" data-tab="tabz-2">疯兔公主</li>
+													  
+													</ul>	
+ 
+													<div style="overflow-x:auto; overflow-y:auto; " id="tabz-1" class="tab-contentz current">
+														<table class="xtable"  width="100%" border=1 style="text-align:center; margin: auto">
+<tbody>
+	<tr>
+<th colspan="9"><b>马里奥的光线炮</b>
+</th></tr>
+<tr>
+<th width="10%" rowspan="2">光线炮
+</th>
+<th  rowspan="2">说明
+</th>
+<th width="10%" rowspan="2">价格
+</th>
+<th  text-align:center;   width="10%" rowspan="2">命中伤害
+</th>
+<th width="10%" colspan="3">特殊效果
+</th>
+<th width="10%" rowspan="2">范围
+</th>
+<th width="10%" rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th width="10%">特殊加成
+</th>
+<th width="10%">伤害
+</th>
+<th width="10%">机率
+</th ></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Lightning_Shark.png" class="image"><img alt="MRKB Lightning Shark.png" src="common/assets/img/mariorabbits/80px-MRKB_Lightning_Shark.png"></a><br>Lightning Shark
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Hell_in_a_Shell.png" class="image"><img alt="MRKB Hell in a Shell.png" src="common/assets/img/mariorabbits/80px-MRKB_Hell_in_a_Shell.png" width="80" height="68" </a><!--srcset="/images/thumb/3/3b/MRKB_Hell_in_a_Shell.png/120px-MRKB_Hell_in_a_Shell.png 1.5x, /images/3/3b/MRKB_Hell_in_a_Shell.png 2x"></a> --><br>Hell in a Shell
+</th>
+<td>
+</td>
+<td>500
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td>42(反弹)
+</td>
+<td>10%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bwah_Blaster.png" class="image"><img alt="MRKB Bwah Blaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Bwah_Blaster.png" width="80" height="63" </a><!--srcset="/images/thumb/4/47/MRKB_Bwah_Blaster.png/120px-MRKB_Bwah_Blaster.png 1.5x, /images/4/47/MRKB_Bwah_Blaster.png 2x"></a> --><br>Bwah 光线炮
+</th>
+<td><i> </i>
+</td>
+<td>520
+</td>
+<td>25-35
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>42(反弹)
+</td>
+<td>10%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Rumble_Bee.png" class="image"><img alt="MRKB Rumble Bee.png" src="common/assets/img/mariorabbits/80px-MRKB_Rumble_Bee.png" width="80" height="68" </a><!--srcset="/images/thumb/0/03/MRKB_Rumble_Bee.png/120px-MRKB_Rumble_Bee.png 1.5x, /images/0/03/MRKB_Rumble_Bee.png 2x"></a> --><br>Rumble Bee
+</th>
+<td><i> </i>
+</td>
+<td>520
+</td>
+<td>25-35
+</td>
+<td>对抗Ziggies +20% 伤害
+</td>
+<td>42(蜂蜜)
+</td>
+<td>10%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Piranha_Pelter.png" class="image"><img alt="MRKB Piranha Pelter.png" src="common/assets/img/mariorabbits/80px-MRKB_Piranha_Pelter.png" width="80" height="67" </a><!--srcset="/images/thumb/c/c0/MRKB_Piranha_Pelter.png/120px-MRKB_Piranha_Pelter.png 1.5x, /images/c/c0/MRKB_Piranha_Pelter.png 2x"></a> --><br>Piranha Pelter
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>30-40
+</td>
+<td> —
+</td>
+<td>52(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Piston_Panic.png" class="image"><img alt="MRKB Piston Panic.png" src="common/assets/img/mariorabbits/80px-MRKB_Piston_Panic.png" width="80" height="67" </a><!--srcset="/images/thumb/f/f4/MRKB_Piston_Panic.png/120px-MRKB_Piston_Panic.png 1.5x, /images/f/f4/MRKB_Piston_Panic.png 2x"></a> --><br>Piston Panic
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>30-40
+</td>
+<td> —
+</td>
+<td>52(反弹)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Flame_Job.png" class="image"><img alt="MRKB Flame Job.png" src="common/assets/img/mariorabbits/80px-MRKB_Flame_Job.png" width="80" height="68" </a><!--srcset="/images/thumb/6/60/MRKB_Flame_Job.png/120px-MRKB_Flame_Job.png 1.5x, /images/6/60/MRKB_Flame_Job.png 2x"></a> --><br>Flame Job
+</th>
+<td><i> </i>
+</td>
+<td>amiibo
+</td>
+<td>30-40
+</td>
+<td>对抗 Small  +15% 机率
+</td>
+<td>52(反弹)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_The_Fragmenter.png" class="image"><img alt="MRKB The Fragmenter.png" src="common/assets/img/mariorabbits/80px-MRKB_The_Fragmenter.png" width="80" height="69" </a><!--srcset="/images/thumb/3/30/MRKB_The_Fragmenter.png/120px-MRKB_The_Fragmenter.png 1.5x, /images/3/30/MRKB_The_Fragmenter.png 2x"></a> --><br>The Fragmenter
+</th>
+<td><i>像素武器</i>
+</td>
+<td>550
+</td>
+<td>30-40
+</td>
+<td>对抗 Ziggies +30% 机率
+</td>
+<td>60(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Yellow_Submarine.png" class="image"><img alt="MRKB Yellow Submarine.png" src="common/assets/img/mariorabbits/80px-MRKB_Yellow_Submarine.png" width="80" height="68" </a><!--srcset="/images/thumb/a/af/MRKB_Yellow_Submarine.png/120px-MRKB_Yellow_Submarine.png 1.5x, /images/a/af/MRKB_Yellow_Submarine.png 2x"></a> --><br>Yellow Submarine
+</th>
+<td><i> 来自于Beatles乐队的歌曲Yellow Submarine</i>
+</td>
+<td>700
+</td>
+<td>55-65
+</td>
+<td> —
+</td>
+<td>85(反弹)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Matter_Splatter.png" class="image"><img alt="MRKB Matter Splatter.png" src="common/assets/img/mariorabbits/80px-MRKB_Matter_Splatter.png" width="80" height="68" </a><!--srcset="/images/thumb/b/b6/MRKB_Matter_Splatter.png/120px-MRKB_Matter_Splatter.png 1.5x, /images/b/b6/MRKB_Matter_Splatter.png 2x"></a> --><br>Matter Splatter
+</th>
+<td><i> 马银中的一个银河的名字</i>
+
+</td>
+<td>700
+</td>
+<td>55-65
+</td>
+<td> —
+</td>
+<td>85(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Golden_Bullet.png" class="image"><img alt="MRKB Golden Bullet.png" src="common/assets/img/mariorabbits/80px-MRKB_Golden_Bullet.png" width="80" height="68" </a><!--srcset="/images/thumb/6/6a/MRKB_Golden_Bullet.png/120px-MRKB_Golden_Bullet.png 1.5x, /images/6/6a/MRKB_Golden_Bullet.png 2x"></a> --><br>Golden Bullet
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>55-65
+</td>
+<td>对抗Mid-Bosses +15% 机率
+</td>
+<td>85(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bwahnzai_Bill.png" class="image"><img alt="MRKB Bwahnzai Bill.png" src="common/assets/img/mariorabbits/80px-MRKB_Bwahnzai_Bill.png" width="80" height="68" </a><!--srcset="/images/thumb/7/72/MRKB_Bwahnzai_Bill.png/120px-MRKB_Bwahnzai_Bill.png 1.5x, /images/7/72/MRKB_Bwahnzai_Bill.png 2x"></a> --><br>Bwahnzai Bill
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>55-65
+</td>
+<td>对抗Supporters +30% 机率
+</td>
+<td>85(反弹)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Chaw_Jaw.png" class="image"><img alt="MRKB Chaw Jaw.png" src="common/assets/img/mariorabbits/80px-MRKB_Chaw_Jaw.png" width="80" height="67" </a><!--srcset="/images/thumb/9/90/MRKB_Chaw_Jaw.png/120px-MRKB_Chaw_Jaw.png 1.5x, /images/9/90/MRKB_Chaw_Jaw.png 2x"></a> --><br>Chaw Jaw
+</th>
+<td>'<i> </i>
+</td>
+<td>800
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td>98(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Ceramic_Panic.png" class="image"><img alt="MRKB Ceramic Panic.png" src="common/assets/img/mariorabbits/80px-MRKB_Ceramic_Panic.png" width="80" height="68" </a><!--srcset="/images/thumb/f/fd/MRKB_Ceramic_Panic.png/120px-MRKB_Ceramic_Panic.png 1.5x, /images/f/fd/MRKB_Ceramic_Panic.png 2x"></a> --><br>Ceramic Panic
+</th>
+<td><i></i>
+</td>
+<td>800
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td>98(反弹)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Visceral_Vaporizer.png" class="image"><img alt="MRKB Visceral Vaporizer.png" src="common/assets/img/mariorabbits/80px-MRKB_Visceral_Vaporizer.png" width="80" height="69" </a><!--srcset="/images/thumb/8/88/MRKB_Visceral_Vaporizer.png/120px-MRKB_Visceral_Vaporizer.png 1.5x, /images/8/88/MRKB_Visceral_Vaporizer.png 2x"></a> --><br>Visceral Vaporizer
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>95-105
+</td>
+<td> —
+</td>
+<td>131(反弹)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Teeth_of_Tanooki.png" class="image"><img alt="MRKB Teeth of Tanooki.png" src="common/assets/img/mariorabbits/80px-MRKB_Teeth_of_Tanooki.png" width="80" height="67" </a><!--srcset="/images/thumb/c/cc/MRKB_Teeth_of_Tanooki.png/120px-MRKB_Teeth_of_Tanooki.png 1.5x, /images/c/cc/MRKB_Teeth_of_Tanooki.png 2x"></a> --><br>Teeth of Tanooki
+</th>
+<td><i>  </i>
+</td>
+<td>1000
+</td>
+<td>95-105
+</td>
+<td> —
+</td>
+<td>131(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Thorn_Scorn.png" class="image"><img alt="MRKB Thorn Scorn.png" src="common/assets/img/mariorabbits/80px-MRKB_Thorn_Scorn.png" width="80" height="68" </a><!--srcset="/images/thumb/1/18/MRKB_Thorn_Scorn.png/120px-MRKB_Thorn_Scorn.png 1.5x, /images/1/18/MRKB_Thorn_Scorn.png 2x"></a> --><br>Thorn Scorn
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>95-105
+</td>
+<td>对抗Valkyries +30% 机率
+</td>
+<td>131(反弹)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_War_Paint.png" class="image"><img alt="MRKB War Paint.png" src="common/assets/img/mariorabbits/80px-MRKB_War_Paint.png" width="80" height="68" </a><!--srcset="/images/thumb/8/84/MRKB_War_Paint.png/120px-MRKB_War_Paint.png 1.5x, /images/8/84/MRKB_War_Paint.png 2x"></a> --><br>War Paint
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>105-115
+</td>
+<td> —
+</td>
+<td>144(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Fat_Cat.png" class="image"><img alt="MRKB Fat Cat.png" src="common/assets/img/mariorabbits/80px-MRKB_Fat_Cat.png" width="80" height="67" </a><!--srcset="/images/thumb/a/a3/MRKB_Fat_Cat.png/120px-MRKB_Fat_Cat.png 1.5x, /images/a/a3/MRKB_Fat_Cat.png 2x"></a> --><br>Fat Cat
+</th>
+<td>来自于狸猫装
+</td>
+<td>1100
+</td>
+<td>105-115
+</td>
+<td> —
+</td>
+<td>144(反弹)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Grudge_Metal.png" class="image"><img alt="MRKB Grudge Metal.png" src="common/assets/img/mariorabbits/80px-MRKB_Grudge_Metal.png" width="80" height="69" </a><!--srcset="/images/thumb/2/2e/MRKB_Grudge_Metal.png/120px-MRKB_Grudge_Metal.png 1.5x, /images/2/2e/MRKB_Grudge_Metal.png 2x"></a> --><br>Grudge Metal
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>155-165
+</td>
+<td> —
+</td>
+<td>198(反弹)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Spider_Ignitor.png" class="image"><img alt="MRKB Spider Ignitor.png" src="common/assets/img/mariorabbits/80px-MRKB_Spider_Ignitor.png" width="80" height="68" </a><!--srcset="/images/thumb/6/67/MRKB_Spider_Ignitor.png/120px-MRKB_Spider_Ignitor.png 1.5x, /images/6/67/MRKB_Spider_Ignitor.png 2x"></a> --><br>Spider Ignitor
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>155-165
+</td>
+<td> —
+</td>
+<td>198(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Carpe_Die-em.png" class="image"><img alt="MRKB Carpe Die-em.png" src="common/assets/img/mariorabbits/80px-MRKB_Carpe_Die-em.png" width="80" height="68" </a><!--srcset="/images/thumb/e/e3/MRKB_Carpe_Die-em.png/120px-MRKB_Carpe_Die-em.png 1.5x, /images/e/e3/MRKB_Carpe_Die-em.png 2x"></a> --><br>Carpe Die-em
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>165-175
+</td>
+<td>对抗Valkyries +30% 机率
+</td>
+<td>210(反弹)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sons_of_Bwahnarchy.png" class="image"><img alt="MRKB Sons of Bwahnarchy.png" src="common/assets/img/mariorabbits/80px-MRKB_Sons_of_Bwahnarchy.png" width="80" height="68" </a><!--srcset="/images/thumb/a/a2/MRKB_Sons_of_Bwahnarchy.png/120px-MRKB_Sons_of_Bwahnarchy.png 1.5x, /images/a/a2/MRKB_Sons_of_Bwahnarchy.png 2x"></a> --><br>Sons of Bwahnarcy
+</th>
+<td> 
+ 
+</td>
+<td>1550
+</td>
+<td>165-175
+</td>
+<td>对抗Valkyries +30% 机率
+</td>
+<td>210(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Anvil.png" class="image"><img alt="MRKB Anvil.png" src="common/assets/img/mariorabbits/80px-MRKB_Anvil.png" width="80" height="67" </a><!--srcset="/images/thumb/6/6e/MRKB_Anvil.png/120px-MRKB_Anvil.png 1.5x, /images/6/6e/MRKB_Anvil.png 2x"></a> --><br>Anvil
+</th>
+<td> 
+</td>
+<td>1700
+</td>
+<td>220-230
+</td>
+<td> —
+</td>
+<td>271(反弹)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Flannel_Phenom.png" class="image"><img alt="MRKB Flannel Phenom.png" src="common/assets/img/mariorabbits/80px-MRKB_Flannel_Phenom.png" width="80" height="68" </a><!--srcset="/images/thumb/3/3f/MRKB_Flannel_Phenom.png/120px-MRKB_Flannel_Phenom.png 1.5x, /images/3/3f/MRKB_Flannel_Phenom.png 2x"></a> --><br>Flannel Phenom
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>220-230
+</td>
+<td> —
+</td>
+<td>271(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td>
+</tr>
+</tbody>
+</table>
+													</div>	
+													<div id="tabz-2" class="tab-contentz">
+														<table class="xtable"  width="100%" border=1 style="text-align:center; margin: auto">
+<tbody>
+<tr>
+<th colspan="9"><b>疯兔公主的光线炮</b>
+</th></tr>
+<tr>
+<th rowspan="2">光线炮
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Fuchsia_Fury.png" class="image"><img alt="MRKB Fuchsia Fury.png" src="common/assets/img/mariorabbits/80px-MRKB_Fuchsia_Fury.png" width="80" height="68" </a><!--srcset="/images/thumb/5/50/MRKB_Fuchsia_Fury.png/120px-MRKB_Fuchsia_Fury.png 1.5x, /images/5/50/MRKB_Fuchsia_Fury.png 2x"></a> --><br>Fuchsia Fury
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Red_Wasp.png" class="image"><img alt="MRKB Red Wasp.png" src="common/assets/img/mariorabbits/80px-MRKB_Red_Wasp.png" width="80" height="68" </a><!--srcset="/images/thumb/d/d4/MRKB_Red_Wasp.png/120px-MRKB_Red_Wasp.png 1.5x, /images/d/d4/MRKB_Red_Wasp.png 2x"></a> --><br>Red Wasp
+</th>
+<td><i> </i>
+</td>
+<td>500
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td>42(蜂蜜)
+</td>
+<td>10%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Rainbow_Runner.png" class="image"><img alt="MRKB Rainbow Runner.png" src="common/assets/img/mariorabbits/80px-MRKB_Rainbow_Runner.png" width="80" height="69" </a><!--srcset="/images/thumb/2/25/MRKB_Rainbow_Runner.png/120px-MRKB_Rainbow_Runner.png 1.5x, /images/2/25/MRKB_Rainbow_Runner.png 2x"></a> --><br>Rainbow Runner
+</th>
+<td>
+</td>
+<td>520
+</td>
+<td>25-35
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>42 (Push)
+</td>
+<td>10%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Barrel_Blaster.png" class="image"><img alt="MRKB Barrel Blaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Barrel_Blaster.png" width="80" height="69" </a><!--srcset="/images/thumb/5/5f/MRKB_Barrel_Blaster.png/120px-MRKB_Barrel_Blaster.png 1.5x, /images/5/5f/MRKB_Barrel_Blaster.png 2x"></a> --><br>Barrel 光线炮
+</th>
+<td><i>来自于大金刚开的一辆车</i>
+
+</td>
+<td>amiibo
+</td>
+<td>30-40
+</td>
+<td> 对抗 Small  +10% 机率
+</td>
+<td>52 (Push)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Retro_Deflator.png" class="image"><img alt="MRKB Retro Deflator.png" src="common/assets/img/mariorabbits/80px-MRKB_Retro_Deflator.png" width="80" height="69" </a><!--srcset="/images/thumb/3/3f/MRKB_Retro_Deflator.png/120px-MRKB_Retro_Deflator.png 1.5x, /images/3/3f/MRKB_Retro_Deflator.png 2x"></a> --><br>Retro Deflator
+</th>
+<td><i> .</i>
+</td>
+<td>550
+</td>
+<td>30-40
+</td>
+<td>对抗 Hoppers +30% 机率
+</td>
+<td>60(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Loaded_Question.png" class="image"><img alt="MRKB Loaded Question.png" src="common/assets/img/mariorabbits/80px-MRKB_Loaded_Question.png" width="80" height="68" </a><!--srcset="/images/thumb/0/05/MRKB_Loaded_Question.png/120px-MRKB_Loaded_Question.png 1.5x, /images/0/05/MRKB_Loaded_Question.png 2x"></a> --><br>Loaded Question
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>55-65
+</td>
+<td> —
+</td>
+<td>85(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Destruction_Zone.png" class="image"><img alt="MRKB Destruction Zone.png" src="common/assets/img/mariorabbits/80px-MRKB_Destruction_Zone.png" width="80" height="70" </a><!--srcset="/images/thumb/6/6b/MRKB_Destruction_Zone.png/120px-MRKB_Destruction_Zone.png 1.5x, /images/6/6b/MRKB_Destruction_Zone.png 2x"></a> --><br>Destruction Zone
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>55-65
+</td>
+<td> —
+</td>
+<td>85 (Push)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bling_Machine.png" class="image"><img alt="MRKB Bling Machine.png" src="common/assets/img/mariorabbits/80px-MRKB_Bling_Machine.png" width="80" height="68" </a><!--srcset="/images/thumb/9/90/MRKB_Bling_Machine.png/120px-MRKB_Bling_Machine.png 1.5x, /images/9/90/MRKB_Bling_Machine.png 2x"></a> --><br>Bling Machine
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>55-65
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>85 (Push)
+</td>
+<td>30
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Brute.png" class="image"><img alt="MRKB Brute.png" src="common/assets/img/mariorabbits/80px-MRKB_Brute.png" width="80" height="69" </a><!--srcset="/images/thumb/1/1f/MRKB_Brute.png/120px-MRKB_Brute.png 1.5x, /images/1/1f/MRKB_Brute.png 2x"></a> --><br>Brute
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>55-65
+</td>
+<td>对抗 Smashers +30% 机率
+</td>
+<td>85(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Pain_Sprayer.png" class="image"><img alt="MRKB Pain Sprayer.png" src="common/assets/img/mariorabbits/80px-MRKB_Pain_Sprayer.png" width="80" height="68" </a><!--srcset="/images/thumb/c/ca/MRKB_Pain_Sprayer.png/120px-MRKB_Pain_Sprayer.png 1.5x, /images/c/ca/MRKB_Pain_Sprayer.png 2x"></a> --><br>Pain Sprayer
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td>98(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Birchin%27_Urchin.png" class="image"><img alt="MRKB Birchin&#39; Urchin.png" src="common/assets/img/mariorabbits/80px-MRKB_Birchin&#39;_Urchin.png" width="80" height="72" </a><!--srcset="/images/thumb/8/8f/MRKB_Birchin%27_Urchin.png/120px-MRKB_Birchin%27_Urchin.png 1.5x, /images/8/8f/MRKB_Birchin%27_Urchin.png 2x"></a> --><br>Birchin' Urchin
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td>98 (Push)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Royal_Pain.png" class="image"><img alt="MRKB Royal Pain.png" src="common/assets/img/mariorabbits/80px-MRKB_Royal_Pain.png" width="80" height="69" </a><!--srcset="/images/thumb/6/64/MRKB_Royal_Pain.png/120px-MRKB_Royal_Pain.png 1.5x, /images/6/64/MRKB_Royal_Pain.png 2x"></a> --><br>Royal Pain
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>95-105
+</td>
+<td> —
+</td>
+<td>131(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Comet.png" class="image"><img alt="MRKB Comet.png" src="common/assets/img/mariorabbits/80px-MRKB_Comet.png" width="80" height="68" </a><!--srcset="/images/thumb/8/8a/MRKB_Comet.png/120px-MRKB_Comet.png 1.5x, /images/8/8a/MRKB_Comet.png 2x"></a> --><br>Comet
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>95-105
+</td>
+<td> —
+</td>
+<td>131 (Push)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_No_Pity_Kitty.png" class="image"><img alt="MRKB No Pity Kitty.png" src="common/assets/img/mariorabbits/80px-MRKB_No_Pity_Kitty.png" width="80" height="67" </a><!--srcset="/images/thumb/6/60/MRKB_No_Pity_Kitty.png/120px-MRKB_No_Pity_Kitty.png 1.5x, /images/6/60/MRKB_No_Pity_Kitty.png 2x"></a> --><br>No Pity Kitty
+</th>
+<td>来自于狸猫装
+</td>
+<td>1030
+</td>
+<td>95-105
+</td>
+<td>对抗Supporters +30% 机率
+</td>
+<td>131(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Camouflage_Corsage.png" class="image"><img alt="MRKB Camouflage Corsage.png" src="common/assets/img/mariorabbits/80px-MRKB_Camouflage_Corsage.png" width="80" height="68" </a><!--srcset="/images/thumb/8/87/MRKB_Camouflage_Corsage.png/120px-MRKB_Camouflage_Corsage.png 1.5x, /images/8/87/MRKB_Camouflage_Corsage.png 2x"></a> --><br>Camouflage Corsage
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>155-165
+</td>
+<td> —
+</td>
+<td>198(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Electron.png" class="image"><img alt="MRKB Electron.png" src="common/assets/img/mariorabbits/80px-MRKB_Electron.png" width="80" height="68" </a><!--srcset="/images/thumb/f/f9/MRKB_Electron.png/120px-MRKB_Electron.png 1.5x, /images/f/f9/MRKB_Electron.png 2x"></a> --><br>Electron
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>155-165
+</td>
+<td> —
+</td>
+<td>198 (Push)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Ballistic_Mystic.png" class="image"><img alt="MRKB Ballistic Mystic.png" src="common/assets/img/mariorabbits/80px-MRKB_Ballistic_Mystic.png" width="80" height="68" </a><!--srcset="/images/thumb/5/5f/MRKB_Ballistic_Mystic.png/120px-MRKB_Ballistic_Mystic.png 1.5x, /images/5/5f/MRKB_Ballistic_Mystic.png 2x"></a> --><br>Ballistic Mystic
+</th>
+<td><i> </i>
+</td>
+<td>1450
+</td>
+<td>155-165
+</td>
+<td>对抗Ziggies +20% 伤害
+</td>
+<td>198 (Push)
+</td>
+<td>50%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Run_For_The_Hills.png" class="image"><img alt="MRKB Run For The Hills.png" src="common/assets/img/mariorabbits/80px-MRKB_Run_For_The_Hills.png" width="80" height="68" </a><!--srcset="/images/thumb/f/f6/MRKB_Run_For_The_Hills.png/120px-MRKB_Run_For_The_Hills.png 1.5x, /images/f/f6/MRKB_Run_For_The_Hills.png 2x"></a> --><br>Run For The Hills
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>165-175
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>210(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Pay_The_Piper.png" class="image"><img alt="MRKB Pay The Piper.png" src="common/assets/img/mariorabbits/80px-MRKB_Pay_The_Piper.png" width="80" height="68" </a><!--srcset="/images/thumb/0/0c/MRKB_Pay_The_Piper.png/120px-MRKB_Pay_The_Piper.png 1.5x, /images/0/0c/MRKB_Pay_The_Piper.png 2x"></a> --><br>Pay The Piper
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>165-175
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>210 (Push)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Lucky_Devil.png" class="image"><img alt="MRKB Lucky Devil.png" src="common/assets/img/mariorabbits/80px-MRKB_Lucky_Devil.png" width="80" height="67" </a><!--srcset="/images/thumb/0/05/MRKB_Lucky_Devil.png/120px-MRKB_Lucky_Devil.png 1.5x, /images/0/05/MRKB_Lucky_Devil.png 2x"></a> --><br>Lucky Devil
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>220-230
+</td>
+<td> —
+</td>
+<td>271(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_New_Wave_Wrecker.png" class="image"><img alt="MRKB New Wave Wrecker.png" src="common/assets/img/mariorabbits/80px-MRKB_New_Wave_Wrecker.png" width="80" height="68" </a><!--srcset="/images/thumb/2/2f/MRKB_New_Wave_Wrecker.png/120px-MRKB_New_Wave_Wrecker.png 1.5x, /images/2/2f/MRKB_New_Wave_Wrecker.png 2x"></a> --><br>New Wave Wrecker
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>220-230
+</td>
+<td> —
+</td>
+<td>271 (Push)
+</td>
+<td>60%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td>
+</tr>
+</tbody>
+</table>
+											
+													</div>	
+												</div><!--containter2 end-->
+        								</div><!--pri weapon tabs-2 end -->
+					              <div id="tabs-2">
+					              	<table class="xtable"   width="100%" border=1 style="text-align:center; margin: auto" >
+<tbody>
+	<tr>
+<th colspan="9"><b>路易的狙击枪</b>
+</th></tr>
+<tr>
+<th  width="10%" rowspan="2">Precision
+</th>
+<th   width="20%"  rowspan="2">说明
+</th>
+<th width="10%"  rowspan="2">价格
+</th>
+<th width="10%"  rowspan="2">命中伤害
+</th>
+<th  colspan="3">特殊效果
+</th>
+<th width="10%"  rowspan="2">范围
+</th>
+<th width="10%"  rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th width="10%" >特殊加成
+</th>
+<th width="10%" >伤害
+</th>
+<th width="10%" >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Suction_Destruction.png" class="image"><img alt="MRKB Suction Destruction.png" src="common/assets/img/mariorabbits/80px-MRKB_Suction_Destruction.png" width="80" height="59" </a><!--srcset="/images/thumb/3/3c/MRKB_Suction_Destruction.png/120px-MRKB_Suction_Destruction.png 1.5x, /images/3/3c/MRKB_Suction_Destruction.png 2x"></a> --><br>Suction Destruction
+</th>
+<td> 
+</td>
+<td> —
+</td>
+<td>35-45
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Prime_Mover.png" class="image"><img alt="MRKB Prime Mover.png" src="common/assets/img/mariorabbits/80px-MRKB_Prime_Mover.png" width="80" height="55" </a><!--srcset="/images/thumb/b/bc/MRKB_Prime_Mover.png/120px-MRKB_Prime_Mover.png 1.5x, /images/b/bc/MRKB_Prime_Mover.png 2x"></a> --><br>Prime Mover
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>35-45
+</td>
+<td> —
+</td>
+<td>59(墨汁)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Muffler_Snuffler.png" class="image"><img alt="MRKB Muffler Snuffler.png" src="common/assets/img/mariorabbits/80px-MRKB_Muffler_Snuffler.png" width="80" height="55" </a><!--srcset="/images/thumb/a/a3/MRKB_Muffler_Snuffler.png/120px-MRKB_Muffler_Snuffler.png 1.5x, /images/a/a3/MRKB_Muffler_Snuffler.png 2x"></a> --><br>Muffler Snuffler
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>35-45
+</td>
+<td> —
+</td>
+<td>59(反弹)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Phosphorus.png" class="image"><img alt="MRKB Phosphorus.png" src="common/assets/img/mariorabbits/80px-MRKB_Phosphorus.png" width="80" height="59" </a><!--srcset="/images/thumb/2/23/MRKB_Phosphorus.png/120px-MRKB_Phosphorus.png 1.5x, /images/2/23/MRKB_Phosphorus.png 2x"></a> --><br>Phosphorus
+</th>
+<td><i> </i>
+</td>
+<td>amiibo
+</td>
+<td>35-45
+</td>
+<td>对抗Large  +15% 机率
+</td>
+<td>59(墨汁)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Boom_Broom.png" class="image"><img alt="MRKB Boom Broom.png" src="common/assets/img/mariorabbits/80px-MRKB_Boom_Broom.png" width="80" height="59" </a><!--srcset="/images/thumb/5/54/MRKB_Boom_Broom.png/120px-MRKB_Boom_Broom.png 1.5x, /images/5/54/MRKB_Boom_Broom.png 2x"></a> --><br>Boom Broom
+</th>
+<td><i> </i>
+</td>
+<td>570
+</td>
+<td>35-45
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>70(反弹)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Spike_Strike.png" class="image"><img alt="MRKB Spike Strike.png" src="common/assets/img/mariorabbits/80px-MRKB_Spike_Strike.png" width="80" height="58" </a><!--srcset="/images/thumb/a/ad/MRKB_Spike_Strike.png/120px-MRKB_Spike_Strike.png 1.5x, /images/a/ad/MRKB_Spike_Strike.png 2x"></a> --><br>Spike Strike
+</th>
+<td> 来自于Super_Mario 3D World   
+ 
+</td>
+<td>570
+</td>
+<td>35-45
+</td>
+<td>对抗Smashers +30% 机率
+</td>
+<td>59(反弹)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bozo_Blaster.png" class="image"><img alt="MRKB Bozo Blaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Bozo_Blaster.png" width="80" height="59" </a><!--srcset="/images/thumb/7/7e/MRKB_Bozo_Blaster.png/120px-MRKB_Bozo_Blaster.png 1.5x, /images/7/7e/MRKB_Bozo_Blaster.png 2x"></a> --><br>Bozo 光线炮
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td>98(墨汁)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Firefighter.png" class="image"><img alt="MRKB Firefighter.png" src="common/assets/img/mariorabbits/80px-MRKB_Firefighter.png" width="80" height="59" </a><!--srcset="/images/thumb/3/3b/MRKB_Firefighter.png/120px-MRKB_Firefighter.png 1.5x, /images/3/3b/MRKB_Firefighter.png 2x"></a> --><br>Firefighter
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td>98(反弹)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Golden_Touch.png" class="image"><img alt="MRKB Golden Touch.png" src="common/assets/img/mariorabbits/80px-MRKB_Golden_Touch.png" width="80" height="59" </a><!--srcset="/images/thumb/6/64/MRKB_Golden_Touch.png/120px-MRKB_Golden_Touch.png 1.5x, /images/6/64/MRKB_Golden_Touch.png 2x"></a> --><br>Golden Touch
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>65-75
+</td>
+<td>对抗Mid-Bosses +10% 机率
+</td>
+<td>98(墨汁)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Hog_Wild.png" class="image"><img alt="MRKB Hog Wild.png" src="common/assets/img/mariorabbits/80px-MRKB_Hog_Wild.png" width="80" height="59" </a><!--srcset="/images/thumb/d/dd/MRKB_Hog_Wild.png/120px-MRKB_Hog_Wild.png 1.5x, /images/d/dd/MRKB_Hog_Wild.png 2x"></a> --><br>Hog Wild
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>65-75
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>98(反弹)
+</td>
+<td>30%
+</td>
+<td>15格(远程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_HMS_Let%27s-A-Go.png" class="image"><img alt="MRKB HMS Let&#39;s-A-Go.png" src="common/assets/img/mariorabbits/80px-MRKB_HMS_Let&#39;s-A-Go.png" width="80" height="64" </a><!--srcset="/images/thumb/2/28/MRKB_HMS_Let%27s-A-Go.png/120px-MRKB_HMS_Let%27s-A-Go.png 1.5x, /images/2/28/MRKB_HMS_Let%27s-A-Go.png 2x"></a> --><br>HMS Let's-A-Go
+</th>
+<td>名字与马里奥和路易的口头禅"Let's-a go!"有关
+</td>
+<td>1000
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>156(墨汁)
+</td>
+<td>40%
+</td>
+<td>15格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Ryu.png" class="image"><img alt="MRKB Ryu.png" src="common/assets/img/mariorabbits/80px-MRKB_Ryu.png" width="80" height="60" </a><!--srcset="/images/thumb/7/75/MRKB_Ryu.png/120px-MRKB_Ryu.png 1.5x, /images/7/75/MRKB_Ryu.png 2x"></a> --><br>Ryu
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>156(反弹)
+</td>
+<td>40%
+</td>
+<td>15格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Stacker_Attacker.png" class="image"><img alt="MRKB Stacker Attacker.png" src="common/assets/img/mariorabbits/80px-MRKB_Stacker_Attacker.png" width="80" height="58" </a><!--srcset="/images/thumb/0/04/MRKB_Stacker_Attacker.png/120px-MRKB_Stacker_Attacker.png 1.5x, /images/0/04/MRKB_Stacker_Attacker.png 2x"></a> --><br>Stacker Attacker
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>125-135
+</td>
+<td> —
+</td>
+<td>169(墨汁)
+</td>
+<td>50%
+</td>
+<td>16格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Harvey_Brawlbanger.png" class="image"><img alt="MRKB Harvey Brawlbanger.png" src="common/assets/img/mariorabbits/80px-MRKB_Harvey_Brawlbanger.png" width="80" height="55" </a><!--srcset="/images/thumb/8/86/MRKB_Harvey_Brawlbanger.png/120px-MRKB_Harvey_Brawlbanger.png 1.5x, /images/8/86/MRKB_Harvey_Brawlbanger.png 2x"></a> --><br>Harvey Brawlbanger
+</th>
+<td> 
+</td>
+<td>1100
+</td>
+<td>125-135
+</td>
+<td> —
+</td>
+<td>169(反弹)
+</td>
+<td>50%
+</td>
+<td>16格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bagsniper.png" class="image"><img alt="MRKB Bagsniper.png" src="common/assets/img/mariorabbits/80px-MRKB_Bagsniper.png" width="80" height="59" </a><!--srcset="/images/thumb/2/2e/MRKB_Bagsniper.png/120px-MRKB_Bagsniper.png 1.5x, /images/2/2e/MRKB_Bagsniper.png 2x"></a> --><br>Bagsniper
+</th>
+<td> 
+</td>
+<td>1400
+</td>
+<td>185-195
+</td>
+<td> —
+</td>
+<td>234(墨汁)
+</td>
+<td>50%
+</td>
+<td>16格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Lil%27_Tikes_Load_n%27_Go.png" class="image"><img alt="MRKB Lil&#39; Tikes Load n&#39; Go.png" src="common/assets/img/mariorabbits/80px-MRKB_Lil&#39;_Tikes_Load_n&#39;_Go.png" width="80" height="59" </a><!--srcset="/images/thumb/e/e3/MRKB_Lil%27_Tikes_Load_n%27_Go.png/120px-MRKB_Lil%27_Tikes_Load_n%27_Go.png 1.5x, /images/e/e3/MRKB_Lil%27_Tikes_Load_n%27_Go.png 2x"></a> --><br>Lil' Tikes Load n' Go
+</th>
+<td> 
+</td>
+<td>1400
+</td>
+<td>185-195
+</td>
+<td> —
+</td>
+<td>234(反弹)
+</td>
+<td>50%
+</td>
+<td>16格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Luigi%27s_Longshot.png" class="image"><img alt="MRKB Luigi&#39;s Longshot.png" src="common/assets/img/mariorabbits/80px-MRKB_Luigi&#39;s_Longshot.png" width="80" height="55" </a><!--srcset="/images/thumb/9/90/MRKB_Luigi%27s_Longshot.png/120px-MRKB_Luigi%27s_Longshot.png 1.5x, /images/9/90/MRKB_Luigi%27s_Longshot.png 2x"></a> --><br>Luigi's Longshot
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>260-270
+</td>
+<td> —
+</td>
+<td>319(墨汁)
+</td>
+<td>60%
+</td>
+<td>17格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Denim_Destroyer.png" class="image"><img alt="MRKB Denim Destroyer.png" src="common/assets/img/mariorabbits/80px-MRKB_Denim_Destroyer.png" width="80" height="55" </a><!--srcset="/images/thumb/b/bf/MRKB_Denim_Destroyer.png/120px-MRKB_Denim_Destroyer.png 1.5x, /images/b/bf/MRKB_Denim_Destroyer.png 2x"></a> --><br>Denim Destroyer
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>260-270
+</td>
+<td> —
+</td>
+<td>319(反弹)
+</td>
+<td>60%
+</td>
+<td>17格(远程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Up_Close_%26_Personal.png" class="image"><img alt="MRKB Up Close &amp; Personal.png" src="common/assets/img/mariorabbits/80px-MRKB_Up_Close_&amp;_Personal.png" width="80" height="58" </a><!--srcset="/images/thumb/c/c6/MRKB_Up_Close_%26_Personal.png/120px-MRKB_Up_Close_%26_Personal.png 1.5x, /images/c/c6/MRKB_Up_Close_%26_Personal.png 2x"></a> --><br>Up Close &amp; Personal
+</th>
+<td><i> </i>
+</td>
+<td>2050
+</td>
+<td>270-280
+</td>
+<td>对抗Mid-Bosses +10% 机率
+</td>
+<td>330(墨汁)
+</td>
+<td>60%
+</td>
+<td>17格(远程)
+</td>
+<td>中
+</td>
+</tr>
+</tbody>
+</table>
+					              </div> <!--pri weapon luyi end-->
+					              <div id="tabs-3">
+					              	 	<table class="xtable" style="text-align:center; margin: auto">
+<tbody><tr>
+<th colspan="9"><b>疯兔路易的元素炮</b>
+</th></tr>
+<tr>
+<th width=10%  rowspan="2">元素炮
+</th>
+<th width=10%  rowspan="2">说明
+</th>
+<th  width=10% rowspan="2">价格
+</th>
+<th  width=10% rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th width=10%  rowspan="2">范围
+</th>
+<th width=10%  rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th width=10% >特殊加成
+</th>
+<th width=10% >伤害
+</th>
+<th width=10% >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Dwarf_Star.png" class="image"><img alt="MRKB Dwarf Star.png" src="common/assets/img/mariorabbits/80px-MRKB_Dwarf_Star.png" width="80" height="68" </a><!--srcset="/images/thumb/0/04/MRKB_Dwarf_Star.png/120px-MRKB_Dwarf_Star.png 1.5x, /images/0/04/MRKB_Dwarf_Star.png 2x"></a> --><br>Dwarf Star
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Slam-Held.png" class="image"><img alt="MRKB Slam-Held.png" src="common/assets/img/mariorabbits/80px-MRKB_Slam-Held.png" width="80" height="68" </a><!--srcset="/images/thumb/6/6f/MRKB_Slam-Held.png/120px-MRKB_Slam-Held.png 1.5x, /images/6/6f/MRKB_Slam-Held.png 2x"></a> --><br>Slam-Held
+</th>
+<td> 与NES的按键类似
+ 
+</td>
+<td>500
+</td>
+<td>20-30
+</td>
+<td> —
+</td>
+<td>36 (Push)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Turbine.png" class="image"><img alt="MRKB Turbine.png" src="common/assets/img/mariorabbits/80px-MRKB_Turbine.png" width="80" height="68" </a><!--srcset="/images/thumb/5/58/MRKB_Turbine.png/120px-MRKB_Turbine.png 1.5x, /images/5/58/MRKB_Turbine.png 2x"></a> --><br>Turbine
+</th>
+<td><i> </i>
+</td>
+<td>520
+</td>
+<td>20-30
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>36(燃烧)
+</td>
+<td>30%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Life%27s_a_Beech.png" class="image"><img alt="MRKB Life&#39;s a Beech.png" src="common/assets/img/mariorabbits/80px-MRKB_Life&#39;s_a_Beech.png" width="80" height="68" </a><!--srcset="/images/thumb/1/14/MRKB_Life%27s_a_Beech.png/120px-MRKB_Life%27s_a_Beech.png 1.5x, /images/1/14/MRKB_Life%27s_a_Beech.png 2x"></a> --><br>Life's a Beech
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td>46 (Push)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sugar_Rush.png" class="image"><img alt="MRKB Sugar Rush.png" src="common/assets/img/mariorabbits/80px-MRKB_Sugar_Rush.png" width="80" height="68" </a><!--srcset="/images/thumb/c/c2/MRKB_Sugar_Rush.png/120px-MRKB_Sugar_Rush.png 1.5x, /images/c/c2/MRKB_Sugar_Rush.png 2x"></a> --><br>Sugar Rush
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>25-35
+</td>
+<td> —
+</td>
+<td>46(燃烧)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Burning_Question.png" class="image"><img alt="MRKB Burning Question.png" src="common/assets/img/mariorabbits/80px-MRKB_Burning_Question.png" width="80" height="68" </a><!--srcset="/images/thumb/0/0f/MRKB_Burning_Question.png/120px-MRKB_Burning_Question.png 1.5x, /images/0/0f/MRKB_Burning_Question.png 2x"></a> --><br>Burning Question
+</th>
+<td> 来自Super Mario Bros中的方块
+  
+</td>
+<td>amiibo
+</td>
+<td>25-35
+</td>
+<td>对抗Small  +15% 机率
+</td>
+<td>46(燃烧)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_ASCII_Eradicator.png" class="image"><img alt="MRKB ASCII Eradicator.png" src="common/assets/img/mariorabbits/80px-MRKB_ASCII_Eradicator.png" width="80" height="67" </a><!--srcset="/images/thumb/c/c9/MRKB_ASCII_Eradicator.png/120px-MRKB_ASCII_Eradicator.png 1.5x, /images/c/c9/MRKB_ASCII_Eradicator.png 2x"></a> --><br>ASCII Eradicator
+</th>
+<td><i> DROK的ASCII代码？
+</p>
+</td>
+<td>550
+</td>
+<td>25-35
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>55 (Push)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Exoskeleton.png" class="image"><img alt="MRKB Exoskeleton.png" src="common/assets/img/mariorabbits/80px-MRKB_Exoskeleton.png" width="80" height="72" </a><!--srcset="/images/thumb/0/0f/MRKB_Exoskeleton.png/120px-MRKB_Exoskeleton.png 1.5x, /images/0/0f/MRKB_Exoskeleton.png 2x"></a> --><br>Exoskeleton
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td>72(石化)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Crosshair_Nightmare.png" class="image"><img alt="MRKB Crosshair Nightmare.png" src="common/assets/img/mariorabbits/80px-MRKB_Crosshair_Nightmare.png" width="80" height="68" </a><!--srcset="/images/thumb/8/89/MRKB_Crosshair_Nightmare.png/120px-MRKB_Crosshair_Nightmare.png 1.5x, /images/8/89/MRKB_Crosshair_Nightmare.png 2x"></a> --><br>Crosshair Nightmare
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td>72(燃烧)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Shining_Dawn.png" class="image"><img alt="MRKB Shining Dawn.png" src="common/assets/img/mariorabbits/80px-MRKB_Shining_Dawn.png" width="80" height="68" </a><!--srcset="/images/thumb/d/d8/MRKB_Shining_Dawn.png/120px-MRKB_Shining_Dawn.png 1.5x, /images/d/d8/MRKB_Shining_Dawn.png 2x"></a> --><br>Shining Dawn
+</th>
+<td><i> </i>
+</td>
+<td>720
+</td>
+<td>45-55
+</td>
+<td>对抗Mid-Bosses +15% 机率
+</td>
+<td>72(吸血)
+</td>
+<td>50%
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Blastberry_Swirl.png" class="image"><img alt="MRKB Blastberry Swirl.png" src="common/assets/img/mariorabbits/80px-MRKB_Blastberry_Swirl.png" width="80" height="68" </a><!--srcset="/images/thumb/2/22/MRKB_Blastberry_Swirl.png/120px-MRKB_Blastberry_Swirl.png 1.5x, /images/2/22/MRKB_Blastberry_Swirl.png 2x"></a> --><br>Blastberry Swirl
+</th>
+<td> 
+</td>
+<td>830
+</td>
+<td>55-65
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>85(吸血)
+</td>
+<td>60%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Butcher%27s_Block.png" class="image"><img alt="MRKB Butcher&#39;s Block.png" src="common/assets/img/mariorabbits/80px-MRKB_Butcher&#39;s_Block.png" width="80" height="68" </a><!--srcset="/images/thumb/2/22/MRKB_Butcher%27s_Block.png/120px-MRKB_Butcher%27s_Block.png 1.5x, /images/2/22/MRKB_Butcher%27s_Block.png 2x"></a> --><br>Butcher's Block
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>80-90
+</td>
+<td> —
+</td>
+<td>113 (Push)
+</td>
+<td>70%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Tesla_Circle.png" class="image"><img alt="MRKB Tesla Circle.png" src="common/assets/img/mariorabbits/80px-MRKB_Tesla_Circle.png" width="80" height="68" </a><!--srcset="/images/thumb/4/47/MRKB_Tesla_Circle.png/120px-MRKB_Tesla_Circle.png 1.5x, /images/4/47/MRKB_Tesla_Circle.png 2x"></a> --><br>Tesla Circle
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>80-90
+</td>
+<td> —
+</td>
+<td>113(吸血)
+</td>
+<td>70%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Crosshead_Orb.png" class="image"><img alt="MRKB Crosshead Orb.png" src="common/assets/img/mariorabbits/80px-MRKB_Crosshead_Orb.png" width="80" height="68" </a><!--srcset="/images/thumb/8/85/MRKB_Crosshead_Orb.png/120px-MRKB_Crosshead_Orb.png 1.5x, /images/8/85/MRKB_Crosshead_Orb.png 2x"></a> --><br>Crosshead Orb
+</th>
+<td><i> </i>
+</td>
+<td>1030
+</td>
+<td>80-90
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>113(石化)
+</td>
+<td>70%
+</td>
+<td>10格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Circle_of_Strife.png" class="image"><img alt="MRKB Circle of Strife.png" src="common/assets/img/mariorabbits/80px-MRKB_Circle_of_Strife.png" width="80" height="68" </a><!--srcset="/images/thumb/d/db/MRKB_Circle_of_Strife.png/120px-MRKB_Circle_of_Strife.png 1.5x, /images/d/db/MRKB_Circle_of_Strife.png 2x"></a> --><br>Circle of Strife
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>130-140
+</td>
+<td> —
+</td>
+<td>168(燃烧)
+</td>
+<td>90%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Gemcutter.png" class="image"><img alt="MRKB Gemcutter.png" src="common/assets/img/mariorabbits/80px-MRKB_Gemcutter.png" width="80" height="72" </a><!--srcset="/images/thumb/e/e0/MRKB_Gemcutter.png/120px-MRKB_Gemcutter.png 1.5x, /images/e/e0/MRKB_Gemcutter.png 2x"></a> --><br>Gemcutter
+</th>
+<td> 
+</td>
+<td>1400
+</td>
+<td>130-140
+</td>
+<td> —
+</td>
+<td>168 (Push)
+</td>
+<td>90%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Marble_Marauder.png" class="image"><img alt="MRKB Marble Marauder.png" src="common/assets/img/mariorabbits/80px-MRKB_Marble_Marauder.png" width="80" height="68" </a><!--srcset="/images/thumb/3/34/MRKB_Marble_Marauder.png/120px-MRKB_Marble_Marauder.png 1.5x, /images/3/34/MRKB_Marble_Marauder.png 2x"></a> --><br>Marble Marauder
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>140-150
+</td>
+<td>对抗Peek-a-Boos +30% 机率
+</td>
+<td>180(燃烧)
+</td>
+<td>90%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Cactus_Fracas.png" class="image"><img alt="MRKB Cactus Fracas.png" src="common/assets/img/mariorabbits/80px-MRKB_Cactus_Fracas.png" width="80" height="72" </a><!--srcset="/images/thumb/8/85/MRKB_Cactus_Fracas.png/120px-MRKB_Cactus_Fracas.png 1.5x, /images/8/85/MRKB_Cactus_Fracas.png 2x"></a> --><br>Cactus Fracas
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>140-150
+</td>
+<td>对抗Peek-a-Boos +30% 机率
+</td>
+<td>180 (Push)
+</td>
+<td>90%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Gag_Me_With_A_Spoon.png" class="image"><img alt="MRKB Gag Me With A Spoon.png" src="common/assets/img/mariorabbits/80px-MRKB_Gag_Me_With_A_Spoon.png" width="80" height="68" </a><!--srcset="/images/thumb/d/d7/MRKB_Gag_Me_With_A_Spoon.png/120px-MRKB_Gag_Me_With_A_Spoon.png 1.5x, /images/d/d7/MRKB_Gag_Me_With_A_Spoon.png 2x"></a> --><br>Gag Me With A Spoon
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>185-195
+</td>
+<td> —
+</td>
+<td>230(吸血)
+</td>
+<td>100%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Round_Shield_Shocker.png" class="image"><img alt="MRKB Round Shield Shocker.png" src="common/assets/img/mariorabbits/80px-MRKB_Round_Shield_Shocker.png" width="80" height="68" </a><!--srcset="/images/thumb/2/23/MRKB_Round_Shield_Shocker.png/120px-MRKB_Round_Shield_Shocker.png 1.5x, /images/2/23/MRKB_Round_Shield_Shocker.png 2x"></a> --><br>Round Shield Shocker
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>185-195
+</td>
+<td> —
+</td>
+<td>230(石化)
+</td>
+<td>100%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr></tbody></table>
+					              </div>
+					              <div id=tabs-4>
+					             
+					             	<div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-3">耀西</li>
+														<li class="tab-link" data-tab="tabz-4">疯兔耀西</li>
+													  
+													</ul>	
+ 
+													<div id="tabz-3" class="tab-contentz current">
+													<table class="xtable" style="text-align:center; margin: auto">
+<tbody><tr>
+<th colspan="9"><b>耀西的机关炮</b>
+</th></tr>
+<tr>
+<th  width=10% rowspan="2">机关炮
+</th>
+<th rowspan="2">说明
+</th>
+<th  width=10% rowspan="2">价格
+</th>
+<th  width=10% rowspan="2">命中伤害
+</th>
+<th  width=10% colspan="3">特殊效果
+</th>
+<th  width=10% rowspan="2">范围
+</th>
+<th  width=10% rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th width=10% >特殊加成
+</th>
+<th width=10% >伤害
+</th>
+<th width=10% >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Egg_Creamer.png" class="image"><img alt="MRKB Egg Creamer.png" src="common/assets/img/mariorabbits/80px-MRKB_Egg_Creamer.png" width="80" height="69" </a><!--srcset="/images/thumb/8/83/MRKB_Egg_Creamer.png/120px-MRKB_Egg_Creamer.png 1.5x, /images/8/83/MRKB_Egg_Creamer.png 2x"></a> --><br>Egg Creamer
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>125-255
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>10格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Last_Dance.png" class="image"><img alt="MRKB Last Dance.png" src="common/assets/img/mariorabbits/80px-MRKB_Last_Dance.png" width="80" height="69" </a><!--srcset="/images/thumb/8/80/MRKB_Last_Dance.png/120px-MRKB_Last_Dance.png 1.5x, /images/8/80/MRKB_Last_Dance.png 2x"></a> --><br>Last Dance
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>135-265
+</td>
+<td>对抗Smashers +30% 机率
+</td>
+<td>318(冻结)
+</td>
+<td>30%
+</td>
+<td>11格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bwahrmageddon.png" class="image"><img alt="MRKB Bwahrmageddon.png" src="common/assets/img/mariorabbits/80px-MRKB_Bwahrmageddon.png" width="80" height="67" </a><!--srcset="/images/thumb/2/2d/MRKB_Bwahrmageddon.png/120px-MRKB_Bwahrmageddon.png 1.5x, /images/2/2d/MRKB_Bwahrmageddon.png 2x"></a> --><br>Bwahrmageddon
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>135-265
+</td>
+<td>对抗Smashers +30% 机率
+</td>
+<td>318(墨汁)
+</td>
+<td>30%
+</td>
+<td>11格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Surly_Temple.png" class="image"><img alt="MRKB Surly Temple.png" src="common/assets/img/mariorabbits/80px-MRKB_Surly_Temple.png" width="80" height="70" </a><!--srcset="/images/thumb/a/a7/MRKB_Surly_Temple.png/120px-MRKB_Surly_Temple.png 1.5x, /images/a/a7/MRKB_Surly_Temple.png 2x"></a> --><br>Surly Temple
+</th>
+<td><i> </i>
+</td>
+<td>1500
+</td>
+<td>155-285
+</td>
+<td> —
+</td>
+<td>342(冻结)
+</td>
+<td>30%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Crossfire_Castle.png" class="image"><img alt="MRKB Crossfire Castle.png" src="common/assets/img/mariorabbits/80px-MRKB_Crossfire_Castle.png" width="80" height="69" </a><!--srcset="/images/thumb/a/a3/MRKB_Crossfire_Castle.png/120px-MRKB_Crossfire_Castle.png 1.5x, /images/a/a3/MRKB_Crossfire_Castle.png 2x"></a> --><br>Crossfire Castle
+</th>
+<td><i> </i>
+</td>
+<td>1500
+</td>
+<td>155-285
+</td>
+<td> —
+</td>
+<td>342(墨汁)
+</td>
+<td>30%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Rainbow_Roaster.png" class="image"><img alt="MRKB Rainbow Roaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Rainbow_Roaster.png" width="80" height="70" </a><!--srcset="/images/thumb/2/24/MRKB_Rainbow_Roaster.png/120px-MRKB_Rainbow_Roaster.png 1.5x, /images/2/24/MRKB_Rainbow_Roaster.png 2x"></a> --><br>Rainbow Roaster
+</th>
+<td><i> </i>
+</td>
+<td>1500
+</td>
+<td>135-265
+</td>
+<td> —
+</td>
+<td>318(冻结)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Hostile_Voxel.png" class="image"><img alt="MRKB Hostile Voxel.png" src="common/assets/img/mariorabbits/80px-MRKB_Hostile_Voxel.png" width="80" height="70" </a><!--srcset="/images/thumb/b/b7/MRKB_Hostile_Voxel.png/120px-MRKB_Hostile_Voxel.png 1.5x, /images/b/b7/MRKB_Hostile_Voxel.png 2x"></a> --><br>Hostile Voxel
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>135-265
+</td>
+<td>对抗Valkyries +30% 机率
+</td>
+<td>331(墨汁)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Calavera_Cannon.png" class="image"><img alt="MRKB Calavera Cannon.png" src="common/assets/img/mariorabbits/80px-MRKB_Calavera_Cannon.png" width="80" height="70" </a><!--srcset="/images/thumb/6/60/MRKB_Calavera_Cannon.png/120px-MRKB_Calavera_Cannon.png 1.5x, /images/6/60/MRKB_Calavera_Cannon.png 2x"></a> --><br>Calavera Cannon
+</th>
+<td><i </i>
+</td>
+<td>1700
+</td>
+<td>190-340
+</td>
+<td> —
+</td>
+<td>401(冻结)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Eye_of_the_Kraken.png" class="image"><img alt="MRKB Eye of the Kraken.png" src="common/assets/img/mariorabbits/80px-MRKB_Eye_of_the_Kraken.png" width="80" height="70" </a><!--srcset="/images/thumb/d/d8/MRKB_Eye_of_the_Kraken.png/120px-MRKB_Eye_of_the_Kraken.png 1.5x, /images/d/d8/MRKB_Eye_of_the_Kraken.png 2x"></a> --><br>Eye of the Kraken
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>190-340
+</td>
+<td> —
+</td>
+<td>401(墨汁)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Luau_Launcher.png" class="image"><img alt="MRKB Luau Launcher.png" src="common/assets/img/mariorabbits/80px-MRKB_Luau_Launcher.png" width="80" height="72" </a><!--srcset="/images/thumb/b/b0/MRKB_Luau_Launcher.png/120px-MRKB_Luau_Launcher.png 1.5x, /images/b/b0/MRKB_Luau_Launcher.png 2x"></a> --><br>Luau Launcher
+</th>
+<td><i> </i>
+</td>
+<td>1750
+</td>
+<td>190-340
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>401(冻结)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Prey_of_Kitsune.png" class="image"><img alt="MRKB Prey of Kitsune.png" src="common/assets/img/mariorabbits/80px-MRKB_Prey_of_Kitsune.png" width="80" height="68" </a><!--srcset="/images/thumb/0/01/MRKB_Prey_of_Kitsune.png/120px-MRKB_Prey_of_Kitsune.png 1.5x, /images/0/01/MRKB_Prey_of_Kitsune.png 2x"></a> --><br>Prey of Kitsune
+</th>
+<td><i> </i>
+</td>
+<td>1750
+</td>
+<td>190-340
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>401(墨汁)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Golden_Rule.png" class="image"><img alt="MRKB Golden Rule.png" src="common/assets/img/mariorabbits/80px-MRKB_Golden_Rule.png" width="80" height="68" </a><!--srcset="/images/thumb/f/f3/MRKB_Golden_Rule.png/120px-MRKB_Golden_Rule.png 1.5x, /images/f/f3/MRKB_Golden_Rule.png 2x"></a> --><br>Golden Rule
+</th>
+<td><i> </i>
+</td>
+<td>1750
+</td>
+<td>190-340
+</td>
+<td>对抗Mid-Bosses +10% 机率
+</td>
+<td>401(冻结)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</tr></tr></tbody></table>
+												</div>
+													<div id="tabz-4" class="tab-contentz">
+												<table class="xtable" style="text-align:center; margin: auto">
+<tbody>
+	<tr>
+	 
+<th colspan="9"><b>疯兔耀西的机关炮</b>
+</th></tr>
+<tr>
+<th rowspan="2">机关炮
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Egg_Fry.png" class="image"><img alt="MRKB Egg Fry.png" src="common/assets/img/mariorabbits/80px-MRKB_Egg_Fry.png" width="80" height="68" </a><!--srcset="/images/thumb/5/5d/MRKB_Egg_Fry.png/120px-MRKB_Egg_Fry.png 1.5x, /images/5/5d/MRKB_Egg_Fry.png 2x"></a> --><br>Egg Fry
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>70-180
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>11格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bulldog.png" class="image"><img alt="MRKB Bulldog.png" src="common/assets/img/mariorabbits/80px-MRKB_Bulldog.png" width="80" height="69" </a><!--srcset="/images/thumb/e/ea/MRKB_Bulldog.png/120px-MRKB_Bulldog.png 1.5x, /images/e/ea/MRKB_Bulldog.png 2x"></a> --><br>Bulldog
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>75-185
+</td>
+<td> —
+</td>
+<td>231(石化)
+</td>
+<td>25%
+</td>
+<td>11格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Chomper_Stopper.png" class="image"><img alt="MRKB Chomper Stopper.png" src="common/assets/img/mariorabbits/80px-MRKB_Chomper_Stopper.png" width="80" height="69" </a><!--srcset="/images/thumb/8/85/MRKB_Chomper_Stopper.png/120px-MRKB_Chomper_Stopper.png 1.5x, /images/8/85/MRKB_Chomper_Stopper.png 2x"></a> --><br>Chomper Stopper
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>75-185
+</td>
+<td> —
+</td>
+<td>231 (Push)
+</td>
+<td>25%
+</td>
+<td>11格(中程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Mega_Bite.png" class="image"><img alt="MRKB Mega Bite.png" src="common/assets/img/mariorabbits/80px-MRKB_Mega_Bite.png" width="80" height="71" </a><!--srcset="/images/thumb/f/f5/MRKB_Mega_Bite.png/120px-MRKB_Mega_Bite.png 1.5x, /images/f/f5/MRKB_Mega_Bite.png 2x"></a> --><br>Mega Bite
+</th>
+<td>与Bowser Jr有关< 
+</td>
+<td>amiibo
+</td>
+<td>75-185
+</td>
+<td>对抗Large  +10% 伤害
+</td>
+<td>231(石化)
+</td>
+<td>25%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Raster_Blaster.png" class="image"><img alt="MRKB Raster Blaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Raster_Blaster.png" width="80" height="70" </a><!--srcset="/images/thumb/7/7d/MRKB_Raster_Blaster.png/120px-MRKB_Raster_Blaster.png 1.5x, /images/7/7d/MRKB_Raster_Blaster.png 2x"></a> --><br>Raster 光线炮
+</th>
+<td><i></i>
+</td>
+<td>1150
+</td>
+<td>75-185
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>241 (Push)
+</td>
+<td>25%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Paladin_Pulverizer.png" class="image"><img alt="MRKB Paladin Pulverizer.png" src="common/assets/img/mariorabbits/80px-MRKB_Paladin_Pulverizer.png" width="80" height="68" </a><!--srcset="/images/thumb/6/6f/MRKB_Paladin_Pulverizer.png/120px-MRKB_Paladin_Pulverizer.png 1.5x, /images/6/6f/MRKB_Paladin_Pulverizer.png 2x"></a> --><br>Paladin Pulverizer
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>125-255
+</td>
+<td> —
+</td>
+<td>306(石化)
+</td>
+<td>25%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Finish.png" class="image"><img alt="MRKB Big Finish.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Finish.png" width="80" height="69" </a><!--srcset="/images/thumb/c/cb/MRKB_Big_Finish.png/120px-MRKB_Big_Finish.png 1.5x, /images/c/cb/MRKB_Big_Finish.png 2x"></a> --><br>Big Finish
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>125-255
+</td>
+<td> —
+</td>
+<td>306 (Push)
+</td>
+<td>25%
+</td>
+<td>11格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Renegade.png" class="image"><img alt="MRKB Renegade.png" src="common/assets/img/mariorabbits/80px-MRKB_Renegade.png" width="80" height="69" </a><!--srcset="/images/thumb/0/01/MRKB_Renegade.png/120px-MRKB_Renegade.png 1.5x, /images/0/01/MRKB_Renegade.png 2x"></a> --><br>Renegade
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>135-265
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>318 (Push)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Attack_O%27_Lantern.png" class="image"><img alt="MRKB Attack O&#39; Lantern.png" src="common/assets/img/mariorabbits/80px-MRKB_Attack_O&#39;_Lantern.png" width="80" height="67" </a><!--srcset="/images/thumb/5/58/MRKB_Attack_O%27_Lantern.png/120px-MRKB_Attack_O%27_Lantern.png 1.5x, /images/5/58/MRKB_Attack_O%27_Lantern.png 2x"></a> --><br>Attack O' Lantern
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>190-340
+</td>
+<td> —
+</td>
+<td>401(石化)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Brutal_Noodle.png" class="image"><img alt="MRKB Brutal Noodle.png" src="common/assets/img/mariorabbits/80px-MRKB_Brutal_Noodle.png" width="80" height="72" </a><!--srcset="/images/thumb/7/7d/MRKB_Brutal_Noodle.png/120px-MRKB_Brutal_Noodle.png 1.5x, /images/7/7d/MRKB_Brutal_Noodle.png 2x"></a> --><br>Brutal Noodle
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>190-340
+</td>
+<td> —
+</td>
+<td>401 (Push)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bullion_Blaster.png" class="image"><img alt="MRKB Bullion Blaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Bullion_Blaster.png" width="80" height="69" </a><!--srcset="/images/thumb/0/0b/MRKB_Bullion_Blaster.png/120px-MRKB_Bullion_Blaster.png 1.5x, /images/0/0b/MRKB_Bullion_Blaster.png 2x"></a> --><br>Bullion 光线炮
+</th>
+<td><i> </i>
+</td>
+<td>1750
+</td>
+<td>190-340
+</td>
+<td>对抗Mid-Bosses +15% 机率
+</td>
+<td>401(石化)
+</td>
+<td>30%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Kimono_No_No.png" class="image"><img alt="MRKB Kimono No No.png" src="common/assets/img/mariorabbits/80px-MRKB_Kimono_No_No.png" width="80" height="69" </a><!--srcset="/images/thumb/e/e9/MRKB_Kimono_No_No.png/120px-MRKB_Kimono_No_No.png 1.5x, /images/e/e9/MRKB_Kimono_No_No.png 2x"></a> --><br>Kimono No No
+</th>
+<td><i> </i>
+</td>
+<td>2050
+</td>
+<td>200-350
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>413(石化)
+</td>
+<td>40%
+</td>
+<td>12格(中程)
+</td>
+<td>中
+</td>
+</tr>
+</tr>
+</tbody>
+</table>
+												</div>
+											</div>	
+  										</div>  	<!--tabs4 end-->
+  										<div id="tabs-5">
+            						<div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-5">桃子公主</li>
+														<li class="tab-link" data-tab="tabz-6">疯兔马里奥</li>
+													  
+													</ul>	
+ 
+													<div id="tabz-5" class="tab-contentz current">
+														<table class="xtable" style="text-align:center; margin: auto">
+<tbody>
+	<tr>
+<th colspan="9"><b>桃子公主的散弹枪</b>
+</th></tr>
+<tr>
+<th  width=10% rowspan="2">散弹枪
+</th>
+<th rowspan="2">说明
+</th>
+<th  width=10% rowspan="2">价格
+</th>
+<th width=10%  rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th  width=10% rowspan="2">范围
+</th>
+<th  width=10% rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th width=10% >特殊加成
+</th>
+<th width=10% >伤害
+</th>
+<th width=10% >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Blue_Flame.png" class="image"><img alt="MRKB Blue Flame.png" src="common/assets/img/mariorabbits/80px-MRKB_Blue_Flame.png" width="80" height="56" </a><!--srcset="/images/thumb/4/43/MRKB_Blue_Flame.png/120px-MRKB_Blue_Flame.png 1.5x, /images/4/43/MRKB_Blue_Flame.png 2x"></a> --><br>Blue Flame
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>90-100
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Top.png" class="image"><img alt="MRKB Big Top.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Top.png" width="80" height="56" </a><!--srcset="/images/thumb/a/a8/MRKB_Big_Top.png/120px-MRKB_Big_Top.png 1.5x, /images/a/a8/MRKB_Big_Top.png 2x"></a> --><br>Big Top
+</th>
+<td>来自于Koopa小丑车
+</td>
+<td>800
+</td>
+<td>90-100
+</td>
+<td> —
+</td>
+<td>130(燃烧)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Crown_Jewel.png" class="image"><img alt="MRKB Crown Jewel.png" src="common/assets/img/mariorabbits/80px-MRKB_Crown_Jewel.png" width="80" height="56" </a><!--srcset="/images/thumb/d/d0/MRKB_Crown_Jewel.png/120px-MRKB_Crown_Jewel.png 1.5x, /images/d/d0/MRKB_Crown_Jewel.png 2x"></a> --><br>Crown Jewel
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(冻结)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Barracuda.png" class="image"><img alt="MRKB Barracuda.png" src="common/assets/img/mariorabbits/80px-MRKB_Barracuda.png" width="80" height="57" </a><!--srcset="/images/thumb/8/8f/MRKB_Barracuda.png/120px-MRKB_Barracuda.png 1.5x, /images/8/8f/MRKB_Barracuda.png 2x"></a> --><br>Barracuda
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(燃烧)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Block_Blaster.png" class="image"><img alt="MRKB Block Blaster.png" src="common/assets/img/mariorabbits/80px-MRKB_Block_Blaster.png" width="80" height="56" </a><!--srcset="/images/thumb/6/68/MRKB_Block_Blaster.png/120px-MRKB_Block_Blaster.png 1.5x, /images/6/68/MRKB_Block_Blaster.png 2x"></a> --><br>Block 光线炮
+</th>
+<td><i> </i>
+</td>
+<td>amiibo
+</td>
+<td>140-150
+</td>
+<td>对抗Small  +10% 伤害
+</td>
+<td>188(冻结)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Royal_Rabbid.png" class="image"><img alt="MRKB Royal Rabbid.png" src="common/assets/img/mariorabbits/80px-MRKB_Royal_Rabbid.png" width="80" height="56" </a><!--srcset="/images/thumb/d/d2/MRKB_Royal_Rabbid.png/120px-MRKB_Royal_Rabbid.png 1.5x, /images/d/d2/MRKB_Royal_Rabbid.png 2x"></a> --><br>Royal Rabbid
+</th>
+<td><i> </i>
+</td>
+<td>1030
+</td>
+<td>140-150
+</td>
+<td>对抗Valkries +30% 机率
+</td>
+<td>188(燃烧)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bait_N%27_Switch_Bruiser.png" class="image"><img alt="MRKB Bait N&#39; Switch Bruiser.png" src="common/assets/img/mariorabbits/80px-MRKB_Bait_N&#39;_Switch_Bruiser.png" width="80" height="59" </a><!--srcset="/images/thumb/7/7d/MRKB_Bait_N%27_Switch_Bruiser.png/120px-MRKB_Bait_N%27_Switch_Bruiser.png 1.5x, /images/7/7d/MRKB_Bait_N%27_Switch_Bruiser.png 2x"></a> --><br>Bait N' Switch Bruiser
+</th>
+<td><i>参考了超级马里奥兄弟中的Toad </i>
+
+</td>
+<td>1030
+</td>
+<td>140-150
+</td>
+<td>对抗Supporters +30% 机率
+</td>
+<td>192(燃烧)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Razzle_Dazzle.png" class="image"><img alt="MRKB Razzle Dazzle.png" src="common/assets/img/mariorabbits/80px-MRKB_Razzle_Dazzle.png" width="80" height="56" </a><!--srcset="/images/thumb/c/c5/MRKB_Razzle_Dazzle.png/120px-MRKB_Razzle_Dazzle.png 1.5x, /images/c/c5/MRKB_Razzle_Dazzle.png 2x"></a> --><br>Razzle Dazzle
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>150-160
+</td>
+<td> —
+</td>
+<td>200(冻结)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Lavanator.png" class="image"><img alt="MRKB Lavanator.png" src="common/assets/img/mariorabbits/80px-MRKB_Lavanator.png" width="80" height="56" </a><!--srcset="/images/thumb/d/d0/MRKB_Lavanator.png/120px-MRKB_Lavanator.png 1.5x, /images/d/d0/MRKB_Lavanator.png 2x"></a> --><br>Lavanator
+</th>
+<td><i </i>
+</td>
+<td>1100
+</td>
+<td>150-160
+</td>
+<td> —
+</td>
+<td>200(燃烧)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Kanagawa_Powa.png" class="image"><img alt="MRKB Kanagawa Powa.png" src="common/assets/img/mariorabbits/80px-MRKB_Kanagawa_Powa.png" width="80" height="57" </a><!--srcset="/images/thumb/d/d1/MRKB_Kanagawa_Powa.png/120px-MRKB_Kanagawa_Powa.png 1.5x, /images/d/d1/MRKB_Kanagawa_Powa.png 2x"></a> --><br>Kanagawa Powa
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(冻结)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Nasty_Yella_Fella.png" class="image"><img alt="MRKB Nasty Yella Fella.png" src="common/assets/img/mariorabbits/80px-MRKB_Nasty_Yella_Fella.png" width="80" height="56" </a><!--srcset="/images/thumb/8/82/MRKB_Nasty_Yella_Fella.png/120px-MRKB_Nasty_Yella_Fella.png 1.5x, /images/8/82/MRKB_Nasty_Yella_Fella.png 2x"></a> --><br>Nasty Yella Fella
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(燃烧)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bullion_Bill.png" class="image"><img alt="MRKB Bullion Bill.png" src="common/assets/img/mariorabbits/80px-MRKB_Bullion_Bill.png" width="80" height="57" </a><!--srcset="/images/thumb/6/68/MRKB_Bullion_Bill.png/120px-MRKB_Bullion_Bill.png 1.5x, /images/6/68/MRKB_Bullion_Bill.png 2x"></a> --><br>Bullion Bill
+</th>
+<td><i> </i>
+</td>
+<td>1450
+</td>
+<td>225-235
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>282(冻结)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Smackerel.png" class="image"><img alt="MRKB Smackerel.png" src="common/assets/img/mariorabbits/80px-MRKB_Smackerel.png" width="80" height="57" </a><!--srcset="/images/thumb/a/a6/MRKB_Smackerel.png/120px-MRKB_Smackerel.png 1.5x, /images/a/a6/MRKB_Smackerel.png 2x"></a> --><br>Smackerel
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>235-245
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>294(冻结)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Heavy_Artil-Lily.png" class="image"><img alt="MRKB Heavy Artil-Lily.png" src="common/assets/img/mariorabbits/80px-MRKB_Heavy_Artil-Lily.png" width="80" height="56" </a><!--srcset="/images/thumb/8/81/MRKB_Heavy_Artil-Lily.png/120px-MRKB_Heavy_Artil-Lily.png 1.5x, /images/8/81/MRKB_Heavy_Artil-Lily.png 2x"></a> --><br>Heavy Artil-Lily
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>235-245
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>294(燃烧)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Battlin%27_Bill.png" class="image"><img alt="MRKB Battlin&#39; Bill.png" src="common/assets/img/mariorabbits/80px-MRKB_Battlin&#39;_Bill.png" width="80" height="57" </a><!--srcset="/images/thumb/6/67/MRKB_Battlin%27_Bill.png/120px-MRKB_Battlin%27_Bill.png 1.5x, /images/6/67/MRKB_Battlin%27_Bill.png 2x"></a> --><br>Battlin' Bill
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(冻结)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Zebra_Muscle.png" class="image"><img alt="MRKB Zebra Muscle.png" src="common/assets/img/mariorabbits/80px-MRKB_Zebra_Muscle.png" width="80" height="57" </a><!--srcset="/images/thumb/6/69/MRKB_Zebra_Muscle.png/120px-MRKB_Zebra_Muscle.png 1.5x, /images/6/69/MRKB_Zebra_Muscle.png 2x"></a> --><br>Zebra Muscle
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(燃烧)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+</tbody>
+</table>
+													 
+												  </div>
+													<div id="tabz-6" class="tab-contentz">
+													 <table class="xtable" style="text-align:center; margin: auto">
+<tbody>	
+<tr>
+<th colspan="9"><b>疯兔马里奥的散弹枪</b>
+</th></tr>
+<tr>
+<th rowspan="2">散弹枪
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Red_Lightning.png" class="image"><img alt="MRKB Red Lightning.png" src="common/assets/img/mariorabbits/80px-MRKB_Red_Lightning.png" width="80" height="56" </a><!--srcset="/images/thumb/0/0f/MRKB_Red_Lightning.png/120px-MRKB_Red_Lightning.png 1.5x, /images/0/0f/MRKB_Red_Lightning.png 2x"></a> --><br>Red Lightning
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>90-100
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Koinobori.png" class="image"><img alt="MRKB Koinobori.png" src="common/assets/img/mariorabbits/80px-MRKB_Koinobori.png" width="80" height="57" </a><!--srcset="/images/thumb/4/48/MRKB_Koinobori.png/120px-MRKB_Koinobori.png 1.5x, /images/4/48/MRKB_Koinobori.png 2x"></a> --><br>Koinobori
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>90-100
+</td>
+<td> —
+</td>
+<td>130(吸血)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Wrath_of_the_Dragon.png" class="image"><img alt="MRKB Wrath of the Dragon.png" src="common/assets/img/mariorabbits/80px-MRKB_Wrath_of_the_Dragon.png" width="80" height="56" </a><!--srcset="/images/thumb/4/42/MRKB_Wrath_of_the_Dragon.png/120px-MRKB_Wrath_of_the_Dragon.png 1.5x, /images/4/42/MRKB_Wrath_of_the_Dragon.png 2x"></a> --><br>Wrath of the Dragon
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>90-100
+</td>
+<td> —
+</td>
+<td>130(石化)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Prickly_Persuader.png" class="image"><img alt="MRKB Prickly Persuader.png" src="common/assets/img/mariorabbits/80px-MRKB_Prickly_Persuader.png" width="80" height="56" </a><!--srcset="/images/thumb/1/12/MRKB_Prickly_Persuader.png/120px-MRKB_Prickly_Persuader.png 1.5x, /images/1/12/MRKB_Prickly_Persuader.png 2x"></a> --><br>Prickly Persuader
+</th>
+<td><i> </i>
+</td>
+<td>830
+</td>
+<td>90-100
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>130(石化)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>低
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Cartridge_Commander.png" class="image"><img alt="MRKB Cartridge Commander.png" src="common/assets/img/mariorabbits/80px-MRKB_Cartridge_Commander.png" width="80" height="59" </a><!--srcset="/images/thumb/8/8a/MRKB_Cartridge_Commander.png/120px-MRKB_Cartridge_Commander.png 1.5x, /images/8/8a/MRKB_Cartridge_Commander.png 2x"></a> --><br>Cartridge Commander
+</th>
+<td><i> </i>
+</td>
+<td>830
+</td>
+<td>90-100
+</td>
+<td>对抗Smashers +30% 机率
+</td>
+<td>140(吸血)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Plumber%27s_Helper.png" class="image"><img alt="MRKB Plumber&#39;s Helper.png" src="common/assets/img/mariorabbits/80px-MRKB_Plumber&#39;s_Helper.png" width="80" height="57" </a><!--srcset="/images/thumb/f/f7/MRKB_Plumber%27s_Helper.png/120px-MRKB_Plumber%27s_Helper.png 1.5x, /images/f/f7/MRKB_Plumber%27s_Helper.png 2x"></a> --><br>Plumber's Helper
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(吸血)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Maki_Marauder.png" class="image"><img alt="MRKB Maki Marauder.png" src="common/assets/img/mariorabbits/80px-MRKB_Maki_Marauder.png" width="80" height="56" </a><!--srcset="/images/thumb/a/a1/MRKB_Maki_Marauder.png/120px-MRKB_Maki_Marauder.png 1.5x, /images/a/a1/MRKB_Maki_Marauder.png 2x"></a> --><br>Maki Marauder
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(石化)
+</td>
+<td>40%
+</td>
+<td>7格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Lowrider.png" class="image"><img alt="MRKB Lowrider.png" src="common/assets/img/mariorabbits/80px-MRKB_Lowrider.png" width="80" height="57" </a><!--srcset="/images/thumb/0/09/MRKB_Lowrider.png/120px-MRKB_Lowrider.png 1.5x, /images/0/09/MRKB_Lowrider.png 2x"></a> --><br>低rider
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(吸血)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_The_Splatformer.png" class="image"><img alt="MRKB The Splatformer.png" src="common/assets/img/mariorabbits/80px-MRKB_The_Splatformer.png" width="80" height="56" </a><!--srcset="/images/thumb/2/2f/MRKB_The_Splatformer.png/120px-MRKB_The_Splatformer.png 1.5x, /images/2/2f/MRKB_The_Splatformer.png 2x"></a> --><br>The Splatformer
+</th>
+<td> 
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(石化)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Goldfish.png" class="image"><img alt="MRKB Goldfish.png" src="common/assets/img/mariorabbits/80px-MRKB_Goldfish.png" width="80" height="57" </a><!--srcset="/images/thumb/d/db/MRKB_Goldfish.png/120px-MRKB_Goldfish.png 1.5x, /images/d/db/MRKB_Goldfish.png 2x"></a> --><br>Goldfish
+</th>
+<td><i </i>
+</td>
+<td>1450
+</td>
+<td>225-235
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>282(吸血)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Mushroom_Marauder.png" class="image"><img alt="MRKB Mushroom Marauder.png" src="common/assets/img/mariorabbits/80px-MRKB_Mushroom_Marauder.png" width="80" height="56" </a><!--srcset="/images/thumb/8/8b/MRKB_Mushroom_Marauder.png/120px-MRKB_Mushroom_Marauder.png 1.5x, /images/8/8b/MRKB_Mushroom_Marauder.png 2x"></a> --><br>Mushroom Marauder
+</th>
+<td> 来自于The_Adventures_of_Super_Mario_Bros._3中的Super Mushroom    
+ 
+</td>
+<td>1450
+</td>
+<td>225-235
+</td>
+<td>对抗Supporters +30% 机率
+</td>
+<td>282(石化)
+</td>
+<td>50%
+</td>
+<td>8格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Cat.png" class="image"><img alt="MRKB Big Cat.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Cat.png" width="80" height="57" </a><!--srcset="/images/thumb/5/56/MRKB_Big_Cat.png/120px-MRKB_Big_Cat.png 1.5x, /images/5/56/MRKB_Big_Cat.png 2x"></a> --><br>Big Cat
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>235-245
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>294(吸血)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sunflower_Power.png" class="image"><img alt="MRKB Sunflower Power.png" src="common/assets/img/mariorabbits/80px-MRKB_Sunflower_Power.png" width="80" height="57" </a><!--srcset="/images/thumb/2/2f/MRKB_Sunflower_Power.png/120px-MRKB_Sunflower_Power.png 1.5x, /images/2/2f/MRKB_Sunflower_Power.png 2x"></a> --><br>Sunflower Power
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>235-245
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>294(石化)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Groove_Thing.png" class="image"><img alt="MRKB Groove Thing.png" src="common/assets/img/mariorabbits/80px-MRKB_Groove_Thing.png" width="80" height="57" </a><!--srcset="/images/thumb/7/78/MRKB_Groove_Thing.png/120px-MRKB_Groove_Thing.png 1.5x, /images/7/78/MRKB_Groove_Thing.png 2x"></a> --><br>Groove Thing
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(吸血)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Matrix_Mashup.png" class="image"><img alt="MRKB Matrix Mashup.png" src="common/assets/img/mariorabbits/80px-MRKB_Matrix_Mashup.png" width="80" height="56" </a><!--srcset="/images/thumb/3/39/MRKB_Matrix_Mashup.png/120px-MRKB_Matrix_Mashup.png 1.5x, /images/3/39/MRKB_Matrix_Mashup.png 2x"></a> --><br>Matrix Mashup
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(石化)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Kite_Commando.png" class="image"><img alt="MRKB Kite Commando.png" src="common/assets/img/mariorabbits/80px-MRKB_Kite_Commando.png" width="80" height="56" </a><!--srcset="/images/thumb/8/82/MRKB_Kite_Commando.png/120px-MRKB_Kite_Commando.png 1.5x, /images/8/82/MRKB_Kite_Commando.png 2x"></a> --><br>Kite Commando
+</th>
+<td><i> </i>
+</td>
+<td>2050
+</td>
+<td>325-335
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>395(吸血)
+</td>
+<td>60%
+</td>
+<td>9格(近程)
+</td>
+<td>中
+</td></tr>
+</tbody>
+</table>
+												</div>
+											</div><!--container end-->
+											</div><!--tabs5 end-->	
+  									</td>   
+									</tr> 
+							</table>	 
+             
+           </div><!--mb2 end-->	
+           <div id="con_mb_3" style="display:none;">
+            	     <table align="center" border="0" cellpadding="0" cellspacing="0">
+					       <tr>
+                   <td valign="top">
+                   <!-- Tabs -->
+								  		<div id="tabs3">
+								  			<ul>
+								  				<li><a href="#tabs-1">近战武器<br />
+								            </a></li>
+								  				<li><a href="#tabs-2">哨兵<br />
+								            </a></li>
+								  				 <li><a href="#tabs-3">火箭炮 <br />
+								            </a></li>
+								             <li><a href="#tabs-4">手榴弹 <br />
+								            </a></li>
+								  			</ul>
+  											<div id="tabs-1" >
+                          <div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-10">马里奥</li>
+														<li class="tab-link" data-tab="tabz-11">疯兔马里奥</li>
+													  
+													</ul>	
+ 
+													<div id="tabz-10" class="tab-contentz current">
+														<table class="xtable" style="text-align:center; margin: auto">
+<tbody><tr>
+<th colspan="11"><b>马里奥的近战武器</b>
+</th></tr>
+<tr>
+<th width="10%" rowspan="2">近战武器
+</th>
+<th width="20%" rowspan="2">说明
+</th>
+<th width="5%"rowspan="2">价格
+</th>
+<th width="5%" rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th width="5%"  rowspan="2">范围
+</th>
+<th width="5%"  rowspan="2">掩护伤害
+</th>
+<th width="5%"  rowspan="2">冷却时间
+</th>
+<th width="5%"  rowspan="2">伤害范围
+</th></tr>
+<tr>
+<th  width="5%" >特殊加成
+</th>
+<th  width="5%" >伤害
+</th>
+<th  width="5%" >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/MRKB_Button_Masher.png" class="image"><img alt="MRKB Button Masher.png" widht="100" height="100" src="common/assets/img/mariorabbits/MRKB_Button_Masher.png" width="80" height="103" </a><!--srcset="common/assets/img/mariorabbits/MRKB_Button_Masher.png 1.5x, common/assets/img/mariorabbits/MRKB_Button_Masher.png 2x"></a> --><br>Button Masher
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>55-65
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bowser_Basher.png" class="image"><img alt="MRKB Bowser Basher.png" src="common/assets/img/mariorabbits/80px-MRKB_Bowser_Basher.png" width="80" height="111" </a><!--srcset="/images/b/ba/MRKB_Bowser_Basher.png 1.5x, /images/b/ba/MRKB_Bowser_Basher.png 2x"></a> --><br>Bowser Basher
+</th>
+<td><i </i>
+</td>
+<td>570
+</td>
+<td>55-65
+</td>
+<td>对抗Ziggies +30% 机率
+</td>
+<td>85(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Spring_Cleaner.png" class="image"><img alt="MRKB Spring Cleaner.png" src="common/assets/img/mariorabbits/80px-MRKB_Spring_Cleaner.png" width="80" height="102" </a><!--srcset="/images/8/8d/MRKB_Spring_Cleaner.png 1.5x, /images/8/8d/MRKB_Spring_Cleaner.png 2x"></a> --><br>Spring Cleaner
+</th>
+<td><i> </i>
+</td>
+<td>570
+</td>
+<td>55-65
+</td>
+<td> —
+</td>
+<td>85(反弹)
+</td>
+<td>30%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Cranial_Abrogator.png" class="image"><img alt="MRKB Cranial Abrogator.png" src="common/assets/img/mariorabbits/80px-MRKB_Cranial_Abrogator.png" width="80" height="107" </a><!--srcset="/images/0/08/MRKB_Cranial_Abrogator.png 1.5x, /images/0/08/MRKB_Cranial_Abrogator.png 2x"></a> --><br>Cranial Abrogator
+</th>
+<td><i> </i>
+</td>
+<td>570
+</td>
+<td>55-65
+</td>
+<td>对抗Hoppers +20% 伤害
+</td>
+<td>90(反弹)
+</td>
+<td>30%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_TKO.png" class="image"><img alt="MRKB TKO.png" src="common/assets/img/mariorabbits/80px-MRKB_TKO.png" width="80" height="110" </a><!--srcset="/images/4/44/MRKB_TKO.png 1.5x, /images/4/44/MRKB_TKO.png 2x"></a> --><br>TKO
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>95-105
+</td>
+<td> —
+</td>
+<td>137(反弹)
+</td>
+<td>30%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Mighty_Mitts_O%27_Mario.png" class="image"><img alt="MRKB Mighty Mitts O&#39; Mario.png" src="common/assets/img/mariorabbits/80px-MRKB_Mighty_Mitts_O&#39;_Mario.png" width="80" height="112" </a><!--srcset="/images/d/d6/MRKB_Mighty_Mitts_O%27_Mario.png 1.5x, /images/d/d6/MRKB_Mighty_Mitts_O%27_Mario.png 2x"></a> --><br>Mighty Mitts O' Mario
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>95-105
+</td>
+<td> —
+</td>
+<td>137(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Conk_Buster.png" class="image"><img alt="MRKB Conk Buster.png" src="common/assets/img/mariorabbits/80px-MRKB_Conk_Buster.png" width="80" height="107" </a><!--srcset="/images/4/41/MRKB_Conk_Buster.png 1.5x, /images/4/41/MRKB_Conk_Buster.png 2x"></a> --><br>Conk Buster
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>219(反弹)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bee_Bludger.png" class="image"><img alt="MRKB Bee Bludger.png" src="common/assets/img/mariorabbits/80px-MRKB_Bee_Bludger.png" width="80" height="103" </a><!--srcset="/images/e/e1/MRKB_Bee_Bludger.png 1.5x, /images/e/e1/MRKB_Bee_Bludger.png 2x"></a> --><br>Bee Bludger
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>219(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Hammer_Time.png" class="image"><img alt="MRKB Hammer Time.png" src="common/assets/img/mariorabbits/80px-MRKB_Hammer_Time.png" width="80" height="101" </a><!--srcset="/images/f/fc/MRKB_Hammer_Time.png 1.5x, /images/f/fc/MRKB_Hammer_Time.png 2x"></a> --><br>Hammer Time
+</th>
+<td> 
+</td>
+<td>1030
+</td>
+<td>165-175
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>219(反弹)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Barrel_Bonker.png" class="image"><img alt="MRKB Barrel Bonker.png" src="common/assets/img/mariorabbits/80px-MRKB_Barrel_Bonker.png" width="80" height="98" </a><!--srcset="/images/1/1c/MRKB_Barrel_Bonker.png 1.5x, /images/1/1c/MRKB_Barrel_Bonker.png 2x"></a> --><br>Barrel Bonker
+</th>
+<td>来自于大金刚 
+</td>
+<td>1100
+</td>
+<td>175-185
+</td>
+<td> —
+</td>
+<td>231(反弹)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Track_Attack.png" class="image"><img alt="MRKB Track Attack.png" src="common/assets/img/mariorabbits/80px-MRKB_Track_Attack.png" width="80" height="94" </a><!--srcset="/images/f/f3/MRKB_Track_Attack.png 1.5x, /images/f/f3/MRKB_Track_Attack.png 2x"></a> --><br>Track Attack
+</th>
+<td> 
+</td>
+<td>1100
+</td>
+<td>175-185
+</td>
+<td> —
+</td>
+<td>231(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>1格
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Hydrant_Hammer.png" class="image"><img alt="MRKB Hydrant Hammer.png" src="common/assets/img/mariorabbits/80px-MRKB_Hydrant_Hammer.png" width="80" height="103" </a><!--srcset="/images/9/9d/MRKB_Hydrant_Hammer.png 1.5x, /images/9/9d/MRKB_Hydrant_Hammer.png 2x"></a> --><br>Hydrant Hammer
+</th>
+<td> 
+</td>
+<td>1100
+</td>
+<td>175-185
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>231(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Toad_Tapper.png" class="image"><img alt="MRKB Toad Tapper.png" src="common/assets/img/mariorabbits/80px-MRKB_Toad_Tapper.png" width="80" height="102" </a><!--srcset="/images/a/a0/MRKB_Toad_Tapper.png 1.5x, /images/a/a0/MRKB_Toad_Tapper.png 2x"></a> --><br>Toad Tapper
+</th>
+<td><i></i>
+</td>
+<td>1400
+</td>
+<td>265-275
+</td>
+<td> —
+</td>
+<td>330(反弹)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Battle_Gavel.png" class="image"><img alt="MRKB Battle Gavel.png" src="common/assets/img/mariorabbits/80px-MRKB_Battle_Gavel.png" width="80" height="102" </a><!--srcset="/images/7/75/MRKB_Battle_Gavel.png 1.5x, /images/7/75/MRKB_Battle_Gavel.png 2x"></a> --><br>Battle Gavel
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>265-275
+</td>
+<td> —
+</td>
+<td>330(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sucker_Puncher.png" class="image"><img alt="MRKB Sucker Puncher.png" src="common/assets/img/mariorabbits/80px-MRKB_Sucker_Puncher.png" width="80" height="110" </a><!--srcset="/images/b/b5/MRKB_Sucker_Puncher.png 1.5x, /images/b/b5/MRKB_Sucker_Puncher.png 2x"></a> --><br>Sucker Puncher
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>275-285
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>342(反弹)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Toxic_Truncheon.png" class="image"><img alt="MRKB Toxic Truncheon.png" src="common/assets/img/mariorabbits/80px-MRKB_Toxic_Truncheon.png" width="80" height="94" </a><!--srcset="/images/3/38/MRKB_Toxic_Truncheon.png 1.5x, /images/3/38/MRKB_Toxic_Truncheon.png 2x"></a> --><br>Toxic Truncheon
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>275-285
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>342(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Peeper_Reaper.png" class="image"><img alt="MRKB Peeper Reaper.png" src="common/assets/img/mariorabbits/80px-MRKB_Peeper_Reaper.png" width="80" height="102" </a><!--srcset="/images/4/40/MRKB_Peeper_Reaper.png 1.5x, /images/4/40/MRKB_Peeper_Reaper.png 2x"></a> --><br>Peeper Reaper
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>275-285
+</td>
+<td>对抗Smashers +30% 机率
+</td>
+<td>342(反弹)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Glamor_Hammer.png" class="image"><img alt="MRKB Glamor Hammer.png" src="common/assets/img/mariorabbits/80px-MRKB_Glamor_Hammer.png" width="80" height="107" </a><!--srcset="/images/4/4a/MRKB_Glamor_Hammer.png 1.5x, /images/4/4a/MRKB_Glamor_Hammer.png 2x"></a> --><br>Glamor Hammer
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>375-385
+</td>
+<td> —
+</td>
+<td>454(反弹)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sunset_Slammer.png" class="image"><img alt="MRKB Sunset Slammer.png" src="common/assets/img/mariorabbits/80px-MRKB_Sunset_Slammer.png" width="80" height="102" </a><!--srcset="/images/0/0b/MRKB_Sunset_Slammer.png 1.5x, /images/0/0b/MRKB_Sunset_Slammer.png 2x"></a> --><br>Sunset Slammer
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>375-385
+</td>
+<td> —
+</td>
+<td>454(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Grid_Gavel.png" class="image"><img alt="MRKB Grid Gavel.png" src="common/assets/img/mariorabbits/80px-MRKB_Grid_Gavel.png" width="80" height="104" </a><!--srcset="/images/c/cc/MRKB_Grid_Gavel.png 1.5x, /images/c/cc/MRKB_Grid_Gavel.png 2x"></a> --><br>Grid Gavel
+</th>
+<td><i> </i>
+</td>
+<td>2050
+</td>
+<td>385-395
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>466(反弹)
+</td>
+<td>60%
+</td>
+<td>1格
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+</tbody></table>
+
+													</div>	
+													<div id="tabz-11" class="tab-contentz">
+														<table class="xtable" style="text-align:center; margin: auto">
+<tbody>	
+<tr>
+<th colspan="11"><b>疯兔马里奥的近战武器</b>
+</th></tr>
+<tr>
+<th rowspan="2">近战武器
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th>
+<th rowspan="2">冷却时间
+</th>
+<th rowspan="2">伤害范围
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Blue_Bopper.png" class="image"><img alt="MRKB Big Blue Bopper.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Blue_Bopper.png" width="80" height="103" </a><!--srcset="/images/6/6c/MRKB_Big_Blue_Bopper.png 1.5x, /images/6/6c/MRKB_Big_Blue_Bopper.png 2x"></a> --><br>Big Blue Bopper
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>105-115
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Deadbolt.png" class="image"><img alt="MRKB Deadbolt.png" src="common/assets/img/mariorabbits/80px-MRKB_Deadbolt.png" width="80" height="99" </a><!--srcset="/images/b/b2/MRKB_Deadbolt.png 1.5x, /images/b/b2/MRKB_Deadbolt.png 2x"></a> --><br>Deadbolt
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>105-115
+</td>
+<td> —
+</td>
+<td>150(石化)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Clobber_Chomper.png" class="image"><img alt="MRKB Clobber Chomper.png" src="common/assets/img/mariorabbits/80px-MRKB_Clobber_Chomper.png" width="80" height="100" </a><!--srcset="/images/f/f7/MRKB_Clobber_Chomper.png 1.5x, /images/f/f7/MRKB_Clobber_Chomper.png 2x"></a> --><br>Clobber Chomper
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>105-115
+</td>
+<td> —
+</td>
+<td>150(吸血)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bone_Shaker.png" class="image"><img alt="MRKB Bone Shaker.png" src="common/assets/img/mariorabbits/80px-MRKB_Bone_Shaker.png" width="80" height="94" </a><!--srcset="/images/7/7c/MRKB_Bone_Shaker.png 1.5x, /images/7/7c/MRKB_Bone_Shaker.png 2x"></a> --><br>Bone Shaker
+</th>
+<td><i> </i>
+</td>
+<td>amiibo
+</td>
+<td>105-115
+</td>
+<td>对抗Large Enemies +15% 机率
+</td>
+<td>150(石化)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Special_Delivery.png" class="image"><img alt="MRKB Special Delivery.png" src="common/assets/img/mariorabbits/80px-MRKB_Special_Delivery.png" width="80" height="102" </a><!--srcset="/images/b/b1/MRKB_Special_Delivery.png 1.5x, /images/b/b1/MRKB_Special_Delivery.png 2x"></a> --><br>Special Delivery
+</th>
+<td><i> </i>
+</td>
+<td>830
+</td>
+<td>105-115
+</td>
+<td>对抗Supporters +30% 机率
+</td>
+<td>150(吸血)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Baleful_Bad_Ender.png" class="image"><img alt="MRKB Baleful Bad Ender.png" src="common/assets/img/mariorabbits/80px-MRKB_Baleful_Bad_Ender.png" width="80" height="96" </a><!--srcset="/images/6/6b/MRKB_Baleful_Bad_Ender.png 1.5x, /images/6/6b/MRKB_Baleful_Bad_Ender.png 2x"></a> --><br>Baleful Bad Ender
+</th>
+<td><i> </i>
+</td>
+<td>830
+</td>
+<td>105-115
+</td>
+<td>对抗Bucklers +20% 伤害
+</td>
+<td>160(吸血)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Marble_Masher.png" class="image"><img alt="MRKB Marble Masher.png" src="common/assets/img/mariorabbits/80px-MRKB_Marble_Masher.png" width="80" height="98" </a><!--srcset="/images/b/b2/MRKB_Marble_Masher.png 1.5x, /images/b/b2/MRKB_Marble_Masher.png 2x"></a> --><br>Marble Masher
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>219(石化)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Rabies_Rattler.png" class="image"><img alt="MRKB Rabies Rattler.png" src="common/assets/img/mariorabbits/80px-MRKB_Rabies_Rattler.png" width="80" height="103" </a><!--srcset="/images/1/1c/MRKB_Rabies_Rattler.png 1.5x, /images/1/1c/MRKB_Rabies_Rattler.png 2x"></a> --><br>Rabies Rattler
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>219(吸血)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Column_Crusher.png" class="image"><img alt="MRKB Column Crusher.png" src="common/assets/img/mariorabbits/80px-MRKB_Column_Crusher.png" width="80" height="98" </a><!--srcset="/images/6/68/MRKB_Column_Crusher.png 1.5x, /images/6/68/MRKB_Column_Crusher.png 2x"></a> --><br>Column Crusher
+</th>
+<td><i> </i>
+</td>
+<td>1030
+</td>
+<td>165-175
+</td>
+<td>对抗Mid-Bosses +15% 机率
+</td>
+<td>219(石化)
+</td>
+<td>40%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Mean_Submarine.png" class="image"><img alt="MRKB Big Mean Submarine.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Mean_Submarine.png" width="80" height="111" </a><!--srcset="/images/c/cd/MRKB_Big_Mean_Submarine.png 1.5x, /images/c/cd/MRKB_Big_Mean_Submarine.png 2x"></a> --><br>Big Mean Submarine
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>175-185
+</td>
+<td> —
+</td>
+<td>231(石化)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Boo_Basher.png" class="image"><img alt="MRKB Boo Basher.png" src="common/assets/img/mariorabbits/80px-MRKB_Boo_Basher.png" width="80" height="96" </a><!--srcset="/images/2/2e/MRKB_Boo_Basher.png 1.5x, /images/2/2e/MRKB_Boo_Basher.png 2x"></a> --><br>Boo Basher
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>175-185
+</td>
+<td> —
+</td>
+<td>231(吸血)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Feel_The_Heat.png" class="image"><img alt="MRKB Feel The Heat.png" src="common/assets/img/mariorabbits/80px-MRKB_Feel_The_Heat.png" width="80" height="100" </a><!--srcset="/images/5/5b/MRKB_Feel_The_Heat.png 1.5x, /images/5/5b/MRKB_Feel_The_Heat.png 2x"></a> --><br>Feel The Heat
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>265-275
+</td>
+<td> —
+</td>
+<td>330(石化)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bat_Out_Of_Heck.png" class="image"><img alt="MRKB Bat Out Of Heck.png" src="common/assets/img/mariorabbits/80px-MRKB_Bat_Out_Of_Heck.png" width="80" height="105" </a><!--srcset="/images/1/1f/MRKB_Bat_Out_Of_Heck.png 1.5x, /images/1/1f/MRKB_Bat_Out_Of_Heck.png 2x"></a> --><br>Bat Out Of Heck
+</th>
+<td>   
+</td>
+<td>1400
+</td>
+<td>265-275
+</td>
+<td> —
+</td>
+<td>330(吸血)
+</td>
+<td>50%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Thwomper_Stomper.png" class="image"><img alt="MRKB Thwomper Stomper.png" src="common/assets/img/mariorabbits/80px-MRKB_Thwomper_Stomper.png" width="80" height="92" </a><!--srcset="/images/d/db/MRKB_Thwomper_Stomper.png 1.5x, /images/d/db/MRKB_Thwomper_Stomper.png 2x"></a> --><br>Thwomper Stomper
+</th>
+<td><i></i>
+</td>
+<td>1700
+</td>
+<td>375-385
+</td>
+<td> —
+</td>
+<td>454(石化)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Thunderbolt.png" class="image"><img alt="MRKB Thunderbolt.png" src="common/assets/img/mariorabbits/80px-MRKB_Thunderbolt.png" width="80" height="103" </a><!--srcset="/images/1/17/MRKB_Thunderbolt.png 1.5x, /images/1/17/MRKB_Thunderbolt.png 2x"></a> --><br>Thunderbolt
+</th>
+<td>  
+</p>
+</td>
+<td>1700
+</td>
+<td>375-385
+</td>
+<td> —
+</td>
+<td>454(吸血)
+</td>
+<td>60%
+</td>
+<td>1格(近距)
+</td>
+<td>无
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr></tbody></table>
+													</div>	
+        								</div>
+								  			<div id="tabs-2">
+								  			<div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-12">路易</li>
+														<li class="tab-link" data-tab="tabz-13">疯兔公主</li>
+													  
+													</ul>	
+ 
+													<div id="tabz-12" class="tab-contentz current">
+														<table class="xtable" style="text-align:center; margin: auto">
+  	<tbody>
+  		<tr>
+<th colspan="13"><b>路易的哨兵</b>
+</th>
+</tr>
+<tr>
+<th  width="10%" rowspan="2">哨兵
+</th>
+<th   rowspan="2">说明
+</th>
+<th width="5%"  rowspan="2">价格
+</th>
+<th  width="5%" rowspan="2">命中伤害
+</th>
+<th   colspan="3">特殊效果
+</th>
+<th  width="5%" rowspan="2">范围
+</th>
+<th  width="8%" rowspan="2">掩护伤害
+</th>
+<th width="8%"  rowspan="2">冷却时间
+</th>
+<th width="8%"  rowspan="2">伤害范围
+</th>
+<th width="8%"  rowspan="2">哨兵 体力
+</th>
+<th  width="8%" rowspan="2">警戒移动范围
+</th></tr>
+<tr>
+<th width="8%" >特殊加成
+</th>
+<th width="8%" >伤害
+</th>
+<th width="8%" >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Top_Gear.png" class="image"><img alt="MRKB Top Gear.png" src="common/assets/img/mariorabbits/80px-MRKB_Top_Gear.png" width="80" height="56" </a><!--srcset="/images/thumb/d/d7/MRKB_Top_Gear.png/120px-MRKB_Top_Gear.png 1.5x, /images/d/d7/MRKB_Top_Gear.png 2x"></a> --><br>Top Gear
+</th>
+<td>来自于Super_Mario_64中的 Tick Tock Clock    
+</td>
+<td> —
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Killer_Extinct.png" class="image"><img alt="MRKB Killer Extinct.png" src="common/assets/img/mariorabbits/80px-MRKB_Killer_Extinct.png" width="80" height="68" </a><!--srcset="/images/f/ff/MRKB_Killer_Extinct.png 1.5x, /images/f/ff/MRKB_Killer_Extinct.png 2x"></a> --><br>Killer Extinct
+</th>
+<td>来自于电影Jurassic_Park  
+ 
+</td>
+<td>570
+</td>
+<td>45-55
+</td>
+<td>对抗Smashers +20% 伤害
+</td>
+<td>72(反弹)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Jeopardous_Jalopy.png" class="image"><img alt="MRKB Jeopardous Jalopy.png" src="common/assets/img/mariorabbits/80px-MRKB_Jeopardous_Jalopy.png" width="80" height="58" </a><!--srcset="/images/thumb/e/ea/MRKB_Jeopardous_Jalopy.png/120px-MRKB_Jeopardous_Jalopy.png 1.5x, /images/e/ea/MRKB_Jeopardous_Jalopy.png 2x"></a> --><br>Jeopardous Jalopy
+</th>
+<td><i> </i>
+</td>
+<td>570
+</td>
+<td>45-55
+</td>
+<td>对抗Hoppers +20% 伤害
+</td>
+<td>80(墨汁)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Master_Control.png" class="image"><img alt="MRKB Master Control.png" src="common/assets/img/mariorabbits/80px-MRKB_Master_Control.png" width="80" height="65" </a><!--srcset="/images/3/33/MRKB_Master_Control.png 1.5x, /images/3/33/MRKB_Master_Control.png 2x"></a> --><br>Master Control
+</th>
+<td>来自于电影Tron
+</td>
+<td>700
+</td>
+<td>80-90
+</td>
+<td> —
+</td>
+<td>117(墨汁)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Barn_Burner.png" class="image"><img alt="MRKB Barn Burner.png" src="common/assets/img/mariorabbits/80px-MRKB_Barn_Burner.png" width="80" height="60" </a><!--srcset="/images/thumb/5/5e/MRKB_Barn_Burner.png/120px-MRKB_Barn_Burner.png 1.5x, /images/5/5e/MRKB_Barn_Burner.png 2x"></a> --><br>Barn Burner
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>80-90
+</td>
+<td> —
+</td>
+<td>117(反弹)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bwahntasaurus_Wrecks.png" class="image"><img alt="MRKB Bwahntasaurus Wrecks.png" src="common/assets/img/mariorabbits/80px-MRKB_Bwahntasaurus_Wrecks.png" width="80" height="79" </a><!--srcset="/images/thumb/7/7f/MRKB_Bwahntasaurus_Wrecks.png/120px-MRKB_Bwahntasaurus_Wrecks.png 1.5x, /images/7/7f/MRKB_Bwahntasaurus_Wrecks.png 2x"></a> --><br>Bwahntasaurus Wrecks
+</th>
+<td><i> </i>
+</td>
+<td>800
+</td>
+<td>90-100
+</td>
+<td> —
+</td>
+<td>130(墨汁)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Crater_Maker.png" class="image"><img alt="MRKB Crater Maker.png" src="common/assets/img/mariorabbits/80px-MRKB_Crater_Maker.png" width="80" height="60" </a><!--srcset="/images/thumb/6/63/MRKB_Crater_Maker.png/120px-MRKB_Crater_Maker.png 1.5x, /images/6/63/MRKB_Crater_Maker.png 2x"></a> --><br>Crater Maker
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(墨汁)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>200
+</td>
+<td>7格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Danger_Arranger.png" class="image"><img alt="MRKB Danger Aranger.png" src="common/assets/img/mariorabbits/80px-MRKB_Danger_Arranger.png" width="80" height="64" </a><!--srcset="/images/thumb/3/37/MRKB_Danger_Aranger.png/120px-MRKB_Danger_Aranger.png 1.5x, /images/3/37/MRKB_Danger_Aranger.png 2x"></a> --><br>Danger Aranger
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(反弹)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>200
+</td>
+<td>7格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Painville_Express.png" class="image"><img alt="MRKB Painville Express.png" src="common/assets/img/mariorabbits/80px-MRKB_Painville_Express.png" width="80" height="63" </a><!--srcset="/images/thumb/a/ac/MRKB_Painville_Express.png/120px-MRKB_Painville_Express.png 1.5x, /images/a/ac/MRKB_Painville_Express.png 2x"></a> --><br>Painville Express
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(墨汁)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Fatal_Frame.png" class="image"><img alt="MRKB Fatal Frame.png" src="common/assets/img/mariorabbits/80px-MRKB_Fatal_Frame.png" width="80" height="62" </a><!--srcset="/images/thumb/5/56/MRKB_Fatal_Frame.png/120px-MRKB_Fatal_Frame.png 1.5x, /images/5/56/MRKB_Fatal_Frame.png 2x"></a> --><br>Fatal Frame
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(反弹)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Gold_Rush.png" class="image"><img alt="MRKB Gold Rush.png" src="common/assets/img/mariorabbits/80px-MRKB_Gold_Rush.png" width="80" height="56" </a><!--srcset="/images/thumb/f/fd/MRKB_Gold_Rush.png/120px-MRKB_Gold_Rush.png 1.5x, /images/f/fd/MRKB_Gold_Rush.png 2x"></a> --><br>Gold Rush
+</th>
+<td><i> </i>
+</td>
+<td>1450
+</td>
+<td>225-235
+</td>
+<td>对抗Mid-Bosses +15% 伤害
+</td>
+<td>282(反弹)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Road_Reaper.png" class="image"><img alt="MRKB Road Reaper.png" src="common/assets/img/mariorabbits/80px-MRKB_Road_Reaper.png" width="80" height="67" </a><!--srcset="/images/1/13/MRKB_Road_Reaper.png 1.5x, /images/1/13/MRKB_Road_Reaper.png 2x"></a> --><br>Road Reaper
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>235-245
+</td>
+<td>对抗Ziggies +20% 伤害
+</td>
+<td>294(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_A_Slay_At_The_Beach.png" class="image"><img alt="MRKB A Slay At The Beach.png" src="common/assets/img/mariorabbits/80px-MRKB_A_Slay_At_The_Beach.png" width="80" height="66" </a><!--srcset="/images/6/6e/MRKB_A_Slay_At_The_Beach.png 1.5x, /images/6/6e/MRKB_A_Slay_At_The_Beach.png 2x"></a> --><br>A Slay At The Beach
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>235-245
+</td>
+<td>对抗Ziggies +20% 伤害
+</td>
+<td>294(反弹)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Deploy_Toy.png" class="image"><img alt="MRKB Deploy Toy.png" src="common/assets/img/mariorabbits/80px-MRKB_Deploy_Toy.png" width="80" height="65" </a><!--srcset="/images/e/e0/MRKB_Deploy_Toy.png 1.5x, /images/e/e0/MRKB_Deploy_Toy.png 2x"></a> --><br>Deploy Toy
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(反弹)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Attack_From_The_Future_II.png" class="image"><img alt="MRKB Attack From The Future II.png" src="common/assets/img/mariorabbits/80px-MRKB_Attack_From_The_Future_II.png" width="80" height="67" </a><!--srcset="/images/f/fd/MRKB_Attack_From_The_Future_II.png 1.5x, /images/f/fd/MRKB_Attack_From_The_Future_II.png 2x"></a> --><br>Attack From The Future II
+</th>
+<td>来自于电影Back_to_the_Future_Part_II 
+ 
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(反弹)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+ 	
+</tbody>
+</table>
+												  </div>	
+												<div id="tabz-13" class="tab-contentz">
+													<table class="xtable" style="text-align:center; margin: auto">
+	<tbody>
+	<tr>
+<th colspan="13"><b>疯兔公主的哨兵</b>
+</th></tr>
+<tr>
+<th rowspan="2">哨兵
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th>
+<th rowspan="2">冷却时间
+</th>
+<th rowspan="2">伤害范围
+</th>
+<th rowspan="2">哨兵 体力
+</th>
+<th rowspan="2">警戒移动范围
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Excavator.png" class="image"><img alt="MRKB Excavator.png" src="common/assets/img/mariorabbits/80px-MRKB_Excavator.png" width="80" height="62" </a><!--srcset="/images/thumb/2/20/MRKB_Excavator.png/120px-MRKB_Excavator.png 1.5x, /images/2/20/MRKB_Excavator.png 2x"></a> --><br>Excavator
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Keys_to_Win.png" class="image"><img alt="MRKB Keys to Win.png" src="common/assets/img/mariorabbits/80px-MRKB_Keys_to_Win.png" width="80" height="63" </a><!--srcset="/images/thumb/9/91/MRKB_Keys_to_Win.png/120px-MRKB_Keys_to_Win.png 1.5x, /images/9/91/MRKB_Keys_to_Win.png 2x"></a> --><br>Keys to Win
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td>72 (Push)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Calamitous_Coupe.png" class="image"><img alt="MRKB Calamitous Coupe.png" src="common/assets/img/mariorabbits/80px-MRKB_Calamitous_Coupe.png" width="80" height="60" </a><!--srcset="/images/thumb/a/ad/MRKB_Calamitous_Coupe.png/120px-MRKB_Calamitous_Coupe.png 1.5x, /images/a/ad/MRKB_Calamitous_Coupe.png 2x"></a> --><br>Calamitous Coupe
+</th>
+<td><i> </i>
+</td>
+<td>550
+</td>
+<td>45-55
+</td>
+<td>对抗Smashers +20% 伤害
+</td>
+<td>80(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sandbagger.png" class="image"><img alt="MRKB Sandbagger.png" src="common/assets/img/mariorabbits/80px-MRKB_Sandbagger.png" width="80" height="58" </a><!--srcset="/images/thumb/2/2c/MRKB_Sandbagger.png/120px-MRKB_Sandbagger.png 1.5x, /images/2/2c/MRKB_Sandbagger.png 2x"></a> --><br>Sandbagger
+</th>
+<td>来自于Mario Golf游戏
+ 
+</td>
+<td>700
+</td>
+<td>80-90
+</td>
+<td> —
+</td>
+<td>117(蜂蜜)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Low_Blow.png" class="image"><img alt="MRKB Low Blow.png" src="common/assets/img/mariorabbits/80px-MRKB_Low_Blow.png" width="80" height="64" </a><!--srcset="/images/thumb/d/d1/MRKB_Low_Blow.png/120px-MRKB_Low_Blow.png 1.5x, /images/d/d1/MRKB_Low_Blow.png 2x"></a> --><br>Low Blow
+</th>
+<td><i> </i>
+</td>
+<td>700
+</td>
+<td>80-90
+</td>
+<td> —
+</td>
+<td>117 (Push)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>150
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Hot_Rod.png" class="image"><img alt="MRKB Hot Rod.png" src="common/assets/img/mariorabbits/80px-MRKB_Hot_Rod.png" width="80" height="72" </a><!--srcset="/images/7/7d/MRKB_Hot_Rod.png 1.5x, /images/7/7d/MRKB_Hot_Rod.png 2x"></a> --><br>Hot Rod
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188(蜂蜜)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>200
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Declogger_Flogger.png" class="image"><img alt="MRKB Declogger Flogger.png" src="common/assets/img/mariorabbits/80px-MRKB_Declogger_Flogger.png" width="80" height="58" </a><!--srcset="/images/thumb/e/eb/MRKB_Declogger_Flogger.png/120px-MRKB_Declogger_Flogger.png 1.5x, /images/e/eb/MRKB_Declogger_Flogger.png 2x"></a> --><br>Declogger Flogger
+</th>
+<td>'<i>　</i>
+</td>
+<td>1000
+</td>
+<td>140-150
+</td>
+<td> —
+</td>
+<td>188 (Push)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>200
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Buck.png" class="image"><img alt="MRKB Buck.png" src="common/assets/img/mariorabbits/80px-MRKB_Buck.png" width="80" height="61" </a><!--srcset="/images/thumb/c/c2/MRKB_Buck.png/120px-MRKB_Buck.png 1.5x, /images/c/c2/MRKB_Buck.png 2x"></a> --><br>Buck
+</th>
+<td><i>　</i>
+</td>
+<td>1030
+</td>
+<td>140-150
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>188 (Push)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>1格
+</td>
+<td>200
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Cookies_N%27_Scream.png" class="image"><img alt="MRKB Cookies N&#39; Scream.png" src="common/assets/img/mariorabbits/80px-MRKB_Cookies_N&#39;_Scream.png" width="80" height="64" </a><!--srcset="/images/thumb/b/bc/MRKB_Cookies_N%27_Scream.png/120px-MRKB_Cookies_N%27_Scream.png 1.5x, /images/b/bc/MRKB_Cookies_N%27_Scream.png 2x"></a> --><br>Cookies N' Scream
+</th>
+<td><i>　</i>
+</td>
+<td>1100
+</td>
+<td>150-160
+</td>
+<td> —
+</td>
+<td>200(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>200
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Anchors_Aweigh.png" class="image"><img alt="MRKB Anchors Aweigh.png" src="common/assets/img/mariorabbits/80px-MRKB_Anchors_Aweigh.png" width="80" height="63" </a><!--srcset="/images/thumb/f/f5/MRKB_Anchors_Aweigh.png/120px-MRKB_Anchors_Aweigh.png 1.5x, /images/f/f5/MRKB_Anchors_Aweigh.png 2x"></a> --><br>Anchors Aweigh
+</th>
+<td><i>　</i>
+</td>
+<td>1100
+</td>
+<td>150-160
+</td>
+<td> —
+</td>
+<td>200 (Push)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>200
+</td>
+<td>6格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Avalanche.png" class="image"><img alt="MRKB Avalanche.png" src="common/assets/img/mariorabbits/80px-MRKB_Avalanche.png" width="80" height="67" </a><!--srcset="/images/3/36/MRKB_Avalanche.png 1.5x, /images/3/36/MRKB_Avalanche.png 2x"></a> --><br>Avalanche
+</th>
+<td><i>　</i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282(蜂蜜)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>300
+</td>
+<td>7格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bullseye.png" class="image"><img alt="MRKB Bullseye.png" src="common/assets/img/mariorabbits/80px-MRKB_Bullseye.png" width="80" height="58" </a><!--srcset="/images/thumb/0/07/MRKB_Bullseye.png/120px-MRKB_Bullseye.png 1.5x, /images/0/07/MRKB_Bullseye.png 2x"></a> --><br>Bullseye
+</th>
+<td><i>　</i>
+</td>
+<td>1400
+</td>
+<td>225-235
+</td>
+<td> —
+</td>
+<td>282 (Push)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td>
+<td>300
+</td>
+<td>7格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Camo_Whammo.png" class="image"><img alt="MRKB Camo Whammo.png" src="common/assets/img/mariorabbits/80px-MRKB_Camo_Whammo.png" width="80" height="62" </a><!--srcset="/images/thumb/6/67/MRKB_Camo_Whammo.png/120px-MRKB_Camo_Whammo.png 1.5x, /images/6/67/MRKB_Camo_Whammo.png 2x"></a> --><br>Camo Whammo
+</th>
+<td><i>　</i>
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384(蜂蜜)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Alarm_Clock.png" class="image"><img alt="MRKB Alarm Clock.png" src="common/assets/img/mariorabbits/80px-MRKB_Alarm_Clock.png" width="80" height="63" </a><!--srcset="/images/thumb/1/14/MRKB_Alarm_Clock.png/120px-MRKB_Alarm_Clock.png 1.5x, /images/1/14/MRKB_Alarm_Clock.png 2x"></a> --><br>Alarm Clock
+</th>
+<td><i>　</i>
+</td>
+<td>1700
+</td>
+<td>315-325
+</td>
+<td> —
+</td>
+<td>384 (Push)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Iron_Curtain.png" class="image"><img alt="MRKB Iron Curtain.png" src="common/assets/img/mariorabbits/80px-MRKB_Iron_Curtain.png" width="80" height="72" </a><!--srcset="/images/c/ca/MRKB_Iron_Curtain.png 1.5x, /images/c/ca/MRKB_Iron_Curtain.png 2x"></a> --><br>Iron Curtain
+</th>
+<td><i>　</i>
+</td>
+<td>2050
+</td>
+<td>325-335
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>395 (Push)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td>
+<td>300
+</td>
+<td>8格
+</td></tr></tbody></table>
+												</div>	
+  										</div>
+  										<div id="tabs-3">
+								  			 <div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-14">耀西</li>
+														<li class="tab-link" data-tab="tabz-15">疯兔路易</li>
+													  
+													</ul>	
+ 
+													<div id="tabz-14" class="tab-contentz current">
+														 <table class="xtable" style="text-align:center; margin: auto">
+<tbody>
+	<tr>
+<th colspan="11"><b>耀西的火箭炮</b>
+</th></tr>
+<tr>
+<th width=10% rowspan="2">火箭炮
+</th>
+<th rowspan="2">说明
+</th>
+<th  width=10% rowspan="2">价格
+</th>
+<th  width=10% rowspan="2">命中伤害
+</th>
+<th  width=10% colspan="3">特殊效果
+</th>
+<th  width=10% rowspan="2">范围
+</th>
+<th  width=5% rowspan="2">掩护伤害
+</th>
+<th  width=5% rowspan="2">冷却时间
+</th>
+<th  width=5% rowspan="2">伤害范围
+</th></tr>
+<tr>
+<th  width=10% >特殊加成
+</th>
+<th width=10% >伤害
+</th>
+<th width=10% >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Supa_Bwahzooka.png" class="image"><img alt="MRKB Supa Bwahzooka.png" src="common/assets/img/mariorabbits/80px-MRKB_Supa_Bwahzooka.png" width="80" height="59" </a><!--srcset="/images/thumb/7/7d/MRKB_Supa_Bwahzooka.png/120px-MRKB_Supa_Bwahzooka.png 1.5x, /images/7/7d/MRKB_Supa_Bwahzooka.png 2x"></a> --><br>Supa Bwahzooka
+</th>
+<td><i>　</i>
+</td>
+<td> —
+</td>
+<td>120-130
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Brush_With_Mortality.png" class="image"><img alt="MRKB Brush With Mortality.png" src="common/assets/img/mariorabbits/80px-MRKB_Brush_With_Mortality.png" width="80" height="61" </a><!--srcset="/images/thumb/5/51/MRKB_Brush_With_Mortality.png/120px-MRKB_Brush_With_Mortality.png 1.5x, /images/5/51/MRKB_Brush_With_Mortality.png 2x"></a> --><br>Brush With Mortality
+</th>
+<td><i>　</i>
+</td>
+<td>1500
+</td>
+<td>125-135
+</td>
+<td> —
+</td>
+<td>162(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Song_of_Kong.png" class="image"><img alt="MRKB Song of Kong.png" src="common/assets/img/mariorabbits/80px-MRKB_Song_of_Kong.png" width="80" height="73" </a><!--srcset="/images/thumb/8/87/MRKB_Song_of_Kong.png/120px-MRKB_Song_of_Kong.png 1.5x, /images/8/87/MRKB_Song_of_Kong.png 2x"></a> --><br>Song of Kong
+</th>
+<td><i>　</i>
+</td>
+<td>1500
+</td>
+<td>125-135
+</td>
+<td> —
+</td>
+<td>162(冻结)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Candy_Striper_Sniper.png" class="image"><img alt="MRKB Candy Striper Sniper.png" src="common/assets/img/mariorabbits/80px-MRKB_Candy_Striper_Sniper.png" width="80" height="58" </a><!--srcset="/images/thumb/b/bc/MRKB_Candy_Striper_Sniper.png/120px-MRKB_Candy_Striper_Sniper.png 1.5x, /images/b/bc/MRKB_Candy_Striper_Sniper.png 2x"></a> --><br>Candy Striper Sniper
+</th>
+<td><i>　</i>
+</td>
+<td>1500
+</td>
+<td>125-135
+</td>
+<td> —
+</td>
+<td>162(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Torpedo.png" class="image"><img alt="MRKB Torpedo.png" src="common/assets/img/mariorabbits/80px-MRKB_Torpedo.png" width="80" height="57" </a><!--srcset="/images/thumb/4/4d/MRKB_Torpedo.png/120px-MRKB_Torpedo.png 1.5x, /images/4/4d/MRKB_Torpedo.png 2x"></a> --><br>Torpedo
+</th>
+<td> 
+</td>
+<td>amiibo
+</td>
+<td>130-140
+</td>
+<td>对抗Large Enemies +10% 伤害
+</td>
+<td>168(冻结)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Blooper_Shooter.png" class="image"><img alt="MRKB Blooper Shooter.png" src="common/assets/img/mariorabbits/80px-MRKB_Blooper_Shooter.png" width="80" height="61" </a><!--srcset="/images/thumb/7/7e/MRKB_Blooper_Shooter.png/120px-MRKB_Blooper_Shooter.png 1.5x, /images/7/7e/MRKB_Blooper_Shooter.png 2x"></a> --><br>Blooper Shooter
+</th>
+<td><i>　</i>
+</td>
+<td>1550
+</td>
+<td>130-140
+</td>
+<td>对抗Bucklers +30% 机率
+</td>
+<td>168(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Direly_Dulcet_Doomsayer.png" class="image"><img alt="MRKB Direly Dulcet Doomsayer.png" src="common/assets/img/mariorabbits/80px-MRKB_Direly_Dulcet_Doomsayer.png" width="80" height="61" </a><!--srcset="/images/thumb/3/3f/MRKB_Direly_Dulcet_Doomsayer.png/120px-MRKB_Direly_Dulcet_Doomsayer.png 1.5x, /images/3/3f/MRKB_Direly_Dulcet_Doomsayer.png 2x"></a> --><br>Direly Dulcet Doomsayer
+</th>
+<td><i>　</i>
+</td>
+<td>1500
+</td>
+<td>125-135
+</td>
+<td>对抗Valkyries +20% 伤害
+</td>
+<td>174(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Timber!.png" class="image"><img alt="MRKB Timber!.png" src="common/assets/img/mariorabbits/80px-MRKB_Timber!.png" width="80" height="61" </a><!--srcset="/images/thumb/b/bc/MRKB_Timber%21.png/120px-MRKB_Timber%21.png 1.5x, /images/b/bc/MRKB_Timber%21.png 2x"></a> --><br>Timber!
+</th>
+<td><i>　</i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_First_Responder.png" class="image"><img alt="MRKB First Responder.png" src="common/assets/img/mariorabbits/80px-MRKB_First_Responder.png" width="80" height="59" </a><!--srcset="/images/thumb/a/a8/MRKB_First_Responder.png/120px-MRKB_First_Responder.png 1.5x, /images/a/a8/MRKB_First_Responder.png 2x"></a> --><br>First Responder
+</th>
+<td><i>　</i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207(冻结)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Eat_Lead.png" class="image"><img alt="MRKB Eat Lead.png" src="common/assets/img/mariorabbits/80px-MRKB_Eat_Lead.png" width="80" height="58" </a><!--srcset="/images/thumb/2/24/MRKB_Eat_Lead.png/120px-MRKB_Eat_Lead.png 1.5x, /images/2/24/MRKB_Eat_Lead.png 2x"></a> --><br>Eat Lead
+</th>
+<td><i>　</i>
+</td>
+<td>1750
+</td>
+<td>165-175
+</td>
+<td>对抗Valkyries +30% 伤害
+</td>
+<td>207(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Pastel_Farewell.png" class="image"><img alt="MRKB Pastel Farewell.png" src="common/assets/img/mariorabbits/80px-MRKB_Pastel_Farewell.png" width="80" height="61" </a><!--srcset="/images/thumb/9/90/MRKB_Pastel_Farewell.png/120px-MRKB_Pastel_Farewell.png 1.5x, /images/9/90/MRKB_Pastel_Farewell.png 2x"></a> --><br>Pastel Farewell
+</th>
+<td><i>　</i>
+</td>
+<td>1750
+</td>
+<td>165-175
+</td>
+<td>对抗Valkyries +30% 伤害
+</td>
+<td>207(冻结)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Golden_Tongue.png" class="image"><img alt="MRKB Golden Tongue.png" src="common/assets/img/mariorabbits/80px-MRKB_Golden_Tongue.png" width="80" height="59" </a><!--srcset="/images/thumb/7/7b/MRKB_Golden_Tongue.png/120px-MRKB_Golden_Tongue.png 1.5x, /images/7/7b/MRKB_Golden_Tongue.png 2x"></a> --><br>Golden Tongue
+</th>
+<td><i>　　</i>
+</td>
+<td>1750
+</td>
+<td>165-175
+</td>
+<td>对抗Mid-Bosses +15% 伤害
+</td>
+<td>207(墨汁)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sixty-Watt_Swat.png" class="image"><img alt="MRKB Sixty-Watt Swat.png" src="common/assets/img/mariorabbits/80px-MRKB_Sixty-Watt_Swat.png" width="80" height="57" </a><!--srcset="/images/thumb/0/09/MRKB_Sixty-Watt_Swat.png/120px-MRKB_Sixty-Watt_Swat.png 1.5x, /images/0/09/MRKB_Sixty-Watt_Swat.png 2x"></a> --><br>Sixty-Watt Swat
+</th>
+<td><i>　</i>
+</td>
+<td>2050
+</td>
+<td>175-185
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>218(冻结)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+
+</tbody>
+</table>
+													</div>
+													<div id="tabz-15" class="tab-contentz">
+														 <table class="xtable" style="text-align:center; margin: auto">
+<tbody>	
+<tr>
+<th colspan="11"><b>疯兔路易的火箭炮</b>
+</th></tr>
+<tr>
+<th rowspan="2">Rocket
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th>
+<th rowspan="2">冷却时间
+</th>
+<th rowspan="2">伤害范围
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Pipe_Dream.png" class="image"><img alt="MRKB Pipe Dream.png" src="common/assets/img/mariorabbits/80px-MRKB_Pipe_Dream.png" width="80" height="60" </a><!--srcset="/images/thumb/7/7d/MRKB_Pipe_Dream.png/120px-MRKB_Pipe_Dream.png 1.5x, /images/7/7d/MRKB_Pipe_Dream.png 2x"></a> --><br>Pipe Dream
+</th>
+<td><i>　</i>
+</td>
+<td> —
+</td>
+<td>20-30
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Polka_Party.png" class="image"><img alt="MRKB Polka Party.png" src="common/assets/img/mariorabbits/80px-MRKB_Polka_Party.png" width="80" height="60" </a><!--srcset="/images/thumb/6/67/MRKB_Polka_Party.png/120px-MRKB_Polka_Party.png 1.5x, /images/6/67/MRKB_Polka_Party.png 2x"></a> --><br>Polka Party
+</th>
+<td><i>　</i>
+</td>
+<td>550
+</td>
+<td>20-30
+</td>
+<td> —
+</td>
+<td>39(燃烧)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Effectual_Atomizer.png" class="image"><img alt="MRKB Effectual Atomizer.png" src="common/assets/img/mariorabbits/80px-MRKB_Effectual_Atomizer.png" width="80" height="63" </a><!--srcset="/images/thumb/1/1f/MRKB_Effectual_Atomizer.png/120px-MRKB_Effectual_Atomizer.png 1.5x, /images/1/1f/MRKB_Effectual_Atomizer.png 2x"></a> --><br>Effectual Atomizer
+</th>
+<td><i>　</i>
+</td>
+<td>550
+</td>
+<td>20-30
+</td>
+<td>对抗Ziggies +20% 伤害
+</td>
+<td>45 (Push)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Black_Widow.png" class="image"><img alt="MRKB Black Widow.png" src="common/assets/img/mariorabbits/80px-MRKB_Black_Widow.png" width="80" height="58" </a><!--srcset="/images/thumb/d/dd/MRKB_Black_Widow.png/120px-MRKB_Black_Widow.png 1.5x, /images/d/dd/MRKB_Black_Widow.png 2x"></a> --><br>Black Widow
+</th>
+<td><i>　</i>
+</td>
+<td>700
+</td>
+<td>40-50
+</td>
+<td> —
+</td>
+<td>65 (Push)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Saturn_V.png" class="image"><img alt="MRKB Saturn V.png" src="common/assets/img/mariorabbits/80px-MRKB_Saturn_V.png" width="80" height="59" </a><!--srcset="/images/thumb/8/8d/MRKB_Saturn_V.png/120px-MRKB_Saturn_V.png 1.5x, /images/8/8d/MRKB_Saturn_V.png 2x"></a> --><br>Saturn V
+</th>
+<td><i>　</i>
+</td>
+<td>700
+</td>
+<td>40-50
+</td>
+<td> —
+</td>
+<td>65(燃烧)
+</td>
+<td>30%
+</td>
+<td>15格 (远程)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Stinger.png" class="image"><img alt="MRKB Stinger.png" src="common/assets/img/mariorabbits/80px-MRKB_Stinger.png" width="80" height="59" </a><!--srcset="/images/thumb/a/ab/MRKB_Stinger.png/120px-MRKB_Stinger.png 1.5x, /images/a/ab/MRKB_Stinger.png 2x"></a> --><br>Stinger
+</th>
+<td><i>　</i>
+</td>
+<td>800
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td>72 (Push)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bullenator.png" class="image"><img alt="MRKB Bullenator.png" src="common/assets/img/mariorabbits/80px-MRKB_Bullenator.png" width="80" height="60" </a><!--srcset="/images/thumb/c/c2/MRKB_Bullenator.png/120px-MRKB_Bullenator.png 1.5x, /images/c/c2/MRKB_Bullenator.png 2x"></a> --><br>Bullenator
+</th>
+<td><i>　</i>
+</td>
+<td>800
+</td>
+<td>45-55
+</td>
+<td> —
+</td>
+<td>72(燃烧)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Thunderceptor.png" class="image"><img alt="MRKB Thunderceptor.png" src="common/assets/img/mariorabbits/80px-MRKB_Thunderceptor.png" width="80" height="55" </a><!--srcset="/images/thumb/2/2e/MRKB_Thunderceptor.png/120px-MRKB_Thunderceptor.png 1.5x, /images/2/2e/MRKB_Thunderceptor.png 2x"></a> --><br>Thunderceptor
+</th>
+<td><i>　</i>
+</td>
+<td>830
+</td>
+<td>45-55
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>72 (Push)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Louis_Harmstrong.png" class="image"><img alt="MRKB Louis Harmstrong.png" src="common/assets/img/mariorabbits/80px-MRKB_Louis_Harmstrong.png" width="80" height="59" </a><!--srcset="/images/thumb/0/0f/MRKB_Louis_Harmstrong.png/120px-MRKB_Louis_Harmstrong.png 1.5x, /images/0/0f/MRKB_Louis_Harmstrong.png 2x"></a> --><br>Louis Harmstrong
+</th>
+<td>　来自于歌曲What A Wonderful World　　
+</td>
+<td>1000
+</td>
+<td>70-80
+</td>
+<td> —
+</td>
+<td>100 (Push)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Spike.png" class="image"><img alt="MRKB Big Spike.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Spike.png" width="80" height="60" </a><!--srcset="/images/thumb/2/22/MRKB_Big_Spike.png/120px-MRKB_Big_Spike.png 1.5x, /images/2/22/MRKB_Big_Spike.png 2x"></a> --><br>Big Spike
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>70-80
+</td>
+<td> —
+</td>
+<td>100(燃烧)
+</td>
+<td>40%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sky_Raider.png" class="image"><img alt="MRKB Sky Raider.png" src="common/assets/img/mariorabbits/80px-MRKB_Sky_Raider.png" width="80" height="65" </a><!--srcset="/images/thumb/1/16/MRKB_Sky_Raider.png/120px-MRKB_Sky_Raider.png 1.5x, /images/1/16/MRKB_Sky_Raider.png 2x"></a> --><br>Sky Raider
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>75-85
+</td>
+<td> —
+</td>
+<td>106 (Push)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Big_Red.png" class="image"><img alt="MRKB Big Red.png" src="common/assets/img/mariorabbits/80px-MRKB_Big_Red.png" width="80" height="60" </a><!--srcset="/images/thumb/1/10/MRKB_Big_Red.png/120px-MRKB_Big_Red.png 1.5x, /images/1/10/MRKB_Big_Red.png 2x"></a> --><br>Big Red
+</th>
+<td><i> </i>
+</td>
+<td>1100
+</td>
+<td>75-85
+</td>
+<td> —
+</td>
+<td>106(燃烧)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Might_of_the_Kite.png" class="image"><img alt="MRKB Might of the Kite.png" src="common/assets/img/mariorabbits/80px-MRKB_Might_of_the_Kite.png" width="80" height="59" </a><!--srcset="/images/thumb/1/1c/MRKB_Might_of_the_Kite.png/120px-MRKB_Might_of_the_Kite.png 1.5x, /images/1/1c/MRKB_Might_of_the_Kite.png 2x"></a> --><br>Might of the Kite
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>150 (Push)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_World_Cannon.png" class="image"><img alt="MRKB World Cannon.png" src="common/assets/img/mariorabbits/80px-MRKB_World_Cannon.png" width="80" height="60" </a><!--srcset="/images/thumb/7/7d/MRKB_World_Cannon.png/120px-MRKB_World_Cannon.png 1.5x, /images/7/7d/MRKB_World_Cannon.png 2x"></a> --><br>World Cannon
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>150(燃烧)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Golden_Rocket.png" class="image"><img alt="MRKB Golden Rocket.png" src="common/assets/img/mariorabbits/80px-MRKB_Golden_Rocket.png" width="80" height="60" </a><!--srcset="/images/thumb/6/60/MRKB_Golden_Rocket.png/120px-MRKB_Golden_Rocket.png 1.5x, /images/6/60/MRKB_Golden_Rocket.png 2x"></a> --><br>Golden Rocket
+</th>
+<td><i> </i>
+</td>
+<td>1450
+</td>
+<td>115-125
+</td>
+<td>对抗Mid-Bosses +15% 机率
+</td>
+<td>150 (Push)
+</td>
+<td>50%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Agro_Torpedo.png" class="image"><img alt="MRKB Agro Torpedo.png" src="common/assets/img/mariorabbits/80px-MRKB_Agro_Torpedo.png" width="80" height="65" </a><!--srcset="/images/thumb/1/1b/MRKB_Agro_Torpedo.png/120px-MRKB_Agro_Torpedo.png 1.5x, /images/1/1b/MRKB_Agro_Torpedo.png 2x"></a> --><br>Agro Torpedo
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207 (Push)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Jade_Jaguar.png" class="image"><img alt="MRKB Jade Jaguar.png" src="common/assets/img/mariorabbits/80px-MRKB_Jade_Jaguar.png" width="80" height="58" </a><!--srcset="/images/thumb/0/0e/MRKB_Jade_Jaguar.png/120px-MRKB_Jade_Jaguar.png 1.5x, /images/0/0e/MRKB_Jade_Jaguar.png 2x"></a> --><br>Jade Jaguar
+</th>
+<td>来自于狸猫装
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207(燃烧)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Righteous_Rocket.png" class="image"><img alt="MRKB Righteous Rocket.png" src="common/assets/img/mariorabbits/80px-MRKB_Righteous_Rocket.png" width="80" height="60" </a><!--srcset="/images/thumb/9/9b/MRKB_Righteous_Rocket.png/120px-MRKB_Righteous_Rocket.png 1.5x, /images/9/9b/MRKB_Righteous_Rocket.png 2x"></a> --><br>Righteous Rocket
+</th>
+<td><i> </i>
+</td>
+<td>2050
+</td>
+<td>175-185
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>218(燃烧)
+</td>
+<td>60%
+</td>
+<td>15格 (远程)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td>
+</tr>
+</tbody>
+</table>
+													</div>
+  										</div>
+  										<div id="tabs-4">
+								  			 <div class="containerz">
+
+													<ul class="tabsz">
+														<li class="tab-link current" data-tab="tabz-16">桃子公主</li>
+														<li class="tab-link" data-tab="tabz-17">疯兔耀西</li>
+													  
+													</ul>	
+ 
+													<div id="tabz-16" class="tab-contentz current">
+														<table class="xtable" style="text-align:center; margin: auto">
+<tbody>
+	<tr>
+<th colspan="11"><b>桃子公主的手榴弹</b>
+</th></tr>
+<tr>
+<th width=10% rowspan="2">手榴弹
+</th>
+<th rowspan="2">说明
+</th>
+<th width=10%  rowspan="2">价格
+</th>
+<th width=10%  rowspan="2">命中伤害
+</th>
+<th width=10%  colspan="3">特殊效果
+</th>
+<th width=10%  rowspan="2">范围
+</th>
+<th width=5%  rowspan="2">掩护伤害
+</th>
+<th width=5%  rowspan="2">冷却时间
+</th>
+<th width=5%  rowspan="2">伤害范围
+</th></tr>
+<tr>
+<th width=10% >特殊加成
+</th>
+<th width=10% >伤害
+</th>
+<th width=10% >机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_The_Duckess.png" class="image"><img alt="MRKB The Duckess.png" src="common/assets/img/mariorabbits/80px-MRKB_The_Duckess.png" width="80" height="97" </a><!--srcset="/images/thumb/1/1b/MRKB_The_Duckess.png/120px-MRKB_The_Duckess.png 1.5x, /images/1/1b/MRKB_The_Duckess.png 2x"></a> --><br>The Duckess
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>65-75
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>10格 (中)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bwahmmo!.png" class="image"><img alt="MRKB Bwahmmo!.png" src="common/assets/img/mariorabbits/80px-MRKB_Bwahmmo!.png" width="80" height="91" </a><!--srcset="/images/thumb/9/9c/MRKB_Bwahmmo%21.png/120px-MRKB_Bwahmmo%21.png 1.5x, /images/9/9c/MRKB_Bwahmmo%21.png 2x"></a> --><br>Bwahmmo!
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>70-80
+</td>
+<td> —
+</td>
+<td>100(冻结)
+</td>
+<td>40%
+</td>
+<td>10格 (中)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Silent_But_Deadly.png" class="image"><img alt="MRKB Silent But Deadly.png" src="common/assets/img/mariorabbits/80px-MRKB_Silent_But_Deadly.png" width="80" height="69" </a><!--srcset="/images/thumb/3/36/MRKB_Silent_But_Deadly.png/120px-MRKB_Silent_But_Deadly.png 1.5x, /images/3/36/MRKB_Silent_But_Deadly.png 2x"></a> --><br>Silent But Deadly
+</th>
+<td><i> </i>
+</td>
+<td>1000
+</td>
+<td>70-80
+</td>
+<td> —
+</td>
+<td>100(燃烧)
+</td>
+<td>40%
+</td>
+<td>10格 (中)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Golden_Goose.png" class="image"><img alt="MRKB Golden Goose.png" src="common/assets/img/mariorabbits/80px-MRKB_Golden_Goose.png" width="80" height="85" </a><!--srcset="/images/thumb/1/12/MRKB_Golden_Goose.png/120px-MRKB_Golden_Goose.png 1.5x, /images/1/12/MRKB_Golden_Goose.png 2x"></a> --><br>Golden Goose
+</th>
+<td><i> </i>
+</td>
+<td>1030
+</td>
+<td>70-80
+</td>
+<td>对抗Mid-Bosses +15% 机率
+</td>
+<td>100(冻结)
+</td>
+<td>40%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Defalcating_Dandy.png" class="image"><img alt="MRKB Defalcating Dandy.png" src="common/assets/img/mariorabbits/80px-MRKB_Defalcating_Dandy.png" width="80" height="99" </a><!--srcset="/images/thumb/4/4c/MRKB_Defalcating_Dandy.png/120px-MRKB_Defalcating_Dandy.png 1.5x, /images/4/4c/MRKB_Defalcating_Dandy.png 2x"></a> --><br>Defalcating Dandy
+</th>
+<td><i> </i>
+</td>
+<td>1030
+</td>
+<td>70-80
+</td>
+<td>对抗Supporters +20% 伤害
+</td>
+<td>110(冻结)
+</td>
+<td>40%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>2格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Brunnhilde.png" class="image"><img alt="MRKB Brunnhilde.png" src="common/assets/img/mariorabbits/80px-MRKB_Brunnhilde.png" width="80" height="92" </a><!--srcset="/images/thumb/9/95/MRKB_Brunnhilde.png/120px-MRKB_Brunnhilde.png 1.5x, /images/9/95/MRKB_Brunnhilde.png 2x"></a> --><br>Brunnhilde
+</th>
+<td><i> </i>
+</td>
+<td>1150
+</td>
+<td>75-85
+</td>
+<td>对抗Hoppers +30% 机率
+</td>
+<td>106(燃烧)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Kamek_Panic.png" class="image"><img alt="MRKB Kamek Panic.png" src="common/assets/img/mariorabbits/80px-MRKB_Kamek_Panic.png" width="80" height="89" </a><!--srcset="/images/thumb/8/8b/MRKB_Kamek_Panic.png/120px-MRKB_Kamek_Panic.png 1.5x, /images/8/8b/MRKB_Kamek_Panic.png 2x"></a> --><br>Kamek Panic
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>150(冻结)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Firequacker.png" class="image"><img alt="MRKB Firequacker.png" src="common/assets/img/mariorabbits/80px-MRKB_Firequacker.png" width="80" height="89" </a><!--srcset="/images/thumb/e/e3/MRKB_Firequacker.png/120px-MRKB_Firequacker.png 1.5x, /images/e/e3/MRKB_Firequacker.png 2x"></a> --><br>Firequacker
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>150(燃烧)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_The_King.png" class="image"><img alt="MRKB The King.png" src="common/assets/img/mariorabbits/80px-MRKB_The_King.png" width="80" height="79" </a><!--srcset="/images/thumb/3/33/MRKB_The_King.png/120px-MRKB_The_King.png 1.5x, /images/3/33/MRKB_The_King.png 2x"></a> --><br>The King
+</th>
+<td> 来自于猫王Elvis Presley（通常称他为the "King of Rock and Roll" or  "the King".）
+</td>
+<td>1450
+</td>
+<td>115-125
+</td>
+<td>对抗Peek-A-Boos +30% 机率
+</td>
+<td>150(冻结)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Gobblegoose.png" class="image"><img alt="MRKB Gobblegoose.png" src="common/assets/img/mariorabbits/80px-MRKB_Gobblegoose.png" width="80" height="82" </a><!--srcset="/images/thumb/d/d7/MRKB_Gobblegoose.png/120px-MRKB_Gobblegoose.png 1.5x, /images/d/d7/MRKB_Gobblegoose.png 2x"></a> --><br>Gobblegoose
+</th>
+<td> 来自于马里奥银河2中的 Gobblegut 
+</td>
+<td>1550
+</td>
+<td>125-135
+</td>
+<td>对抗Peek-A-Boos +20% 伤害
+</td>
+<td>162(燃烧)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Von_Quackington.png" class="image"><img alt="MRKB Von Quackington.png" src="common/assets/img/mariorabbits/80px-MRKB_Von_Quackington.png" width="80" height="74" </a><!--srcset="/images/thumb/8/8d/MRKB_Von_Quackington.png/120px-MRKB_Von_Quackington.png 1.5x, /images/8/8d/MRKB_Von_Quackington.png 2x"></a> --><br>Von Quackington
+</th>
+<td>'<i> </i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207(冻结)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Cock-A-Doodle-Kaboom.png" class="image"><img alt="MRKB Cock-A-Doodle-Kaboom.png" src="common/assets/img/mariorabbits/80px-MRKB_Cock-A-Doodle-Kaboom.png" width="80" height="87" </a><!--srcset="/images/thumb/7/71/MRKB_Cock-A-Doodle-Kaboom.png/120px-MRKB_Cock-A-Doodle-Kaboom.png 1.5x, /images/7/71/MRKB_Cock-A-Doodle-Kaboom.png 2x"></a> --><br>Cock-A-Doodle-Kaboom
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207(燃烧)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Scubam!.png" class="image"><img alt="MRKB Scubam!.png" src="common/assets/img/mariorabbits/80px-MRKB_Scubam!.png" width="80" height="82" </a><!--srcset="/images/thumb/6/64/MRKB_Scubam%21.png/120px-MRKB_Scubam%21.png 1.5x, /images/6/64/MRKB_Scubam%21.png 2x"></a> --><br>Scubam!
+</th>
+<td><i> </i>
+</td>
+<td>2050
+</td>
+<td>175-185
+</td>
+<td>对抗Mid-Bosses +10% 机率
+</td>
+<td>218(冻结)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+</tbody>
+</table>
+												</div>
+													<div id="tabz-17" class="tab-contentz">
+														<table class="xtable" style="text-align:center; margin: auto">
+<tbody>
+<tr>
+<th colspan="11"><b>疯兔耀西的手榴弹</b>
+</th></tr>
+<tr>
+<th rowspan="2">手榴弹
+</th>
+<th rowspan="2">说明
+</th>
+<th rowspan="2">价格
+</th>
+<th rowspan="2">命中伤害
+</th>
+<th colspan="3">特殊效果
+</th>
+<th rowspan="2">范围
+</th>
+<th rowspan="2">掩护伤害
+</th>
+<th rowspan="2">冷却时间
+</th>
+<th rowspan="2">伤害范围
+</th></tr>
+<tr>
+<th>特殊加成
+</th>
+<th>伤害
+</th>
+<th>机率
+</th></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Yoshimite.png" class="image"><img alt="MRKB Yoshimite.png" src="common/assets/img/mariorabbits/80px-MRKB_Yoshimite.png" width="80" height="85" </a><!--srcset="/images/thumb/5/5c/MRKB_Yoshimite.png/120px-MRKB_Yoshimite.png 1.5x, /images/5/5c/MRKB_Yoshimite.png 2x"></a> --><br>Yoshimite
+</th>
+<td><i> </i>
+</td>
+<td> —
+</td>
+<td>70-80
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td> —
+</td>
+<td>10格 (中)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sam_Kingfisher.png" class="image"><img alt="MRKB Sam Kingfisher.png" src="common/assets/img/mariorabbits/80px-MRKB_Sam_Kingfisher.png" width="80" height="72" </a><!--srcset="/images/thumb/1/15/MRKB_Sam_Kingfisher.png/120px-MRKB_Sam_Kingfisher.png 1.5x, /images/1/15/MRKB_Sam_Kingfisher.png 2x"></a> --><br>Sam Kingfisher
+</th>
+<td> 来自于细胞分裂的的Sam大叔  
+</td>
+<td>1100
+</td>
+<td>75-85
+</td>
+<td> —
+</td>
+<td>106 (Push)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Disco_Duck.png" class="image"><img alt="MRKB Disco Duck.png" src="common/assets/img/mariorabbits/80px-MRKB_Disco_Duck.png" width="80" height="78" </a><!--srcset="/images/thumb/c/c1/MRKB_Disco_Duck.png/120px-MRKB_Disco_Duck.png 1.5x, /images/c/c1/MRKB_Disco_Duck.png 2x"></a> --><br>Disco Duck
+</th>
+<td> 来自于歌曲Disco Duck 
+</td>
+<td>1100
+</td>
+<td>75-85
+</td>
+<td> —
+</td>
+<td>106(石化)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>低
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bozo_Boom.png" class="image"><img alt="MRKB Bozo Boom.png" src="common/assets/img/mariorabbits/80px-MRKB_Bozo_Boom.png" width="80" height="76" </a><!--srcset="/images/thumb/2/2c/MRKB_Bozo_Boom.png/120px-MRKB_Bozo_Boom.png 1.5x, /images/2/2c/MRKB_Bozo_Boom.png 2x"></a> --><br>Bozo Boom
+</th>
+<td><i> </i>
+</td>
+<td>1150
+</td>
+<td>75-85
+</td>
+<td>对抗Peek-A-Boos +30% 机率
+</td>
+<td>106 (Push)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Exalted_Entropic_Eggs.png" class="image"><img alt="MRKB Exalted Entropic Eggs.png" src="common/assets/img/mariorabbits/80px-MRKB_Exalted_Entropic_Eggs.png" width="80" height="95" </a><!--srcset="/images/thumb/9/94/MRKB_Exalted_Entropic_Eggs.png/120px-MRKB_Exalted_Entropic_Eggs.png 1.5x, /images/9/94/MRKB_Exalted_Entropic_Eggs.png 2x"></a> --><br>Exalted Entropic Eggs
+</th>
+<td><i> </i>
+</td>
+<td>1150
+</td>
+<td>75-85
+</td>
+<td>对抗Peek-A-Boos +20% 伤害
+</td>
+<td>115(石化)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bowserbeak.png" class="image"><img alt="MRKB Bowserbeak.png" src="common/assets/img/mariorabbits/80px-MRKB_Bowserbeak.png" width="80" height="94" </a><!--srcset="/images/thumb/2/28/MRKB_Bowserbeak.png/120px-MRKB_Bowserbeak.png 1.5x, /images/2/28/MRKB_Bowserbeak.png 2x"></a> --><br>Bowserbeak
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>150 (Push)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Bowsertail_Jr.png" class="image"><img alt="MRKB Bowsertail Jr.png" src="common/assets/img/mariorabbits/80px-MRKB_Bowsertail_Jr.png" width="80" height="94" </a><!--srcset="/images/thumb/f/fa/MRKB_Bowsertail_Jr.png/120px-MRKB_Bowsertail_Jr.png 1.5x, /images/f/fa/MRKB_Bowsertail_Jr.png 2x"></a> --><br>Bowsertail Jr.
+</th>
+<td><i> </i>
+</td>
+<td>1400
+</td>
+<td>115-125
+</td>
+<td> —
+</td>
+<td>150(石化)
+</td>
+<td>50%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>3格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Pinwheel.png" class="image"><img alt="MRKB Pinwheel.png" src="common/assets/img/mariorabbits/80px-MRKB_Pinwheel.png" width="80" height="85" </a><!--srcset="/images/thumb/d/d9/MRKB_Pinwheel.png/120px-MRKB_Pinwheel.png 1.5x, /images/d/d9/MRKB_Pinwheel.png 2x"></a> --><br>Pinwheel
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>125-135
+</td>
+<td>对抗Supporters +30% 伤害
+</td>
+<td>162 (Push)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sir_Crackers.png" class="image"><img alt="MRKB Sir Crackers.png" src="common/assets/img/mariorabbits/80px-MRKB_Sir_Crackers.png" width="80" height="89" </a><!--srcset="/images/thumb/8/87/MRKB_Sir_Crackers.png/120px-MRKB_Sir_Crackers.png 1.5x, /images/8/87/MRKB_Sir_Crackers.png 2x"></a> --><br>Sir Crackers
+</th>
+<td><i> </i>
+</td>
+<td>1550
+</td>
+<td>125-135
+</td>
+<td>对抗Supporters +30% 伤害
+</td>
+<td>162(石化)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Mallardario.png" class="image"><img alt="MRKB Mallardario.png" src="common/assets/img/mariorabbits/80px-MRKB_Mallardario.png" width="80" height="92" </a><!--srcset="/images/thumb/5/58/MRKB_Mallardario.png/120px-MRKB_Mallardario.png 1.5x, /images/5/58/MRKB_Mallardario.png 2x"></a> --><br>Mallardario
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207 (Push)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Annihilation_From_Above.png" class="image"><img alt="MRKB Annihilation From Above.png" src="common/assets/img/mariorabbits/80px-MRKB_Annihilation_From_Above.png" width="80" height="97" </a><!--srcset="/images/thumb/d/dc/MRKB_Annihilation_From_Above.png/120px-MRKB_Annihilation_From_Above.png 1.5x, /images/d/dc/MRKB_Annihilation_From_Above.png 2x"></a> --><br>Annihilation From Above
+</th>
+<td><i> </i>
+</td>
+<td>1700
+</td>
+<td>165-175
+</td>
+<td> —
+</td>
+<td>207(石化)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr>
+<tr>
+<th><a href="common/assets/img/mariorabbits/80px-MRKB_Sir_Goldwain.png" class="image"><img alt="MRKB Sir Goldwain.png" src="common/assets/img/mariorabbits/80px-MRKB_Sir_Goldwain.png" width="80" height="92" </a><!--srcset="/images/thumb/7/71/MRKB_Sir_Goldwain.png/120px-MRKB_Sir_Goldwain.png 1.5x, /images/7/71/MRKB_Sir_Goldwain.png 2x"></a> --><br>Sir Goldwain
+</th>
+<td><i> </i>
+</td>
+<td>1750
+</td>
+<td>165-175
+</td>
+<td>对抗Mid-Bosses +10% 伤害
+</td>
+<td>207 (Push)
+</td>
+<td>60%
+</td>
+<td>10格 (中)
+</td>
+<td>中
+</td>
+<td>1回合
+</td>
+<td>4格
+</td></tr></tbody></table> 
+												</div>
+													
+  										</div>
+  										</div>  	
+  									</td>
+									</tr>
+							</table>  
+           </div><!--mb3 end-->	
+           <div id="con_mb_4" style="display:none;">
+                 4 
+                 正在建设中...     
+           </div>  <!--mb4 end-->	
+        </div><!--connbox end-->	
+    </div> <!--tab_box end-->	
+
+				
+				
+		
+   
+	</div><!-- end  content -->
+ 	
+	</div><!-- end  main -->
+	</div><!-- end  wrap_mr -->
+	</div><!-- end  main bg -->
+<div class="footer_bg">
+<div class="wrap">
+	<div class="footer">
+		<div class="span_of_4">
+			<div class="span1_of_4">
+				<h4>关于我</h4>
+				<p>70后玩家一枚</p>
+				<p>	 1990-1992年接触FC游戏</p>
+				<p>	 1993年开始接触街机游戏</p>
+		    <p>	 1994年开始接触电脑游戏</p>
+  			<span style="font-weight:bold;">关于游戏</span>
+				<p class="top"></p>
+				<p>游戏也是一种文化</p>
+				<p>已经成为生命中难以割舍的一部分</p>
+				 
+				
+			 
+				
+			</div>
+			<div class="span1_of_4">
+				<h4>败家历史</h4>
+				<p>1994年拥有了小霸王学习机</p>
+				<p>1996年拥有了自己的第一台组装电脑</p>
+				<p>2000年拥有了Game Boy(绿色)</p>
+				<p>2001年拥有了Play Station One</p>
+				<p>2006年拥有了Ndsl</p>
+				<p>2013年拥有了Xbox 360</p>
+				<p>2015年拥有了New 3ds LL</p>
+				<p>2017年拥有了Switch</p>
+			</div>
+			<div class="span1_of_4">
+				<h4>喜欢的游戏</h4>
+				<span class="bg">即时战略:命令与征服、横扫千军、英雄连、战锤40k...</span>
+				<span class="bg top">动作及格斗:真侍魂、古墓丽影...</span>
+				<span class="bg">射击:CS、COD、喷射战士2...</span>
+				<span class="bg">角色扮演:勇者斗恶龙、塞尔达...</span>
+				
+			</div>
+			<div class="span1_of_4">
+				<h4>近期关注的游戏</h4>
+				<ul class="f_nav">
+					<li><a href="#"> <img src="common/assets/img/games/ns/splatoon2.jpg" alt="说明" title="喷射战士2" </a></li>
+					<li><a href="#"><img src="common/assets/img/games/ns/mariocart8.jpg" alt="说明" title="马车8"> </a></li>
+					<li><a href="#"><img src="common/assets/img/games/ns/mariorabbit.jpg" alt="说明" title="马里奥疯兔"> </a></li>
+					<li><a href="#"><img src="common/assets/img/games/ns/odsey.jpg" alt="说明" title="奥德赛"> </a></li>
+					
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer_top">
+			<div class="f_nav1">
+				<ul>
+					<li><a href="/">首页</a></li>
+					<li><a href="about.html">关于</a></li>				
+				</ul>
+			</div>
+			<div class="copy">
+				<p class="link"><span>© All rights reserved | 疾风</a></span></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+</div>
+</div>
+<script src='js/jquery.min.js'></script>
+<script >$(document).ready(function(){
+	
+	$('ul.tabsz li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabsz li').removeClass('current');
+		$('.tab-contentz').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+//# sourceURL=pen.js
+</script>
+<script type="text/javascript" src="js/jquery.smartTab.js"></script>
+
+ <!--  jquery plguin -->
+ 
+<script type="text/javascript">
+    $(document).ready(function(){
+    	// Smart Tab
+
+  		$('#tabsd').smartTab({autoProgress: false,stopOnFocus:true,transitionEffect:'vSlide'});
+  	// Smart Tab 2
+  	 $('#tabs2').smartTab({autoProgress: false,stopOnFocus:true,transitionEffect:'vSlide'});
+  	 // Smart Tab 3
+  	 $('#tabs3').smartTab({autoProgress: false,stopOnFocus:true,transitionEffect:'vSlide'});
+    //h_tabls
+   
+});
+</script> 
+	<script>
+			$(document).ready(function() {
+				 $(window).scrollTop(0)
+			   setTimeout(() => window.scrollTo(0, 0), 15)
+			
+		});
+		</script>
+</body>
+</html>

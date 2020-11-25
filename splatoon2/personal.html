@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+  <link rel="stylesheet" href="../common/style/rzslider.css"></link>
+  <script src="../common/lib/rzslider.js"></script>  
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+  <link rel="stylesheet" href="./css/theme.black-ice.css">
+  <script type="text/javascript" src="./jquery.tablesorter.min.js"></script>
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+.ytable {width:60%;border:0;margin:auto}
+.ytable td{border:0;margin:auto}
+th {    cursor: pointer;
+}
+
+</style>
+<script type="text/javascript">
+$(function(){
+  $("#myTable").tablesorter();
+  dateFormat : "yyyy-mm-dd hh24:mi:ss" 
+
+});
+	</script>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+ <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto"><tbody><tr><th colspan=4 > <img src="../common/assets/img/mode/battle-sec01_logo.png" width="80" height="68"  >个人战历情况</th></tr><tr><th>等级</th><th>游戏时间</th><th>胜负数</th><th>涂地点数</th></tr> <tr><th>76</th><td>首次游戏时间:2017-10-07 15:38:23<br>最近更新时间:2018-06-09 22:53:46</td><td>总胜负数:2256次/2241次<br>最近50场:31次/19次</td><td>3607531p</td></tr><tr><th colspan=4 ><img src="../common/assets/img/mode/ranked-battle-icon.png" width="80" height="68"  >真格模式等级</th></tr><tr><th >抢地</th><th >抢鱼</th><th >推塔</th><th>蛤蜊突击</th></tr><tr><td width=25%>B</td><td width=25%>B-</td><td width=25%>B-</td><td>B</td></tr><tr><th colspan=4 ><img src="../common/assets/img/mode/League_mode.png" width="80" height="68"  >组队模式战绩</th></tr><tr><th>项目</th><th>铜牌</th><th>银牌</th><th>金牌</th></tr><tr><td>2排</td><td>0</td><td>0</td><td>0</td></tr><td>4排</td><td>0</td><td>0</td><td>0</td></tr><tr><th colspan=4 ><img  src="../common/assets/img/mode/Splatfest_Logo.png" width="80" height="68"  >祭典参加情况</th></tr><tr><th>序号</th><th>战力</th><th>点数</th><th>等级</th></tr><tr><th widhth=25%>4051</th><td widhth=25%>19675</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1054</th><td widhth=25%>14162</td><td widhth=25%>60</td><td>冠军</td></tr><tr><th widhth=25%>1055</th><td widhth=25%>15983</td><td widhth=25%>37</td><td>守护者</td></tr><tr><th widhth=25%>1056</th><td widhth=25%>14782</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1057</th><td widhth=25%>17195</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1058</th><td widhth=25%>17536</td><td widhth=25%>57</td><td>冠军</td></tr><tr><th widhth=25%>1060</th><td widhth=25%>18905</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1063</th><td widhth=25%>22166</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1062</th><td widhth=25%>19386</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1061</th><td widhth=25%>20282</td><td widhth=25%>0</td><td>王者</td></tr><tr><th widhth=25%>1059</th><td widhth=25%>20101</td><td widhth=25%>0</td><td>王者</td></tr><tr><th colspan=7>武器使用情况</th><tr><td colspan=7><table id="myTable" class="tablesorter-blackice" width="80%" border=1 style="text-align:center;align="center"; margin: auto"><thead><tr><th>武器名称</th><th>涂地点数</th><th>胜利局数</th><th>失败局数</th><th>当前熟练度</th><th>最高熟练度</th><th>最近使用时间</th></tr><tbody><tr><td> <img src="../common/assets/img/weapons/Wst_Twins_Normal_00.png" width="80" height="68"  ><br>标准双枪</td><td>61703p</td><td>46</td><td>35</td><td>10.5</td><td>13.5</td><td>2018-01-15 23:06:54</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Twins_Normal_01.png" width="80" height="68"  ><br>双枪（Enperry版）</td><td>55531p</td><td>31</td><td>31</td><td>10</td><td>10</td><td>2018-04-17 21:52:46</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Spinner_Standard_00.png" width="80" height="68"  ><br>重装加特林</td><td>22393p</td><td>17</td><td>14</td><td>10</td><td>10</td><td>2018-05-22 22:46:19</td></tr><tr><td> <img src="../common/assets/img/weapons/S60px-S2_Weapon_Main_H-3_Nozzlenose_D.png" width="80" height="68"  ><br>H3卷线枪(D型)</td><td>23370p</td><td>18</td><td>9</td><td>10.5</td><td>10.5</td><td>2018-05-11 21:44:52</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Twins_Dual_00.png" width="80" height="68"  ><br>红管双枪</td><td>504725p</td><td>324</td><td>271</td><td>9.5</td><td>18</td><td>2018-01-24 22:26:36</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Twins_Dual_00.png" width="80" height="68"  ><br>红管双枪(定制版)</td><td>94861p</td><td>59</td><td>36</td><td>11</td><td>14</td><td>2018-06-09 22:53:46</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_QuickMiddle_00.png" width="80" height="68"  ><br>85枪</td><td>123953p</td><td>85</td><td>54</td><td>15.5</td><td>16.5</td><td>2018-01-09 21:06:50</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_QuickMiddle_01.png" width="80" height="68"  ><br>89枪</td><td>470329p</td><td>273</td><td>246</td><td>4</td><td>14</td><td>2018-05-20 13:02:55</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Slosher_Strong_01.png" width="80" height="68"  ><br>洗衣机滚桶(Deco版）</td><td>35834p</td><td>28</td><td>17</td><td>10.5</td><td>10.5</td><td>2018-05-04 21:39:49</td></tr><tr><td> <img src="../common/assets/img/weapons/S60px-S2_Weapon_Main_Sloshing_Machine_Neo.png" width="80" height="68"  ><br>洗衣机滚桶(定制版)</td><td>12435p</td><td>7</td><td>9</td><td>3.5</td><td>4</td><td>2018-05-11 21:17:16</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Spinner_Hyper_00.png" width="80" height="68"  ><br>九头蛇加特林</td><td>16241p</td><td>19</td><td>9</td><td>10</td><td>10</td><td>2018-05-21 12:29:11</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Heavy_00.png" width="80" height="68"  ><br>96加仑</td><td>121942p</td><td>73</td><td>78</td><td>10.5</td><td>10.5</td><td>2018-06-02 22:47:41</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_BlasterLightShort_00.png" width="80" height="68"  ><br>蜡笔枪</td><td>78143p</td><td>57</td><td>61</td><td>5.5</td><td>9.5</td><td>2018-06-08 22:12:03</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png" width="80" height="68"  ><br>高速泡泡枪Pro</td><td>293105p</td><td>196</td><td>205</td><td>10</td><td>14</td><td>2018-01-28 13:19:03</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Charger_Light_00.png" width="80" height="68"  ><br>14式竹筒銃?甲</td><td>7800p</td><td>4</td><td>9</td><td>2.5</td><td>3</td><td>2018-05-21 13:05:10</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Precision_00.png" width="80" height="68"  ><br>针管马克枪</td><td>25200p</td><td>16</td><td>9</td><td>10</td><td>10</td><td>2018-03-23 23:38:42</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Precision_00.png" width="80" height="68"  ><br>针管马克枪(定制版)</td><td>66525p</td><td>37</td><td>25</td><td>10.5</td><td>11.5</td><td>2018-05-12 19:50:03</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Umbrella_Normal_00.png" width="80" height="68"  ><br>喷射伞</td><td>10023p</td><td>4</td><td>8</td><td>0</td><td>2</td><td>2018-03-17 22:17:36</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Roller_BrushNormal_00.png" width="80" height="68"  ><br>北斋毛刷</td><td>77326p</td><td>44</td><td>56</td><td>10</td><td>10</td><td>2018-05-25 23:36:08</td></tr><tr><td> <img src="../common/assets/img/weapons/S60px-S2_Weapon_Main_Zink_Mini_Splatling.png" width="80" height="68"  ><br>mini加特林(定制版)</td><td>13018p</td><td>12</td><td>2</td><td>10</td><td>10</td><td>2018-06-02 17:08:44</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Normal_H.png" width="80" height="68"  ><br>P90</td><td>32462p</td><td>20</td><td>15</td><td>5.5</td><td>10</td><td>2018-05-11 21:28:33</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" width="80" height="68"  ><br>喷溅射手</td><td>105137p</td><td>69</td><td>46</td><td>15</td><td>17</td><td>2018-01-19 22:05:01</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Normal_01.png" width="80" height="68"  ><br>喷溅射手(Tentatek版)</td><td>53517p</td><td>32</td><td>32</td><td>3</td><td>10.5</td><td>2018-01-18 12:49:28</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Short_00.png" width="80" height="68"  ><br>喇叭枪</td><td>37274p</td><td>23</td><td>18</td><td>5</td><td>11.5</td><td>2017-11-16 12:34:48</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Flash_00.png" width="80" height="68"  ><br>香槟枪(定制版)</td><td>37716p</td><td>21</td><td>22</td><td>10</td><td>10</td><td>2018-06-02 22:51:15</td></tr><tr><td> <img src="../common/assets/img/weapons/S2_Weapon_Main_Undercover_Brella.png" width="80" height="68"  ><br>间谍伞</td><td>1343p</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2018-02-03 12:37:22</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Roller_Hunter_00.png" width="80" height="68"  ><br>变形滚刷</td><td>35301p</td><td>24</td><td>21</td><td>10</td><td>10</td><td>2018-04-29 17:46:54</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_BlasterLong_00.png" width="80" height="68"  ><br>长泡枪</td><td>12999p</td><td>6</td><td>15</td><td>1.5</td><td>1.5</td><td>2018-05-05 21:57:40</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Charger_Normal_01.png" width="80" height="68"  ><br>蓄力枪(firefin版)</td><td>18206p</td><td>6</td><td>15</td><td>0.5</td><td>2</td><td>2018-05-23 22:54:30</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Charger_Normal_00.png" width="80" height="68"  ><br>蓄力枪</td><td>28823p</td><td>19</td><td>28</td><td>3.5</td><td>6</td><td>2018-05-21 15:31:43</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Twins_Short_00.png" width="80" height="68"  ><br>机动双枪</td><td>77043p</td><td>43</td><td>41</td><td>5.5</td><td>10</td><td>2018-02-03 17:15:44</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_First_00.png" width="80" height="68"  ><br>若叶水枪</td><td>45835p</td><td>27</td><td>21</td><td>12</td><td>12</td><td>2018-04-18 21:50:37</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Twins_Gallon_00.png" width="80" height="68"  ><br>开尔文525</td><td>74296p</td><td>39</td><td>51</td><td>10</td><td>10</td><td>2018-04-27 23:06:49</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_BlasterLight_00.png" width="80" height="68"  ><br>高速泡泡枪</td><td>80477p</td><td>50</td><td>55</td><td>10.5</td><td>10.5</td><td>2018-03-13 12:27:05</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Expert_01.png" width="80" height="68"  ><br>鲨鱼枪（Forge版）</td><td>105973p</td><td>65</td><td>77</td><td>10</td><td>10</td><td>2018-03-09 11:51:19</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Expert_00.png" width="80" height="68"  ><br>鲨鱼枪</td><td>37210p</td><td>26</td><td>17</td><td>14.5</td><td>14.5</td><td>2018-05-12 20:10:30</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Long_00.png" width="80" height="68"  ><br>喷射清洁枪</td><td>82739p</td><td>47</td><td>58</td><td>11</td><td>11</td><td>2018-05-11 21:53:44</td></tr><tr><td> <img src="../common/assets/img/weapons/24px-S2_Weapon_Main_Dark_Tetra_Dualies.png" width="80" height="68"  ><br>四管双枪</td><td>23932p</td><td>17</td><td>11</td><td>7.5</td><td>10</td><td>2018-04-04 22:11:16</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Umbrella_Large_00.png" width="80" height="68"  ><br>大伞</td><td>717p</td><td>0</td><td>1</td><td>0</td><td>0</td><td>2017-11-30 22:18:15</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Roller_Heavy_01.png" width="80" height="68"  ><br>黄金重刷</td><td>18316p</td><td>11</td><td>14</td><td>0</td><td>0</td><td>2018-06-02 19:21:36</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Charger_LongScope_00.png" width="80" height="68"  ><br>带镜4K狙</td><td>31361p</td><td>15</td><td>28</td><td>2.5</td><td>4</td><td>2018-05-22 23:40:04</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Roller_Normal_01.png" width="80" height="68"  ><br>中刷</td><td>58207p</td><td>47</td><td>48</td><td>9</td><td>11.5</td><td>2018-03-03 20:06:54</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Slosher_Diffusion_00.png" width="80" height="68"  ><br>笔洗桶</td><td>31549p</td><td>24</td><td>15</td><td>10</td><td>10</td><td>2018-03-17 22:13:25</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Blaze_00.png" width="80" height="68"  ><br>银喷</td><td>49735p</td><td>28</td><td>29</td><td>8</td><td>12.5</td><td>2017-11-26 21:44:23</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Gravity_01.png" width="80" height="68"  ><br>52加仑(定制版)</td><td>34867p</td><td>22</td><td>19</td><td>10.5</td><td>10.5</td><td>2018-03-21 22:59:58</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Shooter_Gravity_00.png" width="80" height="68"  ><br>52加仑</td><td>265098p</td><td>160</td><td>155</td><td>14.5</td><td>15.5</td><td>2018-01-15 23:19:33</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Charger_NormalScope_01.png" width="80" height="68"  ><br>带镜蓄力枪(firefin版)</td><td>45535p</td><td>23</td><td>34</td><td>2.5</td><td>5</td><td>2018-06-08 21:45:34</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Roller_Compact_00.png" width="80" height="68"  ><br>碳辊滚刷(定制版)</td><td>25265p</td><td>16</td><td>21</td><td>4.5</td><td>6.5</td><td>2018-06-02 23:14:25</td></tr><tr><td> <img src="../common/assets/img/weapons/Wst_Roller_Compact_00.png" width="80" height="68"  ><br>碳辊滚刷</td><td>42141p</td><td>26</td><td>32</td><td>10</td><td>10</td><td>2018-05-04 22:49:56</td></tr></td></tbody></table></tr></tbody></table>更新时间:2018-07-01 16:55:43
+</div>
+
+ <br><br> <br><br>
+
+   <footer class="footer">
+        <div class="container">
+          <span>  整理者:疾风</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+   <script>
+function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+    tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+    i;
+
+    reverse = ((+reverse) || -1);
+
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse * (Number(a.cells[col].textContent.replace(/[^\d.-]/g, ''))
+             - Number(b.cells[col].textContent.replace(/[^\d.-]/g, '')));
+    });
+
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+</script>   
+    </body>
+    </html>

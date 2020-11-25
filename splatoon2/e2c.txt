@@ -1,0 +1,96 @@
+﻿= "走速 (敌方墨水中)"  = "走速 (敌方墨水中)"
+= "[+] Run Speed (Roll)"  = "[+] 走速 (滚压)"
+= "[+] Run Speed (Dash)" = "[+] 走速 (猛击)"
+= "[+] Run Speed (Firing)" = "[+] 走速 (射击中)"
+
+= "Run Speed (Firing)" = "走速 (射击中)"
+
+
+= "[+] Run Speed (Charging)" = "[+] 走速 (蓄力中)"
+
+= "[+] Run Speed (Flicking): Horizontal" = "[+] 走速 (拍): 横拍"
+= "[+] Run Speed (Flicking): Vertical" = "[+] 走速 (拍): 竖拍"
+= "[+] Run Speed (Flicking)" = "[+] 走速 (拍)"
+= "Special Charge Speed" = "大招槽充能速度"
+= "[+] Special Saved" = "[+] 大招槽节省"
+= "[+] Special Saved (On-Use Death)" = "[+] 大招槽节省 (使用时死亡)"
+= "[+] Sub Power (Bomb Range)" = "[+] 副武器威力 (爆炸范围)"
+= "[+] Sub Power (Tracking Time)" = "[+] 副武器威力 (跟踪时间)"
+
+= "[+] Sub Power (Mine Radius)" = "[+] 副武器威力 (陷阱半径)"
+= "[+] Ink Consumption (Main): Rolling" = "[+] 墨水消耗 (主武器): 滚压"
+= "Ink Consumption (Main)" = "墨水消耗 (主武器)"
+= "[+] Ink Consumption (Main)" = "[+] 墨水消耗 (主武器)"
+
+ = "[+] Ink Consumption (Main): Horizontal"  = "[+] 墨水消耗 (主武器): 横拍"
+ = "[+] Ink Consumption (Main): Vertical" = "[+] 墨水消耗 (主武器): 竖拍"
+ = "Ink Consumption (Sub)" = "墨水消耗 (副武器)"
+ = "Ink Recovery Speed (Squid)" = "墨水恢复速度 (乌贼形态)"
+ = "Ink Recovery Speed (Kid)" = "墨水恢复速度 (人形)"
+ = "Main Power Up (Jump Shot Randomization)" = "主武器增强 (跳射乱数)"
+ = "Main Power Up (Ground Shot Randomization)" = "主武器增强 (站射乱数)"
+ = "Main Power Up (Min Damage)" = "主武器增强 (最小伤害)"
+  = "Main Power Up (Max Damage)"  = "主武器增强 (最大伤害)"
+  
+  = "Main Power Up (Ink Coverage)" = "主武器增强 (墨水覆盖)" 
+  = "[+] Main Power Up (Repeat Min Damage)" = "[+] 主武器增强 (重复最小伤害)"
+  = "[+] Main Power Up (Repeat Max Damage)"= "[+] 主武器增强 (重复最大伤害)"
+  = "[+] Main Power Up (Partial Charge Min Damage)" = "[+] 主武器增强 (不完全蓄力最小伤害)"
+  = "[+] Main Power Up (Partial Charge Max Damage)" = "[+] 主武器增强 (不完全蓄力最大伤害)"
+  = "[+] Main Power Up (Full Charge Min Damage)"= "[+] 主武器增强 (完全蓄力最小伤害)"
+  = "[+] Main Power Up (Full Charge Max Damage)" = "[+] 主武器增强 (完全蓄力最大伤害)"
+  
+  = "[+] Main Power Up (Rolling Min Damage)"= "[+] 主武器增强 (滚压最小伤害)"
+  = "[+] Main Power Up (Rolling Max Damage)"= "[+] 主武器增强 (滚压最大伤害)"
+  = "[+] Main Power Up (Standing Min Damage)" = "[+] 主武器增强 (站射最小伤害)"
+  = "[+] Main Power Up (Standing Max Damage)"= "[+] 主武器增强 (站射最大伤害)"
+  = "[+] Main Power Up (Jumping Min Damage)" = "[+] 主武器增强 (跳射最小伤害)"
+  = "[+] Main Power Up (Jumping Max Damage)" = "[+] 主武器增强 (跳射最大伤害)"
+  = "[+] Main Power Up (Full Charge Distance)" = "[+] 主武器增强 (完全蓄力射距)"
+  = "[+] Main Power Up (Partial Charge Distance)"= "[+] 主武器增强 (不完全蓄力射距)"
+  
+  = "[+] Main Power Up (Burst Min Damage)" = "[+] 主武器增强 (爆炸最小伤害)"
+  = "[+] Main Power Up (Burst Max Damage)" = "[+] 主武器增强 (爆炸最大伤害)"
+  = "Main Power Up (First Ring Burst Duration)" = "主武器增强 (第一圈攻击持续时间)"
+  = "Main Power Up (Second Ring Burst Duration)"  = "主武器增强 (第二圈攻击持续时间)"
+  = "Main Power Up (Dash Speed)"= "主武器增强 (猛击速度)"
+  = "Main Power Up (Ink Trail Size)"= "主武器增强 (笔迹大小)"
+  = "Main Power Up (Bullet Velocity)" = "主武器增强 (子弹速度)"
+  
+  = "Main Power Up (High Damage Radius)"= "主武器增强 (高伤害半径)"
+   = "Main Power Up (Damage Radius)" = "主武器增强 (伤害半径)"
+   = "Main Power Up (Max Damage Range)" = "主武器增强 (最大伤害距离)"
+   = "Main Power Up (Canopy Regeneration Time)" = "主武器增强 (伞重置时间)"
+    = "Main Power Up (Canopy HP)"  = "主武器增强 (伞 HP)"
+    
+    
+    4690行
+    = "[+] Main Power Up (Min Damage)"  = "[+] 主武器增强 (最小伤害)" 
+    = "[+] Main Power Up (Max Damage)" = "[+] 主武器增强 (最大伤害)"
+    
+    
+    ===
+    "[+] Tracking Time (Ink Mine)"   "[+] 跟踪时间 (陷阱)"
+    "[+] Tracking Time (Point Sensor)" "[+]  跟踪时间 (传感器)"
+    
+    
+    "[+] Special Saved": "[+] 大招槽节省":  
+    "[+] Special Saved (On-Use Death)": "[+] 大招槽节省 (使用时死亡)":
+    "[+] Sub Power (Bomb Range)": "[+] 副武器威力 (爆炸范围)":
+    "[+] Sub Power (Tracking Time)": "[+] 副武器威力 (跟踪时间)":
+    "[+] Sub Power (Mine Radius)":  "[+] 副武器威力 (陷阱半径)":
+    
+    
+    
+    
+    weapon.js
+    
+    "Range":  "射距":
+    "Damage":  "伤害":
+    "Fire Rate":    "射速": 
+      "Ink Speed":  "涂地速度":
+            "Handling": "操持": 
+            
+ "Charge Speed":  "蓄力速度":
+            "Mobility":  "机动性":
+"Durability":   "耐久力":            

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>喷射战士2资讯专题</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+
+  <script src="../common/lib/jquery/jquery.js"></script>
+  <script src="../common/lib/angular.js"></script>
+  <script src="../common/lib/angular-animate.min.js"></script>
+  <script src="../common/lib/angular-aria.min.js"></script>
+  <script src="../common/lib/angular-touch.min.js"></script>
+  <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
+  <script src="../common/lib/clipboard.min.js"></script>
+
+  <script src="./calc.js"></script>
+  <script src="./util.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
+  <script src="./gear.js"></script>
+  <script src="./stats.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
+  <link rel="stylesheet" href="../common/style/calc.css">
+
+  <link rel="stylesheet" href="../common/style/rzslider.css"></link>
+  <script src="../common/lib/rzslider.js"></script>  
+  <link rel="stylesheet" href="../common/lib/bootstrap.min.css" >
+
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
+ <style>
+ body
+{
+color : #FAFAFA;
+}
+.xtable td{ color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+.xtable th{ font-size:18px;color="#FAFAFA"; border-top:1px solid #FAFAFA;border-left:1px solid #FAFAFA;border-bottom:1px solid #FAFAFA;border-right:1px solid #FAFAFA;   text-align:center;vertical-align: middle;  }
+
+.xtable {width:80%;word-break: break-all; word-wrap: break-word;border-collapse:collapse;align="center"}
+.image_x img{max-width:80px;_width:expression(this.width > 80 ? "80px" : this.width);} 
+.image_h img{max-width:160px;_width:expression(this.width > 160 ? "160px" : this.width);} 
+</style>
+</head>
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
+  <div>
+    <script type="text/ng-template" id="blankModal.html">
+      <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
+        <div class="modal-dialog " role="document">
+          <div class="modal-body" ng-transclude></div>
+        </div>
+      </div>
+    </script>
+
+    <header class="hero-unit" id="splat-header">
+    	
+      <img src="./../common/assets/img/ui/logo_cn.png" />
+      <div id="language-picker" uib-dropdown is-open="status.langOpen">
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-bars"></span> {{::languages['ja_JP']}}</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
+        </ul>
+      </div>
+    </header>
+    
+     <br>
+     <div align="center">
+       <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
+ <tbody>
+ 	<tr>
+<th colspan="6"><b>主要副武器实用度分析</b>
+</th>
+</tr>
+<tr>
+<th width="20%" rowspan="2">副武器类型
+</th>
+<th  rowspan="2" >说明
+</th>
+<th width="10%" rowspan="2">速度
+</th>
+<th width="10%" rowspan="2">躲避指数
+	</th>
+<th width="10%" rowspan="2">战场意外指数
+</th>
+<th  text-align:center;   width="10%" rowspan="2">推荐指数
+</th>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Bomb_Curling.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Bomb_Curling.png" width="80" height="68"  ></a><br>冰壶
+</th>
+<td style="text-align:left">甩出后可以以潜行状态跟随其划过的墨水轨迹快速潜行突进，适合远距离快速奔袭的场景。<br>同时，由于其具备冰壶球那样的碰撞弹跳特性，适合在狭窄区域进行投掷攻击。如果你被堵到角落里，真要祈祷不要碰到冰壶炸弹。
+</td>
+<td>快
+</td>
+<td>★★★
+</td>
+<td>★★★★★
+</td>
+<td>★★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Bomb_Robo.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Bomb_Robo.png" width="80" height="68"  ></a><br>小鸡
+</th>
+<td style="text-align:left">具备自动跟踪能力的小鸡机器人炸弹。<br>如果见识过敌方多人同时扔出多个机器人炸弹来围剿你的场景，你肯定会对这个炸弹印象深刻的。
+</td>
+<td>慢
+</td>
+<td>★★★★
+</td>
+<td>★★
+</td>
+<td>★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Bomb_Quick.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Bomb_Quick.png" width="80" height="68"  ></a><br>水球
+</th>
+<td style="text-align:left">高手砸脸专用的武器。
+</td>
+<td>快
+</td>
+<td>★★
+</td>
+<td>★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Bomb_Splash.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Bomb_Splash.png" width="80" height="68"  ></a><br>三角雷
+</th>
+<td style="text-align:left">具有碰撞弹跳效果和一定延迟引爆的手雷，当它出现在你脚下的时候，你多半离挂不远了。
+</td>
+<td>快
+</td>
+<td>★★
+</td>
+<td>★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Bomb_Suction.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Bomb_Suction.png" width="80" height="68"  ></a><br>粘弹
+</th>
+<td style="text-align:left">可以吸附在战场中诸如墙壁等特殊地形上的延迟炸弹，具有一定威慑敌人强迫退散的效果。由于延迟时间相对较长，高手可以轻易进行躲避。运用不好的话，经常关键时刻扔不到想要的目标之上，导致贻误战机。
+</td>
+<td>慢
+</td>
+<td>★★★★
+</td>
+<td>★★★
+</td>
+<td>★★★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_PoisonFog.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_PoisonFog.png" width="80" height="68"  ></a><br>毒雾
+</th>
+<td style="text-align:left">通常用于在狭窄通道上达到短时封路的效果，对方进入毒雾后移动速度和血量都会减少。由于杀伤力不强，用好了战术意义较大。
+</td>
+<td>快
+</td>
+<td>★★★★
+</td>
+<td>★★
+</td>
+<td>★★
+</td>
+</tr>
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_TimerTrap.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_TimerTrap.png" width="80" height="68"  ></a><br>陷阱
+</th>
+<td style="text-align:left">唯一的优点是隐蔽性，只有正好踩到埋雷点才会触发。但由于杀伤力不强，所以实战中甚少被这种雷干死。
+</td>
+<td>-
+</td>
+<td>★★★★
+</td>
+<td>★★
+</td>
+<td>★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Flag.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Flag.png" width="80" height="68"  ></a><br>跳点
+</th>
+<td style="text-align:left">可以偷偷埋在对方老家附近的利器，只要投放的位置够好，可以对战局的控制有出人意料的作用（需要在地图中用右摇杆选择位置进行超级跳跃）。
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>★★★
+</td>
+<td>★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Sprinkler.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Sprinkler.png" width="80" height="68"  ></a><br>花洒
+</th>
+<td style="text-align:left">如果能投射到不容易被攻击到的高处，对敌人的战斗发挥也能产生一定作用。如果投射到地面或低矮处，在实战中的作用就比较一般了。
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>★★
+</td>
+<td>★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_Shield.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_Shield.png" width="80" height="68"  ></a><br>雨帘
+</th>
+<td style="text-align:left">一般多是用来封路或延缓敌方进攻时使用。
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>★★
+</td>
+</tr>
+<tr>
+<th><a href="../common/assets/img/subspe/Wsb_PointSensor.png" class="image">
+	<img alt="Wsb_Bomb_Curling.png" src="../common/assets/img/subspe/Wsb_PointSensor.png" width="80" height="68"  ></a><br>套环
+</th>
+<td style="text-align:left">投掷后可以得知附近对手位置的感应装置（使隐游效果无效），监测的结果同时会出现在我方同队的雷达中。
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>★
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+ <br><br> <br><br>
+
+      <footer class="footer">
+        <div class="container">
+          <span>  整理者:疾风</span><br>
+           
+        </div>
+      </footer>
+      <div id="draggable-parent"></div>
+    </body>
+    </html>

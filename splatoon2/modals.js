@@ -189,7 +189,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
 
     <h4>版本 2.3.0 (当前)</h4>
     <ul>
-    <li>新增武器支持.</li>
+    <li>2020-11-25 封版.</li>
     </ul>
 
     </div>

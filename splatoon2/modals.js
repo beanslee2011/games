@@ -228,16 +228,12 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
-    There's been an update!
+    欢迎光临喷射战士2资讯站!
     </div>
     <div class="row basic-content readable" id="update">
     <img src="../common/assets/img/ui/update.jpg" width="100%" height="100%"></img>
     <h2 style="text-align:center;">
-    Loadout v`
-    +
-    $scope.appVersionToString()
-    +
-    `</h2></div><div class="row buttons">
+    2020.11.25封版:<br>界面汉化<br>功能微调<br>增加其他功能菜单</h2></div><div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>了解!</span></button>
     </div>

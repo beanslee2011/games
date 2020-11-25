@@ -42,7 +42,7 @@ angular.module('splatApp').tutorial = function(skillName) {
             },
             {
                 title: "<u>头饰技能</u>",
-                content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>abilities</a>头饰装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能</a> . " +
+                content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>技能.</a>头饰可装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能列表参考</a> . " +
                                         "<br><br>第一个是 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Primary_abilities' target='_blank'>主技能槽</a> , 另外3个为<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Secondary_abilities' target='_blank'>副技能</a> 槽. " +
                     "1个主技能槽提供1个副技能槽的3倍性能，但服装上的主技能槽是不可更改的!" +
                     "<br><br>一些技能只会出现在主技能槽,这些技能显示在主页技能分割线下方",
@@ -64,7 +64,7 @@ angular.module('splatApp').tutorial = function(skillName) {
             },
             {
                 title: "<u>衣服技能</u>",
-                content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>abilities</a>衣服装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能</a> . " +
+                content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>技能.</a>衣服可装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能列表参见</a> . " +
                     "<br><br>第一个是 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Primary_abilities' target='_blank'>主技能槽</a> , 另外3个为<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Secondary_abilities' target='_blank'>副技能</a> 槽. " +
                     "1个主技能槽提供1个副技能槽的3倍性能，但服装上的主技能槽是不可更改的!" +
                     "<br><br>一些技能只会出现在主技能槽,这些技能显示在主页技能分割线下方",
@@ -78,7 +78,7 @@ angular.module('splatApp').tutorial = function(skillName) {
                     "<li><a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>技能</a>.</li></ul>" +
                    "点击 <span class='glyphicon glyphicon-pencil'></span> 图标更换! " +
                     "鞋子详细信息包括: " +
-                    "<ul><li>衣服的<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Primary_abilities' target='_blank'>主技能</a>.</li>" +
+                    "<ul><li>鞋子的<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Primary_abilities' target='_blank'>主技能</a>.</li>" +
                     "<li>头饰的 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Brand' target='_blank'>品牌</a>.</li></ul>" +
                     "可以按<i>名字</i>, <i>主技能</i>, or <i>品牌</i>检索!",
                     target: "shoes",
@@ -86,7 +86,7 @@ angular.module('splatApp').tutorial = function(skillName) {
             },
             {
                 title: "<u>鞋子技能</u>",
-                content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>abilities</a>鞋子装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能</a> . " +
+                content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>技能.</a>鞋子可装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能列表参见</a> . " +
                     "Abilities modify the various <i>stats</i> displayed on the right side of the Loadout display. " +
                     "<br><br>第一个是 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Primary_abilities' target='_blank'>主技能槽</a> , 另外3个为<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Secondary_abilities' target='_blank'>副技能</a> 槽. " +
                     "1个主技能槽提供1个副技能槽的3倍性能，但服装上的主技能槽是不可更改的!" +
@@ -144,7 +144,7 @@ angular.module('splatApp').tutorial = function(skillName) {
             },
             {
                 title: "<u>爆风防御增强</u>",
-                content: "<a class='wiki-link' href='https://splatoonwiki.org/wiki/Bomb_Defense_Up_DX' target='_blank'>Bomb Defense Up DX</a> <a class='wiki-link' href='https://splatoonwiki.org/wiki/Bomb_Defense_Up' target='_blank'> </a> and <a class='wiki-link' href='https://splatoonwiki.org/wiki/Cold-Blooded' target='_blank'></a> " ,
+                content: "<a class='wiki-link' href='https://splatoonwiki.org/wiki/Bomb_Defense_Up_DX' target='_blank'></a> <a class='wiki-link' href='https://splatoonwiki.org/wiki/Bomb_Defense_Up' target='_blank'> </a> and <a class='wiki-link' href='https://splatoonwiki.org/wiki/Cold-Blooded' target='_blank'></a> 增强对敌方副武器或nice弹等爆炸攻击产生的爆风伤害的防御力." ,
                 target: "icon:Bomb Defense Up DX",
                 placement: "top"
             },
@@ -175,14 +175,14 @@ angular.module('splatApp').tutorial = function(skillName) {
             },
             {
                 title: "<u>大招增强</u>",
-                content: " <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_Power_Up' target='_blank'>p</a> 增强大招的性能 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_weapon' target='_blank'></a> " ,
+                content: " <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_Power_Up' target='_blank'></a> 增强大招的性能 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_weapon' target='_blank'></a> " ,
                  
                 target: "icon:Special Power Up",
                 placement: "top"
             },
             {
                 title: "<u>副武器增强</u>",
-                content: " <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_Power_Up' target='_blank'></a> 增强服务器的性能 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_weapon' target='_blank'></a>. ",
+                content: " <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_Power_Up' target='_blank'></a> 增强副武器的性能 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_weapon' target='_blank'></a>. ",
                 
                 target: "icon:Sub Power Up",
                 placement: "top"

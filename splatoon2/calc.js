@@ -1100,18 +1100,18 @@ angular
         if($scope.loadout.weapon.class == "Roller" || $scope.loadout.weapon.class == "Brush") {
           var costPerShot = $scope.loadout.weapon.inkPerShotRolling * reduction * 60;
           var name = "[+] 墨水消耗 (主武器): 滚压";
-          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% 减少)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
           var label = "{value}/second".format({value: $scope.toFixedTrimmed(costPerShot,3)});
         }
         else {
           var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
           var name = "墨水消耗 (主武器)";
-          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% 减少)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
           var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: $scope.loadout.weapon.shotUnit});
         }
   
         if($scope.loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
-          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
+          var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% 减少)".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
         }
         
         var value = costPerShot;
@@ -1165,7 +1165,7 @@ angular
         var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
 
         var name = "[+] 墨水消耗 (主武器)";
-        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% 减少)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
         var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "拍"});
         var value = costPerShot;
         var percentage = (100 - (reduction*100)).toFixed(1);
@@ -1207,7 +1207,7 @@ angular
         var costPerShot = $scope.loadout.weapon.horizontalInkPerShot * reduction;
 
         var name = "[+] 墨水消耗 (主武器): 横拍";
-        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% 减少)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
         var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "横拍"});
         var value = costPerShot;
         var percentage = (100 - (reduction*100)).toFixed(1);
@@ -1249,7 +1249,7 @@ angular
         var costPerShot = $scope.loadout.weapon.verticalInkPerShot * reduction;
 
         var name = "[+] 墨水消耗 (主武器): 竖拍";
-        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% reduction)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var desc = "{totalShots} 次射击后墨水耗尽 ({reduction}% 减少)".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
         var label = "{value}% 罐/{unit}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "竖拍"});
         var value = costPerShot;
         var percentage = (100 - (reduction*100)).toFixed(1);

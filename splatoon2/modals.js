@@ -181,8 +181,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <h4>声明</h4>
     <ul>
       <li>初版基于Loadout.ink的分支<a href="https://loadout.ink/en-us/" target="_blank">loadout.ink</a></li>
-      <li>第二版基于selicia的分支 <a href="https://selicia.github.io/en_US/" target="_blank">selicia.github.io</a>.
-      <li>本地化及其他调整。本人FC号: SW-3153-5829-2020
+      <li>第二版基于selicia的分支（第一版缺少游戏后增加的部分武器和技能） <a href="https://selicia.github.io/en_US/" target="_blank">selicia.github.io</a>.
+      <li>本地化及其他调整(优化加载速度、增加游戏其他资讯页面、首页展示内容微调等)。
+      <li>本人FC号: SW-3153-5829-2020
 .
     </ul>
 

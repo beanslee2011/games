@@ -87,7 +87,6 @@ angular.module('splatApp').tutorial = function(skillName) {
             {
                 title: "<u>鞋子技能</u>",
                 content: "4个圆型图标代表<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#List_of_abilities_2' target='_blank'>技能.</a>鞋子可装配的  <a class='wiki-link' href='https://splatoonwiki.org/wiki/List_of_headgear_in_Splatoon_2' target='_blank'>技能列表参见</a> . " +
-                    "Abilities modify the various <i>stats</i> displayed on the right side of the Loadout display. " +
                     "<br><br>第一个是 <a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Primary_abilities' target='_blank'>主技能槽</a> , 另外3个为<a class='wiki-link' href='https://splatoonwiki.org/wiki/Ability#Secondary_abilities' target='_blank'>副技能</a> 槽. " +
                     "1个主技能槽提供1个副技能槽的3倍性能，但服装上的主技能槽是不可更改的!" +
                     "<br><br>一些技能只会出现在主技能槽,这些技能显示在主页技能分割线下方",

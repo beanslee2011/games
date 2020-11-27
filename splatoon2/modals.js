@@ -92,7 +92,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div class="col-md-12">
     <div class="card {{::background}}" id="dialog">
     <div class="row cardheader">
-    Gear Picker
+    服装选择
     </div>
     <div class="row">
     <div class="col-md-4">

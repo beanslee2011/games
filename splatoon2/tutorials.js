@@ -130,7 +130,7 @@ angular.module('splatApp').tutorial = function(skillName) {
             },
             {
                 title: "<u>超级跳时间缩短</u>",
-                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Quick_Super_Jump' target='_blank'></a> 增加超级跳的速度<a class='wiki-link' href='https://splatoonwiki.org/wiki/Super_Jump' target='_blank'> </a> . " ,
+                content: " <a class='wiki-link' href='https://splatoonwiki.org/wiki/Quick_Super_Jump' target='_blank'></a> 增加超级跳的速度<a class='wiki-link' href='https://splatoonwiki.org/wiki/Super_Jump' target='_blank'> </a> . " ,
                 target: "icon:Quick Super Jump",
                 placement: "top"
             },

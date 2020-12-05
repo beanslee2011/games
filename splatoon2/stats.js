@@ -111,7 +111,7 @@ angular.module('splatApp').stats = function ($scope) {
       this.name = "墨水回复速度(人形)";
       this.value = statValues.value;
       this.percentage = statValues.percentage;
-      this.label = "xxxx";
+      this.label = statValues.label;
       
       
       this.desc = statValues.desc;

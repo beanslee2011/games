@@ -84,12 +84,7 @@ $(function(){
 </head>
 <body ng-cloak ng-app="splatApp" ng-controller="splatController">
 	  
-	 <div  class="sssss">
-            <p id="fulldate"></p>
-            <span>----- 本时段剩余时间 -----</span>
-            <div id="time"></div>
-        </div>
-  <div>
+	 
     <script type="text/ng-template" id="blankModal.html">
       <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
         <div class="modal-dialog " role="document">
@@ -110,7 +105,12 @@ $(function(){
     </header>
     
      <br>
-     
+     <div  class="sssss">
+            <p id="fulldate"></p>
+            <span>----- 本时段剩余时间 -----</span>
+            <div id="time"></div>
+        </div>
+  <div>
      <div align="center">
  <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
  	<tbody><tr><th colspan="7"><b>当前对战地图关卡</b></th></tr><tr><th  rowspan="2"  colspan="1"  width="40%" >持续时间</th><th width="20%" colspan="2" ><img src="../common/assets/img/mode/battle-sec01_logo.png" width="80" height="68" ><br>涂地</th><th colspan="2" width="20%" ><img src="../common/assets/img/mode/ranked-battle-icon.png" width="80" height="68"><br>真格</th><th colspan="2" width="20%"> <img src="../common/assets/img/mode/League_mode.png" width="80" height="68" ><br>组排</th></tr><tr><th>地图a</th> <th>地图b</th><th>地图a</th><th>地图b</th><th>地图a</th><th>地图b</th></tr><tr>

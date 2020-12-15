@@ -216,7 +216,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Splattershot Jr.",
           "localizedName": {
             "ja_JP": "おちばシューター",
-            "en_US": "新叶(他牌)",
+            "en_US": "新叶(它牌)",
             "en_GB": "Kensa Splattershot Jr.",
             "es_ES": "Lanzatintas novato elegante",
             "es_MX": "Rociador básico Tonken",
@@ -522,7 +522,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Splattershot",
           "localizedName": {
             "ja_JP": "スプラシューターベッチュー",
-            "en_US": "小绿(他牌)",
+            "en_US": "小绿(它牌)",
             "en_GB": "Kensa Splattershot",
             "es_ES": "Lanzatintas elegante",
             "es_MX": "Rociador Tonken",
@@ -712,7 +712,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa .52 Gal",
           "localizedName": {
             "ja_JP": ".52ガロンベッチュー",
-            "en_US": "52(他牌)",
+            "en_US": "52(它牌)",
             "en_GB": "Kensa .52 Gal",
             "es_ES": "Salpicadora 2000 elegante",
             "es_MX": "Salpicadora 2000 Tonken",
@@ -1213,7 +1213,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa L-3 Nozzlenose",
           "localizedName": {
             "ja_JP": "L3リールガンベッチュー",
-            "en_US": "黑L-3(他牌)",
+            "en_US": "黑L-3(它牌)",
             "en_GB": "Kensa L-3 Nozzlenose",
             "es_ES": "Tintambor ligero elegante",
             "es_MX": "Manguera ligera Tonken",
@@ -1466,7 +1466,7 @@ angular.module('splatApp').weapons = function($scope) {
       "type": "Blasters",
       "localizedName": {
         "ja_JP": "ブラスター",
-        "en_US": "炮",
+        "en_US": "泡",
         "en_GB": "Blasters",
         "es_ES": "Devastadors",
         "es_MX": "Lanzamotas",
@@ -1573,7 +1573,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Luna Blaster",
           "localizedName": {
             "ja_JP": "ノヴァブラスターベッチュー",
-            "en_US": "Luna(他牌)",
+            "en_US": "Luna(它牌)",
             "en_GB": "Kensa Luna Blaster",
             "es_ES": "Ultradevastador elegante",
             "es_MX": "Lanzamotas Nova Tonken",
@@ -1617,7 +1617,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Blaster",
           "localizedName": {
             "ja_JP": "ホットブラスター",
-            "en_US": "热炮",
+            "en_US": "热泡",
             "en_GB": "Blaster",
             "es_ES": "Devastador",
             "es_MX": "Lanzamotas",
@@ -1661,7 +1661,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Custom Blaster",
           "localizedName": {
             "ja_JP": "ホットブラスターカスタム",
-            "en_US": "热炮(贴牌)",
+            "en_US": "热泡(贴牌)",
             "en_GB": "Custom Blaster",
             "es_ES": "Devastador SP",
             "es_MX": "Lanzamotas adaptado",
@@ -1705,7 +1705,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Hero Blaster Replica",
           "localizedName": {
             "ja_JP": "ヒーローブラスター レプリカ",
-            "en_US": "英雄热炮",
+            "en_US": "英雄热泡",
             "en_GB": "Hero Blaster Replica",
             "es_ES": "Devastador de élite (réplica)",
             "es_MX": "Lanzamotas de élite réplica",
@@ -1749,7 +1749,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Range Blaster",
           "localizedName": {
             "ja_JP": "ロングブラスター",
-            "en_US": "长炮",
+            "en_US": "长泡",
             "en_GB": "Range Blaster",
             "es_ES": "Teledevastador",
             "es_MX": "Telelanzamotas",
@@ -1793,7 +1793,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Custom Range Blaster",
           "localizedName": {
             "ja_JP": "ロングブラスターカスタム",
-            "en_US": "长炮(贴牌)",
+            "en_US": "长泡(贴牌)",
             "en_GB": "Custom Range Blaster",
             "es_ES": "Teledevastador SP",
             "es_MX": "Telelanzamotas adaptado",
@@ -1837,7 +1837,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Grim Range Blaster",
           "localizedName": {
             "ja_JP": "ロングブラスターネクロ",
-            "en_US": "长炮(导弹)",
+            "en_US": "长泡(导弹)",
             "en_GB": "Grim Range Blaster",
             "es_ES": "Teledevastador tétrico",
             "es_MX": "Telelanzamotas funesto",
@@ -1881,7 +1881,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Clash Blaster",
           "localizedName": {
             "ja_JP": "クラッシュブラスター",
-            "en_US": "蜡笔炮",
+            "en_US": "蜡笔泡",
             "en_GB": "Clash Blaster",
             "es_ES": "Turbodevastador",
             "es_MX": "Hiperlanzamotas",
@@ -1925,7 +1925,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Clash Blaster Neo",
           "localizedName": {
             "ja_JP": "クラッシュブラスターネオ",
-            "en_US": "蜡笔炮(贴牌)",
+            "en_US": "蜡笔泡(贴牌)",
             "en_GB": "Clash Blaster Neo",
             "es_ES": "Turbodevastador neo",
             "es_MX": "Hiperlanzamotas neo",
@@ -1969,7 +1969,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Rapid Blaster",
           "localizedName": {
             "ja_JP": "ラピッドブラスター",
-            "en_US": "红炮",
+            "en_US": "红泡",
             "en_GB": "Rapid Blaster",
             "es_ES": "Devastador exprés",
             "es_MX": "Turbolanzamotas",
@@ -2013,7 +2013,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Rapid Blaster Deco",
           "localizedName": {
             "ja_JP": "ラピッドブラスターデコ",
-            "en_US": "红炮(贴牌)",
+            "en_US": "红泡(贴牌)",
             "en_GB": "Rapid Blaster Deco",
             "es_ES": "Devastador exprés DX",
             "es_MX": "Turbolanzamotas chic",
@@ -2057,7 +2057,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Rapid Blaster",
           "localizedName": {
             "ja_JP": "ラピッドブラスターベッチュー",
-            "en_US": "黑炮(他牌)",
+            "en_US": "黑泡(它牌)",
             "en_GB": "Kensa Rapid Blaster",
             "es_ES": "Devastador exprés elegante",
             "es_MX": "Turbolanzamotas Tonken",
@@ -2101,7 +2101,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Rapid Blaster Pro",
           "localizedName": {
             "ja_JP": "Rブラスターエリート",
-            "en_US": "长红炮",
+            "en_US": "长红泡",
             "en_GB": "Rapid Blaster Pro",
             "es_ES": "Superdevastador",
             "es_MX": "Turbolanzamotas Pro",
@@ -2145,7 +2145,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Rapid Blaster Pro Deco",
           "localizedName": {
             "ja_JP": "Rブラスターエリートデコ",
-            "en_US": "长红炮(贴牌)",
+            "en_US": "长红泡(贴牌)",
             "en_GB": "Rapid Blaster Pro Deco",
             "es_ES": "Superdevastador DX",
             "es_MX": "Turbolanzamotas Pro chic",
@@ -2433,7 +2433,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Splat Roller",
           "localizedName": {
             "ja_JP": "スプラローラーベッチュー",
-            "en_US": "中刷(他牌)",
+            "en_US": "中刷(它牌)",
             "en_GB": "Kensa Splat Roller",
             "es_ES": "Rodillo básico elegante",
             "es_MX": "Rodillo básico Tonken",
@@ -2658,7 +2658,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Dynamo Roller",
           "localizedName": {
             "ja_JP": "ダイナモローラーベッチュー",
-            "en_US": "重刷(他牌)",
+            "en_US": "重刷(它牌)",
             "en_GB": "Kensa Dynamo Roller",
             "es_ES": "Dinamorrodillo elegante",
             "es_MX": "Dinamorrodillo Tonken",
@@ -3086,7 +3086,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Octobrush",
           "localizedName": {
             "ja_JP": "ホクサイベッチュー",
-            "en_US": "北斋(他牌)",
+            "en_US": "北斋(它牌)",
             "en_GB": "Kensa Octobrush",
             "es_ES": "Brocha elegante",
             "es_MX": "Pincel caligrafía Tonken",
@@ -3430,7 +3430,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Charger",
           "localizedName": {
             "ja_JP": "スプラチャージャーベッチュー",
-            "en_US": "短狙(他牌)",
+            "en_US": "短狙(它牌)",
             "en_GB": "Kensa Charger",
             "es_ES": "Cargatintas elegante",
             "es_MX": "Cargatintas Tonken",
@@ -3622,7 +3622,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Splatterscope",
           "localizedName": {
             "ja_JP": "スプラスコープベッチュー",
-            "en_US": "有镜短狙(他牌)",
+            "en_US": "有镜短狙(它牌)",
             "en_GB": "Kensa Splatterscope",
             "es_ES": "Cargatintas con mira elegante",
             "es_MX": "Telecargatintas Tonken",
@@ -4487,7 +4487,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Sloshing Machine",
           "localizedName": {
             "ja_JP": "スクリュースロッシャーベッチュー",
-            "en_US": "洗衣机(他牌)",
+            "en_US": "洗衣机(它牌)",
             "en_GB": "Kensa Sloshing Machine",
             "es_ES": "Derramatic centrífugo elegante",
             "es_MX": "Derramatic centrífugo Tonken",
@@ -4813,7 +4813,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Mini Splatling",
           "localizedName": {
             "ja_JP": "スプラスピナーベッチュー",
-            "en_US": "轻加(他牌)",
+            "en_US": "轻加(它牌)",
             "en_GB": "Kensa Mini Splatling",
             "es_ES": "Tintralladora ligera elegante",
             "es_MX": "Garabateador Tonken",
@@ -5511,7 +5511,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Splat Dualies",
           "localizedName": {
             "ja_JP": "スプラマニューバーベッチュー",
-            "en_US": "黑双(他牌)",
+            "en_US": "黑双(它牌)",
             "en_GB": "Kensa Splat Dualies",
             "es_ES": "Difusor dual elegante",
             "es_MX": "Difusor dual Tonken",
@@ -5685,7 +5685,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Glooga Dualies",
           "localizedName": {
             "ja_JP": "ケルビン525ベッチュー",
-            "en_US": "525(他牌)",
+            "en_US": "525(它牌)",
             "en_GB": "Kensa Glooga Dualies",
             "es_ES": "Fundidora 525 dual elegante",
             "es_MX": "Fundidora 525 dual Tonken",
@@ -6269,7 +6269,7 @@ angular.module('splatApp').weapons = function($scope) {
           "name": "Kensa Undercover Brella",
           "localizedName": {
             "ja_JP": "スパイガジェットベッチュー",
-            "en_US": "间谍伞(他牌)",
+            "en_US": "间谍伞(它牌)",
             "en_GB": "Kensa Undercover Brella",
             "es_ES": "Paratintas clásico elegante",
             "es_MX": "Paratintas discreto Tonken",

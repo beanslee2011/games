@@ -173,24 +173,16 @@ window.onload = function () {
                
            
 
-                var last_time= hours%2;
-                if (last_time==0) 
-                   last_time=hours+2;
-                else
-                	 last_time=hours+1;       
-                var endTime = new Date(year,month,date,last_time-1,59,59);//获取未来结束的时间
+               
+                var endTime = new Date(1608055200);//获取未来结束的时间
                 
                 setInterval(fun,1000);//开启定时器
                 function fun() {
                 
                     var newTime = new Date();//得到最新的时间
                     hours = newTime.getHours();//小时
-                    last_time= hours%2;
-                    if (last_time==0) 
-                     last_time=hours+2;
-                    else
-                	   last_time=hours+1;       
-                    endTime = new Date(year,month,date,last_time-1,59,59);
+                       
+                    endTime = new Date(1608055200);
                     var ms = parseInt((endTime - newTime) / 1000); //得到毫秒，并取整
                     var s = parseInt(ms % 60);//秒
                     var m = parseInt((ms / 60) % 60); //分

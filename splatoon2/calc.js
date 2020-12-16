@@ -5213,7 +5213,8 @@ angular
       'fr_CA': '服装技能',
       'it_IT': '技能搭配',
       'zh_HK': 'amiibo对应',
-      "stage": '当前模式',
+      "stage": '对战地图',
+      "coop": '打工地图',
       "record": '个人战绩',
       "homex": '返回首页'
          

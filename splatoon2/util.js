@@ -17,7 +17,8 @@ var language_map = {
   "it_IT": "games/splatoon2/ability.html",
   "zh_HK": "games/splatoon2/amiibo.html",
   "record": "games/splatoon2/personal.html",
-  "stage": "games/splatoon2/stage.html"
+  "stage": "games/splatoon2/stage.html",
+  "coop": "games/splatoon2/stage_coop.html"
 
 }
 

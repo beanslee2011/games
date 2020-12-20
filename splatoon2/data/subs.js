@@ -253,7 +253,7 @@ angular.module('splatApp').subs = function ($scope) {
       name: "Torpedo",
       localizedName: {
         "ja_JP": "トーピード",
-        "en_US": "鱼类",
+        "en_US": "鱼雷",
         "en_GB": "Torpedo",
         "es_ES": "",
         "es_MX": "",

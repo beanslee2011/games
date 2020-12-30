@@ -77,7 +77,7 @@ angular.module('splatApp').subs = function ($scope) {
       name: "Fizzy Bomb",
       localizedName: {
         "ja_JP": "タンサンボム",
-        "en_US": "粘弹",
+        "en_US": "碳酸弹",
         "en_GB": "Fizzy Bomb",
         "es_ES": "Bomba carbónica",
         "es_MX": "Bomba carbónica",

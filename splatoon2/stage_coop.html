@@ -187,9 +187,9 @@ endTime = new Date(2020,12,10,14,0,0);
                     //m<10? m="0"+m:m;
                     //h<10? h="0"+h:h;
                     //d<10? d="0"+d:d;
-                     if (d=0) {d='';} else {d=d+' 天';} 
-			if (h=0) {h='';} else {h=h+' 时';} 
-  if (m=0) {m='';} else {m=m+' 分';} 
+                     if (parseInt(d)=0) {d='';} else {d=d+' 天';} 
+			if (parseInt(h)=0) {h='';} else {h=h+' 时';} 
+  if (parseInt(m)=0) {m='';} else {m=m+' 分';} 
   time.innerHTML = d+h+m+s+" 秒";
                     
                     

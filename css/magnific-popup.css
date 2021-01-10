@@ -403,13 +403,13 @@ img.mfp-img {
 	-o-border-radius:2px;
 }
 .pop_up p1{
-	margin-left:20px;
+	margin-left:5px;
 	float:left;
 	top:20px;
 	 text-align:left;  word-break: break-all; word-wrap: break-word;border:1px solid #ddd;
 	position:relative;
- 	width:400px;
-	height:420px;
+ 	width:60%;
+	height:80%;
 	line-height: 1.8em;
 	font-weight: 100;
 	margin-bottom: 2%;

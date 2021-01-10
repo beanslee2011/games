@@ -30,7 +30,7 @@ a{text-decoration:none;}
 .underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
 nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
-img{width:100%;}
+img{width:80%;}
 /*end reset*/
 body {
 	font-family: 'Open Sans', sans-serif;

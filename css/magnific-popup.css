@@ -323,7 +323,7 @@ img.mfp-img {
 	background: white;
 	padding: 3%;
 	text-align: left;
-	width:60%;
+	width:75%;
   /*lw */
 	height:80%;
 
@@ -408,7 +408,7 @@ img.mfp-img {
 	top:20px;
 	 text-align:left;  word-break: break-all; word-wrap: break-word;border:1px solid #ddd;
 	position:relative;
- 	width:80%;
+ 	width:65%;
 	height:80%;
 	line-height: 1.8em;
 	font-weight: 100;

@@ -325,7 +325,7 @@ img.mfp-img {
 	text-align: left;
 	width:50%;
   /*lw */
-	height:auto;
+	height:400px;
 
 	max-width: 100%;
 	margin: 20px auto;
@@ -440,7 +440,7 @@ img.mfp-img {
 	text-align: left;
 	width:60%;
   /*lw */
-	height:auto;
+	height:400px;
 	max-width: 60%;
 	margin: 20px auto;
 	position: relative;
@@ -488,7 +488,7 @@ img.mfp-img {
 	text-align: left;
 	width:60%;
   /*lw */
-	height:auto;
+	height:400px;
 
 	max-width: 60%;
 	margin: 20px auto;

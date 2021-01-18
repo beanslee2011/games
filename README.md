@@ -9,7 +9,7 @@
 1)各个角色、武器等信息（主要来自于mariowiki.com）  
 
 
-#个人discord频道：
+#个人discord频道：  
 1)Inklings' Camp@splatoon2  【  https://discord.gg/fxeExjxJZX  】  
 2)带有可以查看当前时段对战地图的聊天机器人功能  
 

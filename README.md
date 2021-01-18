@@ -1,4 +1,5 @@
-# 个人游戏收集整理、备忘
+# 个人游戏收集整理、备忘[喷射战士2/splatoon2为主]  
+
 平台：switch  
 #1.喷射战士2(splaton2)的相关资料  
 1)武器、装备技能配比相关（基于github的两位作者devipotato、selicia的相关版本汉化而来）  

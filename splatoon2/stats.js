@@ -217,7 +217,7 @@ angular.module('splatApp').stats = function ($scope) {
           var max_duration = special_power_up_parameters[0] / 60;
           var min_duration = special_power_up_parameters[2] / 60;
 
-          this.name = "大招为例 (持续)";
+          this.name = "大招威力 (持续)";
 
           if($scope.logging) {
             var special_power_up_log = {"Special Power Up (Other Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}

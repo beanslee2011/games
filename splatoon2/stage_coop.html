@@ -104,14 +104,14 @@ $(function(){
  <div class="calendarx">
             <p id="fulldate"></p>
             
-<span>----- 下一时段开启剩余时间 -----</span>
+<span>----- 本时段剩余时间 -----</span>
             
             <div id="time"></div>
 </div>
 <div align="center">  
 <table class="xtable"  width="80%" border=1 style="text-align:center;align="center"; margin: auto">
  	<tbody>
-<tr><th colspan=3 width=80%>当前打工模式地图<br></th></tr><tr><th colspan=2>02月17日20时至02月19日08时</th></tr><tr><th>地图</th><th>可用武器</th></tr><tr><td><img src="../common/assets/img/stage/300px/run/200px-S2_Stage_Marooner's_Bay.png" width="100%" height=auto ><br>破船<br></td><td > <table class="ytable" border="0"><tr><td><img src="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" width="80%"><br>小绿</td><td><img src="../common/assets/img/weapons/Wst_Twins_Stepper_00.png" width="80%"><br>气垫</td></tr><tr><td><img src="../common/assets/img/weapons/Wst_Umbrella_Normal_00.png" width="80%"><br>伞</td><td><img src="../common/assets/img/weapons/Wst_Charger_LongScope_00.png" width="80%"><br>有镜4K</td></tr></table></td></tr><tr><th colspan=2>02月19日14时至02月21日02时</th></tr><tr><th>地图</th><th>可用武器</th></tr><tr><td><img src="../common/assets/img/stage/300px/run/200px-S2_Stage_Spawning_Grounds.png" width="100%" height=auto ><br>大坝<br></td><td > <table class="ytable" border="0"><tr><td><img src="../common/assets/img/weapons/Wst_Shooter_Precision_00.png" width="80%"><br>针管</td><td><img src="../common/assets/img/weapons/Wst_Shooter_QuickMiddle_00.png" width="80%"><br>85</td></tr><tr><td><img src="../common/assets/img/weapons/Wst_Roller_BrushMini_00.png" width="80%"><br>笔刷</td><td><img src="../common/assets/img/weapons/Wst_Charger_Normal_00.png" width="80%"><br>短狙</td></tr></table></td></tr></tbody></table>更新时间:2021-02-17 19:05:02
+<tr><th colspan=3 width=80%>当前打工模式地图<br></th></tr><tr><th colspan=2>02月17日20时至02月19日08时</th></tr><tr><th>地图</th><th>可用武器</th></tr><tr><td><img src="../common/assets/img/stage/300px/run/200px-S2_Stage_Marooner's_Bay.png" width="100%" height=auto ><br>破船<br></td><td > <table class="ytable" border="0"><tr><td><img src="../common/assets/img/weapons/Wst_Shooter_Normal_00.png" width="80%"><br>小绿</td><td><img src="../common/assets/img/weapons/Wst_Twins_Stepper_00.png" width="80%"><br>气垫</td></tr><tr><td><img src="../common/assets/img/weapons/Wst_Umbrella_Normal_00.png" width="80%"><br>伞</td><td><img src="../common/assets/img/weapons/Wst_Charger_LongScope_00.png" width="80%"><br>有镜4K</td></tr></table></td></tr><tr><th colspan=2>02月19日14时至02月21日02时</th></tr><tr><th>地图</th><th>可用武器</th></tr><tr><td><img src="../common/assets/img/stage/300px/run/200px-S2_Stage_Spawning_Grounds.png" width="100%" height=auto ><br>大坝<br></td><td > <table class="ytable" border="0"><tr><td><img src="../common/assets/img/weapons/Wst_Shooter_Precision_00.png" width="80%"><br>针管</td><td><img src="../common/assets/img/weapons/Wst_Shooter_QuickMiddle_00.png" width="80%"><br>85</td></tr><tr><td><img src="../common/assets/img/weapons/Wst_Roller_BrushMini_00.png" width="80%"><br>笔刷</td><td><img src="../common/assets/img/weapons/Wst_Charger_Normal_00.png" width="80%"><br>短狙</td></tr></table></td></tr></tbody></table>更新时间:2021-02-17 20:00:01
  <br><br> 
 
    <footer class="footer">
@@ -170,12 +170,12 @@ window.onload = function () {
                 var dayArr = [ "星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
                 //设置年月日
 fulldate.innerHTML = year+" 年 "+(month+1)+" 月 "+date+" 日  "+dayArr[fullTime.getDay()];      
-endTime = new Date(2021,1,17,20,0,0);
+endTime = new Date(2021,1,19,08,0,0);
                 setInterval(fun,1000);//开启定时器
                 function fun() {
                     var newTime = new Date();//得到最新的时间
                     hours = newTime.getHours();//小时
-endTime = new Date(2021,1,17,20,0,0);
+endTime = new Date(2021,1,19,08,0,0);
 
                     var ms = parseInt((endTime - newTime) / 1000); //得到毫秒，并取整
                     
